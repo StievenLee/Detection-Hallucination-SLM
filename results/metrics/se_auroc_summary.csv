@@ -1,0 +1,4 @@
+model,n_questions,M,auroc,accuracy,avg_entropy,std_entropy,total_time_s,nli_calls_total,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,100,10,0.6608,0.29,2.1019,0.4331,9173.6,9000,7.266,4196.4,719.8,514.8
+microsoft/phi-1_5,100,10,0.4944,0.11,2.3012,0.0138,32455.6,9000,8.721,5410.3,3375.6,1959.2
+Qwen/Qwen1.5-1.8B-Chat,100,10,0.5676,0.19,2.2241,0.2215,44840.6,9000,8.583,7006.9,5292.7,3136.8
