@@ -1,83 +1,72 @@
-"""
-Semantic Entropy — implementasi sesuai paper:
-  "Semantic Uncertainty: Linguistic Invariances for Uncertainty
-   Estimation in Natural Language Generation" (Kuhn et al., 2023)
-
-Pipeline:
-  1. Generate M sampel dari satu pertanyaan
-  2. NLI clustering: dua respons masuk cluster sama
-     jika saling entail secara bidirectional
-  3. Hitung probabilitas tiap cluster = ukuran cluster / M
-  4. Semantic entropy = -sum(p_c * log(p_c))
-"""
-
-import math
+from sentence_transformers import SentenceTransformer, util
 import torch
-from transformers import pipeline
+import math
+import gc
 from .metrics import get_ram_usage_mb
 
 
 class SemanticEntropyCalculator:
 
-    def __init__(self, nli_model: str = "cross-encoder/nli-MiniLM2-L6-H768"):
-        print(f"[SE] Loading NLI model: {nli_model}")
+    def __init__(
+        self,
+        model_name: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        similarity_threshold: float = 0.75,
+    ):
+        print(f"[SE] Loading similarity model: {model_name}")
         ram_before = get_ram_usage_mb()
 
-        # Pipeline NLI untuk klasifikasi entailment
-        self.nli = pipeline(
-            "text-classification",
-            model=nli_model,
-            device=-1,          # CPU
-            top_k=None,         # kembalikan semua label & score
-        )
-        self.ENTAILMENT_LABEL = "entailment"
+        self.model = SentenceTransformer(model_name)
+        self.similarity_threshold = similarity_threshold
 
         ram_after = get_ram_usage_mb()
-        print(f"[SE] NLI model loaded. RAM delta: +{ram_after - ram_before:.0f} MB")
+        print(f"[SE] Model loaded. RAM delta: +{ram_after - ram_before:.0f} MB")
 
-    def _entails(self, premise: str, hypothesis: str, threshold: float = 0.5) -> bool:
-        """
-        Cek apakah premise meng-entail hypothesis.
-        Gunakan format: "premise [SEP] hypothesis"
-        """
-        result = self.nli(f"{premise} [SEP] {hypothesis}")
-        # result = list of [{'label': ..., 'score': ...}, ...]
-        scores = {item["label"].lower(): item["score"] for item in result[0]}
-        return scores.get(self.ENTAILMENT_LABEL, 0.0) >= threshold
-
-    def _bidirectional_entails(
-        self, response_a: str, response_b: str, threshold: float = 0.5
-    ) -> bool:
+    def _are_equivalent(self, response_a: str, response_b: str) -> bool:
         """
         Dua respons dianggap semantically equivalent jika
-        A entails B DAN B entails A (bidirectional).
+        cosine similarity >= threshold (bidirectional by nature
+        karena cosine similarity simetris).
         """
-        return (
-            self._entails(response_a, response_b, threshold)
-            and
-            self._entails(response_b, response_a, threshold)
-        )
+        emb_a = self.model.encode(response_a, convert_to_tensor=True)
+        emb_b = self.model.encode(response_b, convert_to_tensor=True)
+        similarity = util.cos_sim(emb_a, emb_b).item()
+        return similarity >= self.similarity_threshold
+
+    def _are_equivalent_batch(
+        self, responses: list[str]
+    ) -> list[list[float]]:
+        """
+        Hitung cosine similarity matrix sekaligus untuk efisiensi.
+        Lebih cepat daripada panggil _are_equivalent satu per satu.
+        """
+        embeddings = self.model.encode(responses, convert_to_tensor=True)
+        sim_matrix = util.cos_sim(embeddings, embeddings)
+        return sim_matrix
 
     def cluster_responses(
-        self, responses: list[str], threshold: float = 0.5
+        self, responses: list[str], threshold: float = None
     ) -> list[list[int]]:
         """
-        Kelompokkan respons ke dalam semantic clusters.
-        Return: list of clusters, tiap cluster = list of response indices.
-
-        Algoritma greedy: iterasi tiap respons, cek apakah
-        masuk ke cluster existing. Kalau tidak, buat cluster baru.
+        Kelompokkan respons ke dalam semantic clusters
+        menggunakan cosine similarity matrix (batch).
         """
-        clusters = []       # list of list of indices
-        assigned = {}       # index → cluster_id
+        if len(responses) == 0:
+            return []
 
-        for i, resp_i in enumerate(responses):
+        # Hitung semua similarity sekaligus (lebih efisien)
+        sim_matrix = self._are_equivalent_batch(responses)
+
+        clusters = []
+        assigned = {}
+
+        t = threshold if threshold is not None else self.similarity_threshold
+
+        for i in range(len(responses)):
             placed = False
             for c_id, cluster in enumerate(clusters):
-                # Bandingkan dengan representatif pertama cluster
                 rep_idx = cluster[0]
-                rep = responses[rep_idx]
-                if self._bidirectional_entails(resp_i, rep, threshold):
+                sim = sim_matrix[i][rep_idx].item()
+                if sim >= t:
                     clusters[c_id].append(i)
                     assigned[i] = c_id
                     placed = True
@@ -89,29 +78,22 @@ class SemanticEntropyCalculator:
         return clusters
 
     def semantic_entropy(
-        self, responses: list[str], threshold: float = 0.5
+        self, responses: list[str], threshold: float = None
     ) -> dict:
-        """
-        Hitung semantic entropy dari list of responses.
-
-        Return dict:
-          - entropy      : float, nilai SE (lebih tinggi = lebih tidak pasti)
-          - n_clusters   : int, jumlah cluster semantik unik
-          - cluster_probs: list[float], distribusi probabilitas tiap cluster
-          - clusters     : list[list[int]], indeks respons per cluster
-        """
         M = len(responses)
         if M == 0:
-            return {"entropy": 0.0, "n_clusters": 0, "cluster_probs": [], "clusters": []}
-
-        clusters = self.cluster_responses(responses, threshold)
-        n_clusters = len(clusters)
-
-        # Probabilitas tiap cluster = ukuran cluster / M
+            return {
+                "entropy": 0.0, "n_clusters": 0,
+                "cluster_probs": [], "clusters": []
+            }
+        """threshold=None → pakai self.similarity_threshold"""
+        t = threshold if threshold is not None else self.similarity_threshold
+        clusters      = self.cluster_responses(responses, threshold=t)
+        n_clusters    = len(clusters)
         cluster_probs = [len(c) / M for c in clusters]
-
-        # Shannon entropy: -sum(p * log(p))
-        entropy = -sum(p * math.log(p) for p in cluster_probs if p > 0)
+        entropy       = -sum(
+            p * math.log(p) for p in cluster_probs if p > 0
+        )
 
         return {
             "entropy":       round(entropy, 6),
@@ -119,10 +101,10 @@ class SemanticEntropyCalculator:
             "cluster_probs": [round(p, 4) for p in cluster_probs],
             "clusters":      clusters,
         }
-    
+
     def unload(self):
-        """Bebaskan NLI model dari memory."""
-        del self.nli
-        import gc
+        del self.model
         gc.collect()
-        print("[SE] NLI model unloaded.")
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        print("[SE] Model unloaded.")

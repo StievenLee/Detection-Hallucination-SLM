@@ -1,4 +1,7 @@
-model,M,device,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb,gen_time_s,total_new_tokens,tokens_per_sec,avg_tokens_per_sample,avg_time_per_sample_s
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,10,cpu,6.297,4196.4,2174.1,1636.0,191.105,1000,5.23,100.0,19.111
-microsoft/phi-1_5,10,cpu,9.051,5410.3,1462.3,1637.7,224.072,1000,4.46,100.0,22.407
-Qwen/Qwen1.5-1.8B-Chat,10,cpu,11.99,7006.9,259.7,477.8,262.751,1000,3.81,100.0,26.275
+language,model,M,device,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb,gen_time_s,total_new_tokens,tokens_per_sec,avg_tokens_per_sample,avg_time_per_sample_s
+en,TinyLlama/TinyLlama-1.1B-Chat-v1.0,10,cpu,4.457,4196.4,3159.6,2089.6,222.066,1000,4.5,100.0,22.207
+id,TinyLlama/TinyLlama-1.1B-Chat-v1.0,10,cpu,4.457,4196.4,3159.6,2089.6,214.342,1000,4.67,100.0,21.434
+en,microsoft/phi-1_5,10,cpu,9.058,5410.3,1999.1,1339.6,229.328,1000,4.36,100.0,22.933
+id,microsoft/phi-1_5,10,cpu,9.058,5410.3,1999.1,1339.6,226.527,1000,4.41,100.0,22.653
+en,Qwen/Qwen1.5-1.8B-Chat,10,cpu,13.956,7006.9,689.3,886.0,273.662,1000,3.65,100.0,27.366
+id,Qwen/Qwen1.5-1.8B-Chat,10,cpu,13.956,7006.9,689.3,886.0,554.717,1000,1.8,100.0,55.472

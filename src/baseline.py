@@ -34,15 +34,22 @@ MODELS = [
     "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
-SYSTEM_PROMPT = "You are a helpful assistant."
+LANGUAGES = ["en", "id"]
+
+SYSTEM_PROMPTS = {
+    "en": "You are a helpful assistant. Answer the question concisely in 1-2 sentences.",
+    "id": "Anda adalah asisten yang membantu. Jawab pertanyaan berikut secara singkat dalam 1-2 kalimat."
+}
 
 # Gunakan pertanyaan sederhana di Week 1 untuk verifikasi saja
 # Week 2 nanti pakai TriviaQA/BioASQ yang sebenarnya
-TEST_QUESTION = "Explain artificial intelligence in simple terms."
-
+TEST_QUESTIONS = {
+    "en": "Explain artificial intelligence in simple terms.",
+    "id": "Jelaskan kecerdasan buatan dengan bahasa sederhana."
+}
 M_BASELINE = 10     # Angka resmi paper — JANGAN kurangi untuk baseline
 MAX_NEW_TOKENS = 100
-TEMPERATURE = 0.9
+TEMPERATURE = 0.5
 TOP_P = 0.95
 DEVICE = "cpu"
 
@@ -67,36 +74,38 @@ def main():
         # 1. Load model
         model, tokenizer, load_stats = load_model_and_tokenizer(model_name, DEVICE)
 
-        # 2. Build prompt dengan template yang benar per model
-        prompt = build_prompt(
-            tokenizer=tokenizer,
-            model_name=model_name,
-            system=SYSTEM_PROMPT,
-            user=TEST_QUESTION,
-        )
-        print(f"\n[Prompt preview]\n{prompt[:200]}...")
+        for lang in LANGUAGES:
+            # 2. Build prompt dengan template yang benar per model
+            prompt = build_prompt(
+                tokenizer=tokenizer,
+                model_name=model_name,
+                system=SYSTEM_PROMPTS[lang],
+                user=TEST_QUESTIONS[lang],
+            )
+            print(f"\n[Prompt preview]\n{prompt[:200]}...")
 
-        # 3. Generate M sampel
-        responses, gen_stats = generate_responses(
-            model=model,
-            tokenizer=tokenizer,
-            prompt=prompt,
-            M=M_BASELINE,
-            max_new_tokens=MAX_NEW_TOKENS,
-            temperature=TEMPERATURE,
-            top_p=TOP_P,
-        )
-        all_responses[model_name] = responses
+            # 3. Generate M sampel
+            responses, gen_stats = generate_responses(
+                model=model,
+                tokenizer=tokenizer,
+                prompt=prompt,
+                M=M_BASELINE,
+                max_new_tokens=MAX_NEW_TOKENS,
+                temperature=TEMPERATURE,
+                top_p=TOP_P,
+            )
+            all_responses[f"{model_name}_{lang}"] = responses
 
-        # 4. Catat semua metric ke CSV
-        row = {
-            "model": model_name,
-            "M": M_BASELINE,
-            "device": DEVICE,
-            **load_stats,
-            **gen_stats,
-        }
-        logger.log(row)
+            # 4. Catat semua metric ke CSV
+            row = {
+                "language": lang,
+                "model": model_name,
+                "M": M_BASELINE,
+                "device": DEVICE,
+                **load_stats,
+                **gen_stats,
+            }
+            logger.log(row)
 
         # 5. Unload model sebelum load berikutnya — PENTING untuk CPU
         unload_model(model)
@@ -106,7 +115,7 @@ def main():
         for model_name, responses in all_responses.items():
             f.write(f"\n{'='*60}\n")
             f.write(f"Model: {model_name}\n")
-            f.write(f"Question: {TEST_QUESTION}\n")
+            f.write(f"Question: {TEST_QUESTIONS[lang]}\n")
             f.write(f"{'='*60}\n")
             for i, resp in enumerate(responses, 1):
                 f.write(f"\n--- Sample {i} ---\n")

@@ -1,18 +1,25 @@
-"""
-Week 2 — Replikasi Semantic Entropy Baseline
-=============================================
-Tujuan:
-  - Hitung semantic entropy untuk setiap respons model di TriviaQA
-  - Ukur AUROC: seberapa baik SE membedakan jawaban benar vs salah
-  - Catat resource usage sebagai baseline semantic entropy
-  - Simpan ke results/
+# """
+# Week 2 — Replikasi Semantic Entropy Baseline
+# =============================================
+# Tujuan:
+#   - Hitung semantic entropy untuk setiap respons model di TriviaQA
+#   - Ukur AUROC: seberapa baik SE membedakan jawaban benar vs salah
+#   - Catat resource usage sebagai baseline semantic entropy
+#   - Simpan ke results/
     
+# Jalankan:
+#   python src/se_baseline.py
+
+
+"""
+SE Baseline — Multi-dataset & Multi-language
+=============================================
+Support:
+  EN: TriviaQA, BioASQ
+  ID: FacQA, WReTE
+
 Jalankan:
   python src/se_baseline.py
-
-Estimasi waktu (CPU):
-  50 soal × 3 model × M=10 → ~2-3 jam
-  Mulai dengan N_QUESTIONS=20 untuk validasi dulu
 """
 
 import sys
@@ -22,109 +29,130 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 import numpy as np
-import pandas as pd
 from sklearn.metrics import roc_auc_score
 
 from utils.metrics import ResultsLogger, get_ram_usage_mb
-from utils.model_utils import (
-    build_prompt,
-    load_model_and_tokenizer,
-    unload_model,
-    generate_responses,
-)
-from utils.data_loader import load_trivia_qa, is_correct
+from utils.model_utils import build_prompt, load_model_and_tokenizer, unload_model, generate_responses
+from utils.data_loader import load_dataset_by_name, is_correct
 from utils.semantic_entropy import SemanticEntropyCalculator
 
-# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────────
 # KONFIGURASI
-# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────────
 MODELS = [
     "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    "microsoft/phi-1_5",
-    "Qwen/Qwen1.5-1.8B-Chat",
+    # "microsoft/phi-1_5",
+    # "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
-NLI_MODEL     = "cross-encoder/nli-MiniLM2-L6-H768"
-N_QUESTIONS   = 100        # ← mulai dari 20 untuk validasi, naikkan ke 100+ nanti
-M             = 10        # jumlah sampel per pertanyaan (sesuai paper)
-MAX_TOKENS    = 100
-TEMPERATURE   = 0.9
+# Dataset yang dijalankan — comment/uncomment sesuai kebutuhan
+DATASETS = [
+    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
+    {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
+    {"name": "facqa",     "split": None,           "n": 100,
+     "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    {"name": "wrete",     "split": None,           "n": 100,
+     "csv_path": "data/raw/wrete/train_preprocess.csv"},
+]
+
+# Prompt per bahasa
+SYSTEM_PROMPTS = {
+    "en": (
+        "You are a helpful assistant. "
+        "Answer the question concisely in 1-2 sentences."
+    ),
+    "id": (
+        "Anda adalah asisten yang membantu. "
+        "Jawab pertanyaan berikut secara singkat dalam 1-2 kalimat dalam Bahasa Indonesia."
+    ),
+}
+
+NLI_MODEL             = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+# cosine similarity, bukan entailment score
+SIMILARITY_THRESHOLDS = {
+    "en": 0.80,   # English: P1=0.998 ✅, P2=0.745 ✅, P4=0.196 ✅
+    "id": 0.62,   # Indonesian: P3=0.639 ✅, P5=0.462 ✅
+}
+M             = 10
+MAX_TOKENS    = 100       
+TEMPERATURE   = 0.5       # diturunkan dari 0.9 berdasarkan analisis Week 2
 TOP_P         = 0.95
 DEVICE        = "cpu"
-NLI_THRESHOLD = 0.5       # threshold entailment
-
-SYSTEM_PROMPT = (
-    "You are a helpful assistant. "
-    "Answer the question concisely in 1-2 sentences."
-)
+# NLI_THRESHOLD = 0.5
 
 Path("results/metrics").mkdir(parents=True, exist_ok=True)
 Path("results/outputs").mkdir(parents=True, exist_ok=True)
 Path("results/figures").mkdir(parents=True, exist_ok=True)
 
-RESULTS_CSV    = "results/metrics/se_results.csv"
-AUROC_CSV      = "results/metrics/se_auroc_summary.csv"
-RESPONSES_TXT  = "results/outputs/se_responses.txt"
+RESULTS_CSV = "results/metrics/se_results.csv"
+AUROC_CSV   = "results/metrics/se_auroc_summary.csv"
 
-# ──────────────────────────────────────────────
-# PIPELINE PER MODEL
-# ──────────────────────────────────────────────
-def run_model(model_name, dataset, se_calc, logger):
-    """Jalankan semantic entropy pipeline untuk satu model."""
+# ──────────────────────────────────────────────────
+# PIPELINE
+# ──────────────────────────────────────────────────
+def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
+    """Jalankan SE pipeline untuk satu model × satu dataset."""
+
+    dataset = load_dataset_by_name(
+        name=dataset_cfg["name"],
+        split=dataset_cfg.get("split", "validation"),
+        n=dataset_cfg["n"],
+        csv_path=dataset_cfg.get("csv_path"),
+    )
+    if not dataset:
+        print(f"[Skip] Dataset kosong: {dataset_cfg['name']}")
+        return None
+
+    # Deteksi bahasa dari dataset
+    language = dataset[0]["language"]
+    system_prompt = SYSTEM_PROMPTS[language]
+    threshold     = SIMILARITY_THRESHOLDS[language]  # ← ambil threshold per bahasa
+    se_calc.similarity_threshold = threshold   
 
     print(f"\n{'='*55}")
-    print(f"MODEL: {model_name}")
+    print(f"MODEL  : {model_name}")
+    print(f"DATASET: {dataset_cfg['name']} ({language.upper()}) — {len(dataset)} soal")
     print(f"{'='*55}")
 
     model, tokenizer, load_stats = load_model_and_tokenizer(model_name, DEVICE)
 
-    entropies       = []
-    correctness     = []
-    total_nli_calls = 0
-    start_total     = time.time()
+    entropies   = []
+    correctness = []
+    start_total = time.time()
 
     for q_idx, sample in enumerate(dataset):
-        print(f"\n[Q {q_idx+1}/{len(dataset)}] {sample['question'][:70]}...")
+        print(f"\n[Q {q_idx+1}/{len(dataset)}] {sample['question'][:65]}...")
 
         prompt = build_prompt(
             tokenizer=tokenizer,
             model_name=model_name,
-            system=SYSTEM_PROMPT,
+            system=system_prompt,
             user=sample["question"],
         )
 
-        # Generate M respons
-        responses, gen_stats = generate_responses(
-            model=model,
-            tokenizer=tokenizer,
-            prompt=prompt,
-            M=M,
-            max_new_tokens=MAX_TOKENS,
-            temperature=TEMPERATURE,
-            top_p=TOP_P,
+        responses, _ = generate_responses(
+            model=model, tokenizer=tokenizer, prompt=prompt,
+            M=M, max_new_tokens=MAX_TOKENS,
+            temperature=TEMPERATURE, top_p=TOP_P,
         )
 
-        # Hitung semantic entropy
         se_start  = time.time()
-        se_result = se_calc.semantic_entropy(responses, threshold=NLI_THRESHOLD)
+        se_result = se_calc.semantic_entropy(responses)
         se_time   = time.time() - se_start
 
-        # NLI calls = M*(M-1) bidirectional
-        total_nli_calls += M * (M - 1)
-
-        # Correctness: pakai respons pertama sebagai prediksi utama
         correct = int(is_correct(responses[0], sample))
-
         entropies.append(se_result["entropy"])
         correctness.append(correct)
 
         print(f"  ✓ SE={se_result['entropy']:.4f} | "
               f"clusters={se_result['n_clusters']}/{M} | "
-              f"correct={correct} | "
-              f"SE time={se_time:.1f}s")
+              f"correct={correct} | lang={language}")
 
-        logger.log({
+        # Simpan hasil dengan kolom language & dataset
+        q_logger.log({
             "model":        model_name,
+            "dataset":      dataset_cfg["name"],
+            "language":     language,
             "question_idx": q_idx,
             "question":     sample["question"][:100],
             "answer_gt":    sample["answer"],
@@ -133,93 +161,90 @@ def run_model(model_name, dataset, se_calc, logger):
             "se_entropy":   se_result["entropy"],
             "n_clusters":   se_result["n_clusters"],
             "M":            M,
+            "temperature":  TEMPERATURE,
             "se_time_s":    round(se_time, 3),
-            **{f"response_{i+1}": r[:80] for i, r in enumerate(responses)},
         })
 
     total_time = time.time() - start_total
 
-    # ── AUROC
-    # SE tinggi → model ragu → prediksi salah → flip ke -SE untuk roc_auc_score
-    if len(set(correctness)) < 2:
-        auroc = float("nan")
-        print("  [Warning] Semua jawaban sama — AUROC tidak bisa dihitung.")
-        print("  [Tip] Naikkan N_QUESTIONS agar ada variasi benar/salah.")
-    else:
-        auroc = roc_auc_score(correctness, [-e for e in entropies])
+    from utils.metrics import compute_auroc, compute_aurac, compute_rejection_accuracy
+    # AUROC
+    auroc = compute_auroc(correctness, entropies)
+    # Rejection accuracy di beberapa threshold
+    p25 = float(np.percentile(entropies, 25))   # buang 75% teratas
+    p50 = float(np.percentile(entropies, 50))   # buang 50% teratas
+    p75 = float(np.percentile(entropies, 75))   # buang 25% teratas
+    p90 = float(np.percentile(entropies, 90))   # buang 10% teratas
+
+    rej_05 = compute_rejection_accuracy(correctness, entropies, threshold=p25)
+    rej_10 = compute_rejection_accuracy(correctness, entropies, threshold=p50)
+    rej_15 = compute_rejection_accuracy(correctness, entropies, threshold=p75)
+    rej_20 = compute_rejection_accuracy(correctness, entropies, threshold=p90)
+
+    # AURAC
+    aurac_result = compute_aurac(correctness, entropies)
 
     accuracy = sum(correctness) / len(correctness)
 
-    print(f"\n{'─'*45}")
-    print(f"  AUROC     : {auroc:.4f}" if not np.isnan(auroc) else "  AUROC     : N/A")
-    print(f"  Accuracy  : {accuracy:.2%}")
-    print(f"  Avg SE    : {np.mean(entropies):.4f}")
-    print(f"  Std SE    : {np.std(entropies):.4f}")
-    print(f"  Total time: {total_time:.0f}s")
+    print(f"\n  AUROC    : {auroc:.4f}" if not np.isnan(auroc) else "\n  AUROC    : N/A")
+    print(f"  AURAC    : {aurac_result['aurac']:.4f}" if aurac_result['aurac'] is not None and not np.isnan(aurac_result['aurac']) else "  AURAC    : N/A")
+    print(f"  Accuracy : {accuracy:.2%}")
+    print(f"  Avg SE   : {np.mean(entropies):.4f} ± {np.std(entropies):.4f}")
+
+
+    if aurac_result.get("best_threshold") is not None:
+        print(f"\n  Best threshold: SE ≤ {aurac_result['best_threshold']:.4f} "
+              f"(risk < 30%)")
 
     unload_model(model)
 
     return {
-        "model":            model_name,
-        "n_questions":      len(dataset),
-        "M":                M,
-        "auroc":            round(auroc, 4) if not np.isnan(auroc) else "N/A",
-        "accuracy":         round(accuracy, 4),
-        "avg_entropy":      round(float(np.mean(entropies)), 4),
-        "std_entropy":      round(float(np.std(entropies)), 4),
-        "total_time_s":     round(total_time, 1),
-        "nli_calls_total":  total_nli_calls,
+        "model":           model_name,
+        "dataset":         dataset_cfg["name"],
+        "language":        language,
+        "n_questions":     len(dataset),
+        "M":               M,
+        "temperature":     TEMPERATURE,
+        "auroc":           round(auroc, 4) if not np.isnan(auroc) else "N/A",
+        "aurac":           aurac_result["aurac"],         
+        "best_threshold":  aurac_result["best_threshold"],           
+        "accuracy":        round(accuracy, 4),
+        "avg_entropy":     round(float(np.mean(entropies)), 4),
+        "std_entropy":     round(float(np.std(entropies)), 4),
+        "total_time_s":    round(total_time, 1),
+        "similarity_calls_total": (M * (M - 1) // 2) * len(dataset),
         **load_stats,
     }
 
 
-# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────────
 # MAIN
-# ──────────────────────────────────────────────
+# ──────────────────────────────────────────────────
 def main():
     print("=" * 55)
-    print("SE BASELINE — SEMANTIC ENTROPY EVALUATION")
+    print("SE BASELINE — MULTI-DATASET & MULTI-LANGUAGE")
     print("=" * 55)
-    print(f"Models     : {len(MODELS)}")
-    print(f"Questions  : {N_QUESTIONS}")
-    print(f"M (samples): {M}")
-    print(f"NLI model  : {NLI_MODEL}")
-    print(f"RAM awal   : {get_ram_usage_mb():.0f} MB")
+    print(f"Models  : {len(MODELS)}")
+    print(f"Datasets: {[d['name'] for d in DATASETS]}")
+    print(f"M       : {M}")
+    print(f"Temp    : {TEMPERATURE}")
 
-    # Load dataset
-    dataset = load_trivia_qa(split="validation", n=N_QUESTIONS)
-
-    print(f"\nContoh soal:")
-    for s in dataset[:3]:
-        print(f"  Q: {s['question']}")
-        print(f"  A: {s['answer']}\n")
-
-    # Load NLI — tetap di memory selama semua model berjalan
-    se_calc      = SemanticEntropyCalculator(NLI_MODEL)
+    se_calc = SemanticEntropyCalculator(model_name=NLI_MODEL, similarity_threshold=SIMILARITY_THRESHOLDS)
     q_logger     = ResultsLogger(RESULTS_CSV)
     auroc_logger = ResultsLogger(AUROC_CSV)
 
-    for model_name in MODELS:
-        summary = run_model(model_name, dataset, se_calc, q_logger)
-        auroc_logger.log(summary)
+    for dataset_cfg in DATASETS:
+        for model_name in MODELS:
+            result = run_experiment(model_name, dataset_cfg, se_calc, q_logger)
+            if result:
+                auroc_logger.log(result)
 
     se_calc.unload()
 
-    with open(RESPONSES_TXT, "w", encoding="utf-8") as f:
-        df = pd.read_csv(RESULTS_CSV)
-        for _, row in df.iterrows():
-            f.write(f"\n{'='*55}\n")
-            f.write(f"Model   : {row['model']}\n")
-            f.write(f"Q       : {row['question']}\n")
-            f.write(f"Answer  : {row['answer_gt']}\n")
-            f.write(f"Predict : {row['prediction']}\n")
-            f.write(f"Correct : {row['correct']} | SE: {row['se_entropy']}\n")
-
     print(f"\n{'='*55}")
     print("SELESAI. AUROC Summary:")
-    print(auroc_logger.summary()[
-        ["model", "auroc", "accuracy", "avg_entropy", "total_time_s"]
-    ].to_string(index=False))
+    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy"]
+    print(auroc_logger.summary()[cols].to_string(index=False))
 
     print(f"\nFile tersimpan:")
     print(f"  {RESULTS_CSV}")

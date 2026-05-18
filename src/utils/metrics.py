@@ -63,3 +63,123 @@ class ResultsLogger:
 
     def summary(self):
         return pd.DataFrame(self.rows)
+    
+import numpy as np
+from sklearn.metrics import roc_auc_score
+
+def compute_auroc(correctness: list[int], entropies: list[float]) -> float:
+    """
+    AUROC: kemampuan SE membedakan benar vs salah.
+    SE tinggi → prediksi salah → flip ke -SE.
+    """
+    if len(set(correctness)) < 2:
+        return float("nan")
+    return roc_auc_score(correctness, [-e for e in entropies])
+
+
+def compute_rejection_accuracy(
+    correctness: list[int],
+    entropies: list[float],
+    threshold: float
+) -> dict:
+    """
+    Rejection accuracy pada threshold SE tertentu.
+    Soal dengan SE > threshold ditolak (tidak dijawab).
+
+    Return:
+      - accuracy_retained : akurasi pada soal yang dijawab
+      - coverage          : % soal yang dijawab
+      - n_retained        : jumlah soal yang dijawab
+      - n_rejected        : jumlah soal yang ditolak
+    """
+    retained_correct = [
+        c for c, e in zip(correctness, entropies) if e <= threshold
+    ]
+    n_retained = len(retained_correct)
+    n_total    = len(correctness)
+
+    if n_retained == 0:
+        return {
+            "threshold":          threshold,
+            "accuracy_retained":  float("nan"),
+            "coverage":           0.0,
+            "n_retained":         0,
+            "n_rejected":         n_total,
+        }
+
+    return {
+        "threshold":         threshold,
+        "accuracy_retained": sum(retained_correct) / n_retained,
+        "coverage":          n_retained / n_total,
+        "n_retained":        n_retained,
+        "n_rejected":        n_total - n_retained,
+    }
+
+
+def compute_aurac(
+    correctness: list[int],
+    entropies: list[float],
+    n_thresholds: int = 100
+) -> dict:
+    """
+    AURAC: Area Under Risk-Coverage Curve.
+
+    Risk     = error rate pada soal yang dijawab = 1 - accuracy_retained
+    Coverage = proporsi soal yang dijawab
+
+    Kurva: sumbu X = coverage (0→1), sumbu Y = risk (0→1)
+    AURAC = luas area di bawah kurva (lebih RENDAH = lebih baik)
+
+    Catatan konvensi: beberapa paper plot Coverage vs Accuracy
+    (AURAC lebih tinggi = lebih baik). Kita pakai Risk-Coverage
+    agar konsisten dengan paper Kuhn et al.
+
+    Return:
+      - aurac         : float, luas area (trapezoid integration)
+      - coverages     : list titik coverage
+      - risks         : list titik risk
+      - best_threshold: threshold SE yang memberi trade-off terbaik
+    """
+    # Buat threshold dari min ke max entropy
+    min_e = min(entropies)
+    max_e = max(entropies)
+    thresholds = np.linspace(min_e, max_e, n_thresholds)
+
+    coverages = []
+    risks     = []
+
+    for t in thresholds:
+        result = compute_rejection_accuracy(correctness, entropies, threshold=t)
+        cov  = result["coverage"]
+        acc  = result["accuracy_retained"]
+
+        if not np.isnan(acc):
+            coverages.append(cov)
+            risks.append(1.0 - acc)   # risk = error rate
+
+    if len(coverages) < 2:
+        return {"aurac": float("nan"), "coverages": [], "risks": []}
+
+    # Sort by coverage untuk trapezoid integration
+    paired = sorted(zip(coverages, risks))
+    coverages_sorted = [p[0] for p in paired]
+    risks_sorted     = [p[1] for p in paired]
+
+    # Trapezoid rule
+    aurac = float(np.trapz(risks_sorted, coverages_sorted))
+
+    # Best threshold = coverage tertinggi dengan risk < 0.3
+    best_threshold = None
+    for t in reversed(thresholds):
+        res = compute_rejection_accuracy(correctness, entropies, threshold=t)
+        if not np.isnan(res["accuracy_retained"]):
+            if (1 - res["accuracy_retained"]) < 0.3:
+                best_threshold = t
+                break
+
+    return {
+        "aurac":          round(aurac, 4),
+        "coverages":      coverages_sorted,
+        "risks":          risks_sorted,
+        "best_threshold": round(best_threshold, 4) if best_threshold else None,
+    }
