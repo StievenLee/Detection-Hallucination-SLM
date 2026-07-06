@@ -1,2 +1,2 @@
 model,dataset,language,n_questions,M,temperature,auroc,aurac,best_threshold,accuracy,avg_entropy,std_entropy,total_time_s,similarity_calls_total,avg_latency_s,throughput_tok_s,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,trivia_qa,en,10,10,0.5,0.5,0.1378,,0.2,0.7507,0.5734,772.1,450,77.21,4.76,6.011,4196.4,501.8,684.6
+TinyLlama/TinyLlama-1.1B-Chat-v1.0,trivia_qa,en,50,10,0.5,0.8147,0.2599,,0.24,0.8841,0.7274,3799.3,2250,75.99,5.12,5.941,4196.4,2416.7,1690.2

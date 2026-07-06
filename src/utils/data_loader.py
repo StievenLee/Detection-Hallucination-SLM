@@ -12,39 +12,6 @@ import ast
 def _normalize(text: str) -> str:
     return text.strip().lower()
 
-# def is_correct(prediction: str, sample: dict) -> bool:
-    pred = _normalize(prediction)
-    
-    # Cek semua kandidat jawaban
-    all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
-    
-    for ans in all_answers:
-        ans = _normalize(ans)
-        if not ans:
-            continue
-        
-        # 1. Substring match (untuk jawaban pendek)
-        if ans in pred or pred in ans:
-            return True
-        
-        # 2. Token F1 match (untuk jawaban panjang seperti BioASQ)
-        pred_tokens = set(pred.split())
-        ans_tokens  = set(ans.split())
-        if ans_tokens:
-            overlap = len(pred_tokens & ans_tokens) / len(ans_tokens)
-            
-            # Pisahkan logika berdasarkan panjang jawaban
-            if len(ans_tokens) <= 3:
-                # Jawaban pendek: harus exact match substring
-                if ans in pred or pred in ans:
-                    return True
-            else:
-                # Jawaban panjang: baru pakai token overlap
-                if overlap >= 0.5:
-                    return True
-    
-    return False
-
 def is_correct(prediction: str, sample: dict) -> bool:
     pred = _normalize(prediction)
     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
@@ -53,7 +20,7 @@ def is_correct(prediction: str, sample: dict) -> bool:
         ans = _normalize(ans)
         if not ans:
             continue
-        if ans in pred or pred in ans:
+        if ans in pred:
             return True
     return False
 
