@@ -122,31 +122,22 @@ def compute_aurac(
     n_thresholds: int = 100
 ) -> dict:
     """
-    AURAC: Area Under Risk-Coverage Curve.
+    AURAC: Area Under the Rejection Accuracy Curve.
 
-    Risk     = error rate pada soal yang dijawab = 1 - accuracy_retained
+    Accuracy = accuracy_retained pada soal yang dijawab
     Coverage = proporsi soal yang dijawab
 
-    Kurva: sumbu X = coverage (0→1), sumbu Y = risk (0→1)
-    AURAC = luas area di bawah kurva (lebih RENDAH = lebih baik)
-
-    Catatan konvensi: beberapa paper plot Coverage vs Accuracy
-    (AURAC lebih tinggi = lebih baik). Kita pakai Risk-Coverage
-    agar konsisten dengan paper Kuhn et al.
-
-    Return:
-      - aurac         : float, luas area (trapezoid integration)
-      - coverages     : list titik coverage
-      - risks         : list titik risk
-      - best_threshold: threshold SE yang memberi trade-off terbaik
+    Kurva: sumbu X = coverage (0..1), sumbu Y = accuracy (0..1)
+    AURAC = luas area di bawah kurva (lebih TINGGI = lebih baik).
+    Konsisten dengan definisi Farquhar et al. (Nature, 2024).
     """
     # Buat threshold dari min ke max entropy
     min_e = min(entropies)
     max_e = max(entropies)
     thresholds = np.linspace(min_e, max_e, n_thresholds)
 
-    coverages = []
-    risks     = []
+    coverages   = []
+    accuracies  = []
 
     for t in thresholds:
         result = compute_rejection_accuracy(correctness, entropies, threshold=t)
@@ -155,18 +146,18 @@ def compute_aurac(
 
         if not np.isnan(acc):
             coverages.append(cov)
-            risks.append(1.0 - acc)   # risk = error rate
+            accuracies.append(acc)   # rejection accuracy (bukan risk)
 
     if len(coverages) < 2:
-        return {"aurac": float("nan"), "coverages": [], "risks": []}
+        return {"aurac": float("nan"), "coverages": [], "accuracies": []}
 
     # Sort by coverage untuk trapezoid integration
-    paired = sorted(zip(coverages, risks))
-    coverages_sorted = [p[0] for p in paired]
-    risks_sorted     = [p[1] for p in paired]
+    paired = sorted(zip(coverages, accuracies))
+    coverages_sorted  = [p[0] for p in paired]
+    accuracies_sorted = [p[1] for p in paired]
 
-    # Trapezoid rule
-    aurac = float(np.trapz(risks_sorted, coverages_sorted))
+    # Trapezoid rule: integral rejection-accuracy terhadap coverage
+    aurac = float(np.trapezoid(accuracies_sorted, coverages_sorted))
 
     # Best threshold = coverage tertinggi dengan risk < 0.3
     best_threshold = None
@@ -180,6 +171,6 @@ def compute_aurac(
     return {
         "aurac":          round(aurac, 4),
         "coverages":      coverages_sorted,
-        "risks":          risks_sorted,
+        "accuracies":     accuracies_sorted,
         "best_threshold": round(best_threshold, 4) if best_threshold else None,
     }

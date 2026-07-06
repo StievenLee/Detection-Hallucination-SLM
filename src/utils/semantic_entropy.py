@@ -43,36 +43,21 @@ class SemanticEntropyCalculator:
         sim_matrix = util.cos_sim(embeddings, embeddings)
         return sim_matrix
 
-    def cluster_responses(
-        self, responses: list[str], threshold: float = None
-    ) -> list[list[int]]:
-        """
-        Kelompokkan respons ke dalam semantic clusters
-        menggunakan cosine similarity matrix (batch).
-        """
-        if len(responses) == 0:
-            return []
-
-        # Hitung semua similarity sekaligus (lebih efisien)
+    def cluster_responses(self, responses, threshold=None):
         sim_matrix = self._are_equivalent_batch(responses)
-
         clusters = []
-        assigned = {}
-
         t = threshold if threshold is not None else self.similarity_threshold
 
         for i in range(len(responses)):
             placed = False
             for c_id, cluster in enumerate(clusters):
-                rep_idx = cluster[0]
-                sim = sim_matrix[i][rep_idx].item()
-                if sim >= t:
+                # Rata-rata similarity ke semua anggota cluster
+                avg_sim = sum(sim_matrix[i][j].item() for j in cluster) / len(cluster)
+                if avg_sim >= t:
                     clusters[c_id].append(i)
-                    assigned[i] = c_id
                     placed = True
                     break
             if not placed:
-                assigned[i] = len(clusters)
                 clusters.append([i])
 
         return clusters

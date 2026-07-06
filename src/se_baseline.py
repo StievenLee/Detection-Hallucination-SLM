@@ -1,16 +1,3 @@
-# """
-# Week 2 — Replikasi Semantic Entropy Baseline
-# =============================================
-# Tujuan:
-#   - Hitung semantic entropy untuk setiap respons model di TriviaQA
-#   - Ukur AUROC: seberapa baik SE membedakan jawaban benar vs salah
-#   - Catat resource usage sebagai baseline semantic entropy
-#   - Simpan ke results/
-    
-# Jalankan:
-#   python src/se_baseline.py
-
-
 """
 SE Baseline — Multi-dataset & Multi-language
 =============================================
@@ -40,9 +27,9 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
     # "microsoft/phi-1_5",
-    "Qwen/Qwen1.5-1.8B-Chat",
+    # "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
@@ -80,12 +67,18 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
+<<<<<<< HEAD
 Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True) 
 Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
 Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
+=======
+Path("results/metrics/tinyllama").mkdir(parents=True, exist_ok=True)
+Path("results/outputs/tinyllama").mkdir(parents=True, exist_ok=True)
+Path("results/figures/tinyllama").mkdir(parents=True, exist_ok=True)
+>>>>>>> abbeb1b590c780efa3cbb7cc876fa296c78b9ef5
 
-RESULTS_CSV = "results/metrics/qwen/se_results.csv"
-AUROC_CSV   = "results/metrics/qwen/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
+AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
 
 # ──────────────────────────────────────────────────
 # PIPELINE
@@ -118,29 +111,51 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
     entropies   = []
     correctness = []
+    all_throughput = []   
     start_total = time.time()
+
+    # Peak RAM tracking: RSS awal (sudah termasuk SLM + MiniLM ter-load)
+    peak_ram_mb = get_ram_usage_mb()
 
     for q_idx, sample in enumerate(dataset):
         print(f"\n[Q {q_idx+1}/{len(dataset)}] {sample['question'][:65]}...")
+
+        # Sebelum build_prompt
+        if sample.get("passage"):
+            user_input = f"Bacaan: {sample['passage']}\n\nPertanyaan: {sample['question']}"
+        else:
+            user_input = sample["question"]
 
         prompt = build_prompt(
             tokenizer=tokenizer,
             model_name=model_name,
             system=system_prompt,
-            user=sample["question"],
+            user=user_input,
         )
 
-        responses, _ = generate_responses(
+        responses, gen_stats= generate_responses(
             model=model, tokenizer=tokenizer, prompt=prompt,
             M=M, max_new_tokens=MAX_TOKENS,
             temperature=TEMPERATURE, top_p=TOP_P,
         )
+        all_throughput.append(gen_stats["tokens_per_sec"])
 
         se_start  = time.time()
         se_result = se_calc.semantic_entropy(responses)
         se_time   = time.time() - se_start
 
+        # Update peak RAM setelah generate + clustering (titik RSS tertinggi per soal)
+        current_ram = get_ram_usage_mb()
+        if current_ram > peak_ram_mb:
+            peak_ram_mb = current_ram
+
         correct = int(is_correct(responses[0], sample))
+
+        # Tambahkan ini sementara
+        print(f"  GT    : '{sample['answer']}'")
+        print(f"  Pred  : '{responses[0][:100]}'")
+        print(f"  Correct: {correct}")
+
         entropies.append(se_result["entropy"])
         correctness.append(correct)
 
@@ -163,6 +178,9 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
             "M":            M,
             "temperature":  TEMPERATURE,
             "se_time_s":    round(se_time, 3),
+            "gen_time_s":   gen_stats["gen_time_s"],        # ← tambah
+            "latency_s":    gen_stats["gen_time_s"] + se_time,  # ← total latency per query
+            "throughput_tokens_per_sec": gen_stats["tokens_per_sec"],  # ← tambah
         })
 
     total_time = time.time() - start_total
@@ -213,6 +231,9 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         "std_entropy":     round(float(np.std(entropies)), 4),
         "total_time_s":    round(total_time, 1),
         "similarity_calls_total": (M * (M - 1) // 2) * len(dataset),
+        "avg_latency_s":    round(total_time / len(dataset), 2),
+        "throughput_tok_s": round(float(np.mean(all_throughput)), 2),
+        "peak_ram_mb":      round(peak_ram_mb, 1),
         **load_stats,
     }
 
@@ -243,7 +264,7 @@ def main():
 
     print(f"\n{'='*55}")
     print("SELESAI. AUROC Summary:")
-    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy"]
+    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy", "peak_ram_mb", "avg_latency_s", "throughput_tok_s"]
     print(auroc_logger.summary()[cols].to_string(index=False))
 
     print(f"\nFile tersimpan:")

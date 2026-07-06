@@ -6,46 +6,22 @@ Data loader untuk semua dataset yang digunakan:
 
 import pandas as pd
 from pathlib import Path
-
+import ast
 # ── Helpers ──────────────────────────────────────
 
 def _normalize(text: str) -> str:
     return text.strip().lower()
 
-# def is_correct(prediction: str, sample: dict) -> bool:
-#     pred = _normalize(prediction)
-#     if _normalize(sample["answer"]) in pred:
-#         return True
-#     if pred in _normalize(sample["answer"]):
-#         return True
-#     for alias in sample.get("answer_aliases", []):
-#         if _normalize(alias) in pred or pred in _normalize(alias):
-#             return True
-#     return False
-
 def is_correct(prediction: str, sample: dict) -> bool:
     pred = _normalize(prediction)
-    
-    # Cek semua kandidat jawaban
     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
     
     for ans in all_answers:
         ans = _normalize(ans)
         if not ans:
             continue
-        
-        # 1. Substring match (untuk jawaban pendek)
-        if ans in pred or pred in ans:
+        if ans in pred:
             return True
-        
-        # 2. Token F1 match (untuk jawaban panjang seperti BioASQ)
-        pred_tokens = set(pred.split())
-        ans_tokens  = set(ans.split())
-        if ans_tokens:
-            overlap = len(pred_tokens & ans_tokens) / len(ans_tokens)
-            if overlap >= 0.4:   # 40% token overlap = benar
-                return True
-    
     return False
 
 # ── English Datasets ─────────────────────────────
@@ -65,49 +41,6 @@ def load_trivia_qa(split: str = "validation", n: int = 100) -> list[dict]:
     print(f"[Loader] TriviaQA: {len(samples)} sampel")
     return samples
 
-# def load_bioasq(split: str = "train", n: int = 100) -> list[dict]:
-#     from datasets import load_dataset
-
-#     # Ambil lebih banyak untuk antisipasi duplikat & yang difilter
-#     ds = load_dataset("kroshan/BioASQ", split=f"{split}[:{n * 5}]")
-
-#     samples = []
-#     seen_questions = set()   # ← fix duplikat
-
-#     for item in ds:
-#         question = item.get("question", "").strip()
-#         text     = item.get("text", "").strip()
-
-#         if not question or not text:
-#             continue
-
-#         # Deduplikasi
-#         if question in seen_questions:
-#             continue
-
-#         # Extract jawaban dari format <answer>...</answer>
-#         if "<answer>" in text and "<context>" in text:
-#             answer = text.split("<answer>")[1].split("<context>")[0].strip()
-#         else:
-#             continue
-
-#         if not answer:
-#             continue
-
-#         seen_questions.add(question)
-#         samples.append({
-#             "question":       question,
-#             "answer":         _normalize(answer),
-#             "answer_aliases": [],
-#             "language":       "en",
-#             "dataset":        "bioasq",
-#         })
-
-#         if len(samples) >= n:
-#             break
-
-#     print(f"[Loader] BioASQ: {len(samples)} sampel")
-#     return samples
 
 def load_bioasq(split: str = "factoid", n: int = 100) -> list[dict]:
     from datasets import load_dataset
@@ -124,7 +57,13 @@ def load_bioasq(split: str = "factoid", n: int = 100) -> list[dict]:
 
         # Coba 'answer' dulu, fallback ke 'ideal_answer'
         raw_ans = item.get("answer", "") or item.get("ideal_answer", "")
-
+        # print(f"RAW ANS TYPE: {type(raw_ans)} | VALUE: {raw_ans}")
+        if isinstance(raw_ans, str):
+            try:
+                raw_ans = ast.literal_eval(raw_ans)
+            except Exception:
+                pass
+        
         if isinstance(raw_ans, list):
             flat = []
             for a in raw_ans:
@@ -171,7 +110,6 @@ def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
     Pipeline extract jawaban:
       zip(passage_tokens, bio_labels) → ambil token ber-label B atau I
     """
-    import ast
 
     path = Path(csv_path)
     assert path.exists(), f"File tidak ditemukan: {csv_path}"
@@ -233,6 +171,7 @@ def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
             "answer_aliases": [],
             "language":       "id",
             "dataset":        "facqa",
+            "passage":        " ".join(passage_tokens).strip(),
         })
 
         if len(samples) >= n:
