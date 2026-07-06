@@ -113,7 +113,7 @@ def generate_responses(
     prompt: str,
     M: int = 10,
     max_new_tokens: int = 100,
-    temperature: float = 0.9,
+    temperature: float = 0.5,
     top_p: float = 0.95,
 ) -> tuple[list[str], dict]:
     """

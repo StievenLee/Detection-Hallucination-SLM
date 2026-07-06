@@ -47,12 +47,12 @@ MODELS = [
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan
 DATASETS = [
-    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
-    {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
-    {"name": "facqa",     "split": None,           "n": 100,
-     "csv_path": "data/raw/facqa/train_preprocess.csv"},
-    {"name": "wrete",     "split": None,           "n": 100,
-     "csv_path": "data/raw/wrete/train_preprocess.csv"},
+    {"name": "trivia_qa", "split": "validation", "n": 50, "csv_path": None},
+    # {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
+    # {"name": "facqa",     "split": None,           "n": 100,
+    #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    # {"name": "wrete",     "split": None,           "n": 100,
+    #  "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
 
 # Prompt per bahasa
@@ -118,29 +118,43 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
     entropies   = []
     correctness = []
+    all_throughput = []   # ← tambah ini
     start_total = time.time()
 
     for q_idx, sample in enumerate(dataset):
         print(f"\n[Q {q_idx+1}/{len(dataset)}] {sample['question'][:65]}...")
 
+        # Sebelum build_prompt
+        if sample.get("passage"):
+            user_input = f"Bacaan: {sample['passage']}\n\nPertanyaan: {sample['question']}"
+        else:
+            user_input = sample["question"]
+
         prompt = build_prompt(
             tokenizer=tokenizer,
             model_name=model_name,
             system=system_prompt,
-            user=sample["question"],
+            user=user_input,
         )
 
-        responses, _ = generate_responses(
+        responses, gen_stats= generate_responses(
             model=model, tokenizer=tokenizer, prompt=prompt,
             M=M, max_new_tokens=MAX_TOKENS,
             temperature=TEMPERATURE, top_p=TOP_P,
         )
+        all_throughput.append(gen_stats["tokens_per_sec"])
 
         se_start  = time.time()
         se_result = se_calc.semantic_entropy(responses)
         se_time   = time.time() - se_start
 
         correct = int(is_correct(responses[0], sample))
+
+        # Tambahkan ini sementara
+        print(f"  GT    : '{sample['answer']}'")
+        print(f"  Pred  : '{responses[0][:100]}'")
+        print(f"  Correct: {correct}")
+
         entropies.append(se_result["entropy"])
         correctness.append(correct)
 
@@ -163,6 +177,9 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
             "M":            M,
             "temperature":  TEMPERATURE,
             "se_time_s":    round(se_time, 3),
+            "gen_time_s":   gen_stats["gen_time_s"],        # ← tambah
+            "latency_s":    gen_stats["gen_time_s"] + se_time,  # ← total latency per query
+            "throughput_tokens_per_sec": gen_stats["tokens_per_sec"],  # ← tambah
         })
 
     total_time = time.time() - start_total
@@ -213,6 +230,8 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         "std_entropy":     round(float(np.std(entropies)), 4),
         "total_time_s":    round(total_time, 1),
         "similarity_calls_total": (M * (M - 1) // 2) * len(dataset),
+        "avg_latency_s":    round(total_time / len(dataset), 2),
+        "throughput_tok_s": round(float(np.mean(all_throughput)), 2),   # ← fix ini
         **load_stats,
     }
 
@@ -243,7 +262,7 @@ def main():
 
     print(f"\n{'='*55}")
     print("SELESAI. AUROC Summary:")
-    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy"]
+    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy", "avg_latency_s", "throughput_tok_s"]
     print(auroc_logger.summary()[cols].to_string(index=False))
 
     print(f"\nFile tersimpan:")
