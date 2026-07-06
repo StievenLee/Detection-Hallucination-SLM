@@ -105,8 +105,11 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
     entropies   = []
     correctness = []
-    all_throughput = []   # ← tambah ini
+    all_throughput = []   
     start_total = time.time()
+
+    # Peak RAM tracking: RSS awal (sudah termasuk SLM + MiniLM ter-load)
+    peak_ram_mb = get_ram_usage_mb()
 
     for q_idx, sample in enumerate(dataset):
         print(f"\n[Q {q_idx+1}/{len(dataset)}] {sample['question'][:65]}...")
@@ -134,6 +137,11 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         se_start  = time.time()
         se_result = se_calc.semantic_entropy(responses)
         se_time   = time.time() - se_start
+
+        # Update peak RAM setelah generate + clustering (titik RSS tertinggi per soal)
+        current_ram = get_ram_usage_mb()
+        if current_ram > peak_ram_mb:
+            peak_ram_mb = current_ram
 
         correct = int(is_correct(responses[0], sample))
 
@@ -218,7 +226,8 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         "total_time_s":    round(total_time, 1),
         "similarity_calls_total": (M * (M - 1) // 2) * len(dataset),
         "avg_latency_s":    round(total_time / len(dataset), 2),
-        "throughput_tok_s": round(float(np.mean(all_throughput)), 2),   # ← fix ini
+        "throughput_tok_s": round(float(np.mean(all_throughput)), 2),
+        "peak_ram_mb":      round(peak_ram_mb, 1),
         **load_stats,
     }
 
@@ -249,7 +258,7 @@ def main():
 
     print(f"\n{'='*55}")
     print("SELESAI. AUROC Summary:")
-    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy", "avg_latency_s", "throughput_tok_s"]
+    cols = ["model", "dataset", "language", "auroc", "aurac", "accuracy", "avg_entropy", "peak_ram_mb", "avg_latency_s", "throughput_tok_s"]
     print(auroc_logger.summary()[cols].to_string(index=False))
 
     print(f"\nFile tersimpan:")
