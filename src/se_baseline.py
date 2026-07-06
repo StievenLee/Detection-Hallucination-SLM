@@ -40,9 +40,9 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
     # "microsoft/phi-1_5",
-    # "Qwen/Qwen1.5-1.8B-Chat",
+    "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan
@@ -80,12 +80,12 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
-Path("results/metrics").mkdir(parents=True, exist_ok=True)
-Path("results/outputs").mkdir(parents=True, exist_ok=True)
-Path("results/figures").mkdir(parents=True, exist_ok=True)
+Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True)
+Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
+Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
 
-RESULTS_CSV = "results/metrics/se_results.csv"
-AUROC_CSV   = "results/metrics/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/qwen/se_results.csv"
+AUROC_CSV   = "results/metrics/qwen/se_auroc_summary.csv"
 
 # ──────────────────────────────────────────────────
 # PIPELINE
