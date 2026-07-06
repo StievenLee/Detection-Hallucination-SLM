@@ -45,7 +45,7 @@ MODELS = [
     "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
-# Dataset yang dijalankan — comment/uncomment sesuai kebutuhan
+# Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
 DATASETS = [
     {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
     {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
@@ -80,7 +80,7 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
-Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True)
+Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True) 
 Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
 Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
 

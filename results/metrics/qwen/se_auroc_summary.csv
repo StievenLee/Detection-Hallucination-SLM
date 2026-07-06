@@ -1,0 +1,5 @@
+model,dataset,language,n_questions,M,temperature,auroc,aurac,best_threshold,accuracy,avg_entropy,std_entropy,total_time_s,similarity_calls_total,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,100,10,0.5,0.616,0.3968,,0.4,0.8402,0.6674,17241.6,4500,8.62,7006.9,2066.4,1266.2
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,100,10,0.5,0.6587,0.4961,,0.09,0.5385,0.6306,24532.5,4500,6.862,7006.9,3038.3,2276.0
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,100,10,0.5,0.511,0.3205,,0.17,0.2636,0.408,20740.8,4500,5.862,7006.9,7983.0,2730.7
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,100,10,0.5,0.4405,0.0397,1.3592,0.84,0.1175,0.2406,28735.6,4500,6.097,7006.9,1071.3,652.3
