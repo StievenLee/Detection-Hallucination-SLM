@@ -7,15 +7,35 @@ Data loader untuk semua dataset yang digunakan:
 import pandas as pd
 from pathlib import Path
 import ast
+import re
 # ── Helpers ──────────────────────────────────────
 
 def _normalize(text: str) -> str:
     return text.strip().lower()
 
-def is_correct(prediction: str, sample: dict) -> bool:
+def _extract_yesno(prediction: str):
+    """Deteksi polaritas ya/tidak dari respons (dukung ID & EN)."""
+    p = str(prediction).lower().strip()
+    head = p[:60]  # polaritas biasanya di awal jawaban
+    neg = re.search(r'\b(tidak|no|bukan|false|salah|incorrect)\b', head)
+    pos = re.search(r'\b(ya|yes|benar|betul|true|correct)\b', head)
+    # negasi diprioritaskan bila muncul lebih awal/bersamaan
+    if neg and (not pos or neg.start() <= pos.start()):
+        return 'tidak'
+    if pos:
+        return 'ya'
+    return None
+
+
+def is_correct(prediction: str, sample: dict, dataset_name: str = None) -> bool:
+    # Task entailment biner (WReTE): banding polaritas, bukan substring
+    if dataset_name == "wrete" or str(sample.get("answer")).strip().lower() in ("ya", "tidak"):
+        pol = _extract_yesno(prediction)
+        return pol is not None and pol == str(sample["answer"]).strip().lower()
+
+    # Factoid QA (TriviaQA, BioASQ, FacQA): substring matching
     pred = _normalize(prediction)
     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
-    
     for ans in all_answers:
         ans = _normalize(ans)
         if not ans:
@@ -23,6 +43,18 @@ def is_correct(prediction: str, sample: dict) -> bool:
         if ans in pred:
             return True
     return False
+
+# def is_correct(prediction: str, sample: dict) -> bool:
+#     pred = _normalize(prediction)
+#     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
+    
+#     for ans in all_answers:
+#         ans = _normalize(ans)
+#         if not ans:
+#             continue
+#         if ans in pred:
+#             return True
+#     return False
 
 # ── English Datasets ─────────────────────────────
 

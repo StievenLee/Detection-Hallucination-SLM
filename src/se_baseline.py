@@ -34,10 +34,10 @@ MODELS = [
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan
 DATASETS = [
-    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
-    {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
-    {"name": "facqa",     "split": None,           "n": 100,
-     "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    # {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
+    # {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
+    # {"name": "facqa",     "split": None,           "n": 100,
+    #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
     {"name": "wrete",     "split": None,           "n": 100,
      "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
@@ -67,12 +67,12 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
-Path("results/metrics/tinyllama").mkdir(parents=True, exist_ok=True)
-Path("results/outputs/tinyllama").mkdir(parents=True, exist_ok=True)
-Path("results/figures/tinyllama").mkdir(parents=True, exist_ok=True)
+# Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True)
+# Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
+# Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
 
-RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
-AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/qwen/se_results.csv"
+AUROC_CSV   = "results/metrics/qwen/se_auroc_summary.csv"
 
 # ──────────────────────────────────────────────────
 # PIPELINE
@@ -95,6 +95,15 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
     system_prompt = SYSTEM_PROMPTS[language]
     threshold     = SIMILARITY_THRESHOLDS[language]  # ← ambil threshold per bahasa
     se_calc.similarity_threshold = threshold   
+
+    # WReTE adalah task entailment biner -> instruksikan jawab ya/tidak saja
+    if dataset_cfg["name"] == "wrete":
+        system_prompt = (
+            "Anda adalah asisten yang menentukan apakah sebuah pernyataan benar "
+            "berdasarkan teks bacaan. Jawab HANYA dengan satu kata: 'ya' jika "
+            "pernyataan benar sesuai bacaan, atau 'tidak' jika tidak sesuai. "
+            "Jangan memberikan penjelasan."
+        )
 
     print(f"\n{'='*55}")
     print(f"MODEL  : {model_name}")
@@ -143,7 +152,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         if current_ram > peak_ram_mb:
             peak_ram_mb = current_ram
 
-        correct = int(is_correct(responses[0], sample))
+        correct = int(is_correct(responses[0], sample, dataset_name=dataset_cfg["name"]))
 
         # Tambahkan ini sementara
         print(f"  GT    : '{sample['answer']}'")
