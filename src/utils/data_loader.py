@@ -13,13 +13,36 @@ import re
 def _normalize(text: str) -> str:
     return text.strip().lower()
 
+import re
+
+# Kata polaritas (word-boundary, dukung Indonesia & Inggris)
+_POS_PAT = re.compile(r'\b(ya|iya|yes|benar|betul|correct|true|sure|setuju|tepat)\b')
+_NEG_PAT = re.compile(r'\b(tidak|tak|no|not|bukan|salah|incorrect|false|nope)\b')
+
+
 def _extract_yesno(prediction: str):
-    """Deteksi polaritas ya/tidak dari respons (dukung ID & EN)."""
+    """
+    Deteksi polaritas ya/tidak dari respons SLM untuk task entailment (WReTE).
+
+    Tahan terhadap dua masalah khas SLM kecil:
+      1. Model mengutip kalimat soal -> kata 'ya'/'tidak'/'benar' di dalam
+         tanda kutip DIBUANG dulu agar tidak mencemari deteksi.
+      2. Model menjawab bertele-tele -> hanya pembuka jawaban (40 char
+         setelah kutipan dibuang) yang dibaca, karena polaritas ada di awal.
+
+    Return: 'ya', 'tidak', atau None (jika tak ada polaritas jelas,
+    mis. model mengulang prompt). None dihitung sebagai jawaban salah
+    di is_correct.
+    """
     p = str(prediction).lower().strip()
-    head = p[:60]  # polaritas biasanya di awal jawaban
-    neg = re.search(r'\b(tidak|no|bukan|false|salah|incorrect)\b', head)
-    pos = re.search(r'\b(ya|yes|benar|betul|true|correct)\b', head)
-    # negasi diprioritaskan bila muncul lebih awal/bersamaan
+    # Buang teks di dalam tanda kutip (kutipan dari soal)
+    p = re.sub(r'"[^"]*"', ' ', p)
+    p = re.sub(r"'[^']*'", ' ', p)
+    # Fokus ke pembuka jawaban
+    head = p[:40]
+    neg = _NEG_PAT.search(head)
+    pos = _POS_PAT.search(head)
+    # Negasi diprioritaskan bila muncul lebih awal atau bersamaan
     if neg and (not pos or neg.start() <= pos.start()):
         return 'tidak'
     if pos:

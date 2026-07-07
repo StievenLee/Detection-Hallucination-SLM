@@ -38,7 +38,7 @@ DATASETS = [
     # {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
     # {"name": "facqa",     "split": None,           "n": 100,
     #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
-    {"name": "wrete",     "split": None,           "n": 100,
+    {"name": "wrete",     "split": None,           "n": 20,
      "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
 
@@ -71,8 +71,8 @@ DEVICE        = "cpu"
 # Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
 # Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
 
-RESULTS_CSV = "results/metrics/qwen/se_results.csv"
-AUROC_CSV   = "results/metrics/qwen/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
+AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
 
 # ──────────────────────────────────────────────────
 # PIPELINE
@@ -128,6 +128,10 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
             user_input = f"Bacaan: {sample['passage']}\n\nPertanyaan: {sample['question']}"
         else:
             user_input = sample["question"]
+
+        # WReTE: paksa format jawaban biner sedekat mungkin dgn pertanyaan
+        if dataset_cfg["name"] == "wrete":
+            user_input = user_input + "\n\nJawab dengan satu kata saja: ya atau tidak."
 
         prompt = build_prompt(
             tokenizer=tokenizer,
