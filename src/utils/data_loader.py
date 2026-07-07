@@ -7,15 +7,58 @@ Data loader untuk semua dataset yang digunakan:
 import pandas as pd
 from pathlib import Path
 import ast
+import re
 # ── Helpers ──────────────────────────────────────
 
 def _normalize(text: str) -> str:
     return text.strip().lower()
 
-def is_correct(prediction: str, sample: dict) -> bool:
+import re
+
+# Kata polaritas (word-boundary, dukung Indonesia & Inggris)
+_POS_PAT = re.compile(r'\b(ya|iya|yes|benar|betul|correct|true|sure|setuju|tepat)\b')
+_NEG_PAT = re.compile(r'\b(tidak|tak|no|not|bukan|salah|incorrect|false|nope)\b')
+
+
+def _extract_yesno(prediction: str):
+    """
+    Deteksi polaritas ya/tidak dari respons SLM untuk task entailment (WReTE).
+
+    Tahan terhadap dua masalah khas SLM kecil:
+      1. Model mengutip kalimat soal -> kata 'ya'/'tidak'/'benar' di dalam
+         tanda kutip DIBUANG dulu agar tidak mencemari deteksi.
+      2. Model menjawab bertele-tele -> hanya pembuka jawaban (40 char
+         setelah kutipan dibuang) yang dibaca, karena polaritas ada di awal.
+
+    Return: 'ya', 'tidak', atau None (jika tak ada polaritas jelas,
+    mis. model mengulang prompt). None dihitung sebagai jawaban salah
+    di is_correct.
+    """
+    p = str(prediction).lower().strip()
+    # Buang teks di dalam tanda kutip (kutipan dari soal)
+    p = re.sub(r'"[^"]*"', ' ', p)
+    p = re.sub(r"'[^']*'", ' ', p)
+    # Fokus ke pembuka jawaban
+    head = p[:40]
+    neg = _NEG_PAT.search(head)
+    pos = _POS_PAT.search(head)
+    # Negasi diprioritaskan bila muncul lebih awal atau bersamaan
+    if neg and (not pos or neg.start() <= pos.start()):
+        return 'tidak'
+    if pos:
+        return 'ya'
+    return None
+
+
+def is_correct(prediction: str, sample: dict, dataset_name: str = None) -> bool:
+    # Task entailment biner (WReTE): banding polaritas, bukan substring
+    if dataset_name == "wrete" or str(sample.get("answer")).strip().lower() in ("ya", "tidak"):
+        pol = _extract_yesno(prediction)
+        return pol is not None and pol == str(sample["answer"]).strip().lower()
+
+    # Factoid QA (TriviaQA, BioASQ, FacQA): substring matching
     pred = _normalize(prediction)
     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
-    
     for ans in all_answers:
         ans = _normalize(ans)
         if not ans:
@@ -23,6 +66,18 @@ def is_correct(prediction: str, sample: dict) -> bool:
         if ans in pred:
             return True
     return False
+
+# def is_correct(prediction: str, sample: dict) -> bool:
+#     pred = _normalize(prediction)
+#     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
+    
+#     for ans in all_answers:
+#         ans = _normalize(ans)
+#         if not ans:
+#             continue
+#         if ans in pred:
+#             return True
+#     return False
 
 # ── English Datasets ─────────────────────────────
 

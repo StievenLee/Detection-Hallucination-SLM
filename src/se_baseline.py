@@ -34,11 +34,11 @@ MODELS = [
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
 DATASETS = [
-    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
-    {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
-    {"name": "facqa",     "split": None,           "n": 100,
-     "csv_path": "data/raw/facqa/train_preprocess.csv"},
-    {"name": "wrete",     "split": None,           "n": 100,
+    # {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
+    # {"name": "bioasq",    "split": "factoid",       "n": 100, "csv_path": None},
+    # {"name": "facqa",     "split": None,           "n": 100,
+    #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    {"name": "wrete",     "split": None,           "n": 20,
      "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
 
@@ -67,9 +67,15 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
+<<<<<<< HEAD
 Path("results/metrics/phi").mkdir(parents=True, exist_ok=True) 
 Path("results/outputs/phi").mkdir(parents=True, exist_ok=True)
 Path("results/figures/phi").mkdir(parents=True, exist_ok=True)
+=======
+# Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True)
+# Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
+# Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
+>>>>>>> 92b9328e42a90f224fe3dcbcc08a4a6b131be81a
 
 RESULTS_CSV = "results/metrics/phi/se_results.csv"
 AUROC_CSV   = "results/metrics/phi/se_auroc_summary.csv"
@@ -96,6 +102,15 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
     threshold     = SIMILARITY_THRESHOLDS[language]  # ← ambil threshold per bahasa
     se_calc.similarity_threshold = threshold   
 
+    # WReTE adalah task entailment biner -> instruksikan jawab ya/tidak saja
+    if dataset_cfg["name"] == "wrete":
+        system_prompt = (
+            "Anda adalah asisten yang menentukan apakah sebuah pernyataan benar "
+            "berdasarkan teks bacaan. Jawab HANYA dengan satu kata: 'ya' jika "
+            "pernyataan benar sesuai bacaan, atau 'tidak' jika tidak sesuai. "
+            "Jangan memberikan penjelasan."
+        )
+
     print(f"\n{'='*55}")
     print(f"MODEL  : {model_name}")
     print(f"DATASET: {dataset_cfg['name']} ({language.upper()}) — {len(dataset)} soal")
@@ -120,6 +135,10 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         else:
             user_input = sample["question"]
 
+        # WReTE: paksa format jawaban biner sedekat mungkin dgn pertanyaan
+        if dataset_cfg["name"] == "wrete":
+            user_input = user_input + "\n\nJawab dengan satu kata saja: ya atau tidak."
+
         prompt = build_prompt(
             tokenizer=tokenizer,
             model_name=model_name,
@@ -143,7 +162,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         if current_ram > peak_ram_mb:
             peak_ram_mb = current_ram
 
-        correct = int(is_correct(responses[0], sample))
+        correct = int(is_correct(responses[0], sample, dataset_name=dataset_cfg["name"]))
 
         # Tambahkan ini sementara
         print(f"  GT    : '{sample['answer']}'")
