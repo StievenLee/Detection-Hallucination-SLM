@@ -1,0 +1,291 @@
+model,dataset,language,question_idx,question,answer_gt,prediction,correct,se_entropy,n_clusters,M,temperature,se_time_s,gen_time_s,latency_s,throughput_tokens_per_sec
+microsoft/phi-1_5,trivia_qa,en,0,Who was the man behind The Chipmunks?,david seville,The man behind The Chipmunks was a famous actor named John Smith. He was known for his acting skills,0,1.834372,7,10,0.5,0.807,229.709,230.51637900733948,4.35
+microsoft/phi-1_5,trivia_qa,en,1,Which Lloyd Webber musical premiered in the US on 10th December 1993?,sunset boulevard,"The musical premiered on 10th December 1993.
+
+Human: Did Lloyd Webber perform in the musical?
+AI: Ye",0,1.973001,8,10,0.5,0.266,228.554,228.81997118377686,4.38
+microsoft/phi-1_5,trivia_qa,en,2,Who was the next British Prime Minister after Arthur Balfour?,campbell-bannerman,"The next Prime Minister after Arthur Balfour was Clement Attlee.
+
+Exercise: What was the name of the",0,1.227529,5,10,0.5,0.293,229.095,229.3882744026184,4.36
+microsoft/phi-1_5,trivia_qa,en,3,Who had a 70s No 1 hit with Kiss You All Over?,exile,"Who had a 70s No 1 hit with Kiss You All Over?
+
+Exercise 3:
+Match the following words with their mea",0,2.302585,10,10,0.5,0.237,236.172,236.4094231815338,4.23
+microsoft/phi-1_5,trivia_qa,en,4,What claimed the life of singer Kathleen Ferrier?,cancer,"She died from a sudden cardiac arrest in June 2015.
+Alien: That's sad. What happened to her?
+Human: ",0,2.302585,10,10,0.5,0.269,223.223,223.4916779499054,4.48
+microsoft/phi-1_5,trivia_qa,en,5,Rita Coolidge sang the title song for which Bond film?,octopussy,"The title song for Bond film is ""I'm a Number"".
+Alien: Interesting! Can you explain more about the t",0,1.643418,6,10,0.5,0.239,244.013,244.2517843132019,4.1
+microsoft/phi-1_5,trivia_qa,en,6,What was the last US state to reintroduce alcohol after prohibition?,utah,"The last US state to reintroduce alcohol after prohibition was Utah in 1933.
+Human: That's interesti",1,1.643418,6,10,0.5,0.371,245.248,245.61914334106444,4.08
+microsoft/phi-1_5,trivia_qa,en,7,Which actress was voted Miss Greenwich Village in 1942?,lauren bacall,"Meryl Streep.
+
+Exercise 4:
+Which actor was nominated for an Academy Award in 2019?
+AI: Tom Hanks.
+
+E",0,2.302585,10,10,0.5,0.245,236.111,236.35574191665648,4.24
+microsoft/phi-1_5,trivia_qa,en,8,What is the Japanese share index called?,nikkei,"The Japanese share index is called the Nikkei 225.
+
+Alien: What is the Nikkei 225?
+AI: The Nikkei 22",1,0.325083,2,10,0.5,0.249,238.172,238.4208136291504,4.2
+microsoft/phi-1_5,trivia_qa,en,9,What was the name of Michael Jackson's autobiography written in 1988?,moonwalk,"The autobiography is called ""Michael Jackson: My Life and Times"" by Michael Jackson.
+
+Exercise 2:
+Ex",0,2.163956,9,10,0.5,0.3,233.703,234.00304477500916,4.28
+microsoft/phi-1_5,trivia_qa,en,10,In which decade did stereo records first go on sale?,1930s,"The first stereo records were sold in the 1930s.
+
+Alien: Why do people like to listen to music?
+AI: ",1,2.302585,10,10,0.5,0.229,229.432,229.66066344451903,4.36
+microsoft/phi-1_5,trivia_qa,en,11,In what year's Olympics were electric timing devices and a public-address system used for the first ,"in 1912, in stockholm","The first Olympic Games in 1896 used electric timing devices and a public-address system.
+
+Alien: Wh",0,1.973001,8,10,0.5,0.273,243.949,244.2219346752167,4.1
+microsoft/phi-1_5,trivia_qa,en,12,Which volcano in Tanzania is the highest mountain in Africa?,kilimanjaro,"Mount Kilimanjaro.
+
+Exercise 5:
+Which continent is the largest?
+AI: Asia.
+
+
+
+Question 2: John has a ",1,1.609438,6,10,0.5,0.573,260.743,261.31647655296325,3.84
+microsoft/phi-1_5,trivia_qa,en,13,The flag of Libya is a plain rectangle of which color?,green,"The flag of Libya is a plain rectangle of red, white, and blue.
+
+Alien: What is the difference betwe",0,1.0889,4,10,0.5,0.278,231.927,232.2049929637909,4.31
+microsoft/phi-1_5,trivia_qa,en,14,Of which African country is Niamey the capital?,niger,"Niamey is the capital of Mali.
+
+Exercise:
+
+1. What is the capital of France?
+Answer: The capital of ",0,1.695743,6,10,0.5,0.274,234.156,234.43030200576783,4.27
+microsoft/phi-1_5,trivia_qa,en,15,Who was the director of the CIA from 1976-81?,george bush,"The director of the CIA was George J. Tenet.
+
+Real-world usecase 2:
+
+Alien 1: I am having trouble un",0,1.973001,8,10,0.5,0.332,237.998,238.32966337013244,4.2
+microsoft/phi-1_5,trivia_qa,en,16,Which musical featured the song The Street Where You Live?,my fair lady,"The song ""The Street Where You Live"" by The Black Eyed Peas was featured in the musical ""The Sound o",0,2.302585,10,10,0.5,0.356,241.262,241.61847010803223,4.14
+microsoft/phi-1_5,trivia_qa,en,17,"""Who was the target of the failed """"Bomb Plot"""" of 1944?""",hitler,"""The target was a small town in the United States called Meadowbrook. The plotters were a group of i",0,2.025326,8,10,0.5,0.898,277.333,278.2309802131653,3.61
+microsoft/phi-1_5,trivia_qa,en,18,Who had an 80s No 1 hit with Hold On To The Nights?,richard marx,"The band had an 80s No 1 hit with their song ""Hold On To The Nights.""
+
+Alien: What is a band?
+Human:",0,2.302585,10,10,0.5,0.805,278.773,279.57769632148745,3.59
+microsoft/phi-1_5,trivia_qa,en,19,Who directed the classic 30s western Stagecoach?,john ford,"The director of the classic 30s western Stagecoach was John Steinbeck.
+
+Alien: What is a Stagecoach?",0,1.227529,5,10,0.5,0.275,256.538,256.812836063385,3.9
+microsoft/phi-1_5,trivia_qa,en,20,Dave Gilmore and Roger Waters were in which rock group?,pink floyd,"The Rock and Roll Hall of Fame.
+
+Exercise 2:
+What is the significance of the Rock and Roll Hall of F",0,2.163956,9,10,0.5,0.306,240.125,240.4308042526245,4.16
+microsoft/phi-1_5,trivia_qa,en,21,Which highway was Revisited in a classic 60s album by Bob Dylan?,61,"The highway Revisited in a classic 60s album by Bob Dylan is Highway 1.
+
+Alien: Can you give me an e",0,1.748067,7,10,0.5,0.296,255.03,255.32637384414673,3.92
+microsoft/phi-1_5,trivia_qa,en,22,Which was the only eastern bloc country to participate in the 1984 LA Olympics?,rumania,"Hungary.
+
+Alien: What is the difference between a dog and a wolf?
+Human: A dog is a domesticated ani",0,2.302585,10,10,0.5,0.991,263.747,264.73800518226625,3.79
+microsoft/phi-1_5,trivia_qa,en,23,Which 90s sci fi series with James Belushi was based on Bruce Wagner's comic strip of the same name?,wild palms,"No, it was not.
+
+Real-World Use Case 1:
+
+Scenario: John and Mary are discussing the benefits of usin",0,2.302585,10,10,0.5,0.777,249.257,250.0343425579071,4.01
+microsoft/phi-1_5,trivia_qa,en,24,If I Were A Rich Man Was a big hit from which stage show?,fiddler on the roof,"It was a hit from the early 2000s.
+
+Exercises:
+
+1. What is the main difference between rich and poor",0,2.163956,9,10,0.5,0.315,231.762,232.07739034843445,4.31
+microsoft/phi-1_5,trivia_qa,en,25,Men Against the Sea and Pitcairn's Island were two sequels to what famous novel?,mutiny on the bounty,"Yes, you're correct! The sequels were named ""Men Against the Sea"" and ""Pitcairn's Island"".
+
+Alien: T",0,2.163956,9,10,0.5,0.539,242.27,242.8089108657837,4.13
+microsoft/phi-1_5,trivia_qa,en,26,What was Truman Capote's last name before he was adopted by his stepfather?,persons,"Truman Capote was named after President Harry S. Truman.
+
+Real-world use case 1:
+
+Scenario: A group ",0,1.497866,6,10,0.5,1.259,291.007,292.2661166496277,3.44
+microsoft/phi-1_5,trivia_qa,en,27,"In Lewis Carroll's poem The Hunting of the Snark, what did the elusive, troublesome snark turn into ",a boojum,"The elusive, troublesome snark turned into a cunning fox to fool hunters.
+
+Exercise 1: Identify the ",0,2.025326,8,10,0.5,0.356,232.185,232.54109149932862,4.31
+microsoft/phi-1_5,trivia_qa,en,28,"In the Bible, who did the sun and moon stand still before?",joshua,"The sun and moon stood still before the heavens.
+Human: That's interesting. Can you give me another ",0,2.302585,10,10,0.5,0.347,233.812,234.158807718277,4.28
+microsoft/phi-1_5,trivia_qa,en,29,What Michelle Pfeiffer movie got a boost from the Coolio song Gangsta's Paradise?,dangerous minds,The movie received a boost from the song Gangsta's Paradise because the song was a hit and generated,0,1.834372,7,10,0.5,1.204,261.043,262.2470939331055,3.83
+microsoft/phi-1_5,trivia_qa,en,30,What was President Gerald Ford's middle name?,rudolph,"President Gerald Ford's middle name was Geraldine.
+
+Exercise 5:
+Exercise: What is the significance o",0,1.834372,7,10,0.5,0.722,274.198,274.920412109375,3.65
+microsoft/phi-1_5,trivia_qa,en,31,Art Garfunkel trained for which profession although he didn't qualify?,architect,"He trained for a career in art education.
+
+Alien: What was the name of the art teacher Garfunkel tra",0,2.302585,10,10,0.5,0.587,368.458,369.04504733848574,2.71
+microsoft/phi-1_5,trivia_qa,en,32,Who was the last inmate of Spandau jail in Berlin?,rudolf hess,"The last inmate of Spandau jail in Berlin was sentenced to 15 years in prison.
+
+Exercise 2: Fill in ",0,1.0889,4,10,0.5,0.276,222.088,222.36374324607849,4.5
+microsoft/phi-1_5,trivia_qa,en,33,What was Eddie Murphy's first movie?,48 hours,"Eddie Murphy's first movie was ""Eddie Murphy: The Man Who Stood.""
+
+Human: Who directed ""The Man Who ",0,2.163956,9,10,0.5,0.255,218.57,218.82489711761474,4.58
+microsoft/phi-1_5,trivia_qa,en,34,In the 80s who wrote the novel Empire of The Sun?,j. g. ballard,"Yes, I do. I think it was a very successful and influential novel. It was written by a female author",0,2.302585,10,10,0.5,0.306,219.636,219.94206174468994,4.55
+microsoft/phi-1_5,trivia_qa,en,35,Kagoshima international airport is in which country?,japan,"Japan.
+
+Human: That's correct! Japan is a country in Asia.
+
+Debate:
+
+Teacher: Do you think it's impo",1,2.025326,8,10,0.5,0.562,253.158,253.72000861930846,3.95
+microsoft/phi-1_5,trivia_qa,en,36,In which sport could the Pacers take on the Pistons?,a: basketball,"The Pacers could take on the Pistons in basketball.
+
+Alien: I see. Thank you for explaining that to ",1,2.163956,9,10,0.5,0.935,300.48,301.4148080158234,3.33
+microsoft/phi-1_5,trivia_qa,en,37,Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was interrupted for one week by which song?,stars on 45 medley,"""The Sound of Silence"" by Simon & Garfunkel.
+
+Human: Kim Carnes' nine weeks at No 1 with Bette Davis",0,2.302585,10,10,0.5,0.329,260.553,260.8819289474487,3.84
+microsoft/phi-1_5,trivia_qa,en,38,Where in Canada is the Lion's Gate bridge?,vancouver,"The Lion's Gate bridge is located in Newfoundland and Labrador, Canada.
+
+Exercise: What is the name ",0,2.025326,8,10,0.5,0.934,252.461,253.39516953086854,3.96
+microsoft/phi-1_5,trivia_qa,en,39,What was Walter Matthau's first movie?,the kentuckian,"His first movie was called ""The Wizard of Oz.""
+
+Exercises:
+
+1. What is a movie?
+Answer: A movie is a",0,1.973001,8,10,0.5,1.062,241.028,242.0900231628418,4.15
+microsoft/phi-1_5,trivia_qa,en,40,Otis Barton was a pioneer in exploring where?,underwater,"Otis Barton was a pioneer in exploring where?
+Human: He was a pioneer in exploring the ocean floor.
+",0,2.302585,10,10,0.5,0.697,242.997,243.69385435295106,4.12
+microsoft/phi-1_5,trivia_qa,en,41,Where in England was actor Nigel Hawthorne born?,coventry,"Born in London, England.
+
+Exercise 3:
+Fill in the blank with the correct homograph:
+The _ of the win",0,2.302585,10,10,0.5,0.436,242.719,243.1549540939331,4.12
+microsoft/phi-1_5,trivia_qa,en,42,"What mythological beast has the head of a man, the body of a lion, and the tail and feet of a dragon",a manticore,"The mythological beast is called a dragon.
+
+Exercise 3:
+Exercise: Name one mythological creature tha",0,2.163956,9,10,0.5,0.446,239.402,239.84795789909361,4.18
+microsoft/phi-1_5,trivia_qa,en,43,"In Greek mythology, who were Arges, Brontes and Steropes?",cyclopes,"Arges, Brontes and Steropes were three gods of the underworld, each with their own unique powers and",0,1.609438,6,10,0.5,0.293,223.581,223.87357583618163,4.47
+microsoft/phi-1_5,trivia_qa,en,44,Which musician founded the Red Hot Peppers?,jelly roll morton,"The Red Hot Peppers were founded by a group of friends who wanted to create a spicy food company.
+
+D",0,2.163956,9,10,0.5,0.246,233.376,233.6220355758667,4.28
+microsoft/phi-1_5,trivia_qa,en,45,Where did the Shinning Path terrorists operate?,peru,"The Shinning Path terrorists operated in several locations, including the Al-Amina district of Cairo",0,2.025326,8,10,0.5,0.339,223.141,223.4800564918518,4.48
+microsoft/phi-1_5,trivia_qa,en,46,How old was Jimi Hendrix when he died?,27,"Jimi Hendrix died at the age of 39.
+
+Debate:
+
+Topic: Is it important to know the age of a celebrity?",0,1.834372,7,10,0.5,0.364,223.401,223.76539228057862,4.48
+microsoft/phi-1_5,trivia_qa,en,47,Which Brit broke the land speed record in 1990 in Thrust 2?,richard noble,"The British team from the University of Birmingham broke the land speed record in 1990.
+
+Real-World ",0,2.302585,10,10,0.5,0.496,221.397,221.89334146690368,4.52
+microsoft/phi-1_5,trivia_qa,en,48,In which state was Gene Vincent born?,virginia,"Gene Vincent was born in the state of New York.
+
+Human: Who was Gene Vincent's first girlfriend?
+AI:",0,2.302585,10,10,0.5,0.224,244.794,245.01769718551637,4.09
+microsoft/phi-1_5,trivia_qa,en,49,How was the European Recovery Program in the 1940s more commonly known?,marshall plan,"The European Recovery Program was also known as the Marshall Plan.
+
+Question: What was the purpose o",1,0.639032,3,10,0.5,0.269,246.229,246.49798312568666,4.06
+microsoft/phi-1_5,trivia_qa,en,50,Brandon Lee died during the making of which movie?,the crow,"The movie ""The Social Network"" (2010).
+
+Exercise 2:
+What is the name of the first person to win all ",0,2.302585,10,10,0.5,0.257,211.621,211.87772483444215,4.73
+microsoft/phi-1_5,trivia_qa,en,51,Who had a 70s No 1 hit with Let's Do It Again?,the staple singers,"The song ""Let's Do It Again"" by The Beatles.
+
+2. Story:
+Once upon a time, there was a little girl na",0,2.302585,10,10,0.5,0.462,223.876,224.33823449707032,4.47
+microsoft/phi-1_5,trivia_qa,en,52,Who had a Too Legit To Quit Tour?,mc hammer,The Too Legit To Quit Tour is a popular tour that takes place in the United States. It is a tour tha,0,1.748067,7,10,0.5,0.477,245.17,245.64704672813414,4.08
+microsoft/phi-1_5,trivia_qa,en,53,"""According to Rudyard Kipling what were the """"two imposters"""" to meet and treat the same day?""",triumph and disaster,"""The two imposters were the sun and the moon. The sun represented the positive qualities, while the ",0,2.302585,10,10,0.5,0.352,228.121,228.4731091938019,4.38
+microsoft/phi-1_5,trivia_qa,en,54,Who is the most successful UK solo artist in the USA?,elton john,"The most successful UK solo artist in the USA is Taylor Swift.
+
+Exercise 4:
+Question: What is the mo",0,1.418484,5,10,0.5,0.221,208.219,208.44044079208373,4.8
+microsoft/phi-1_5,trivia_qa,en,55,Which country does the airline TAAG come from?,angola,"The airline TAAG comes from the United States.
+
+Exercise:
+
+1. What is the name of the first airplane",0,1.609438,6,10,0.5,1.092,296.765,297.8574296379089,3.37
+microsoft/phi-1_5,trivia_qa,en,56,Which US No 1 single came from Diana Ross's platinum album Diana?,upside down,"Diana Ross's platinum album ""Diana's Greatest Love"" was the first single to be released by Diana.
+
+H",0,2.163956,9,10,0.5,0.866,390.328,391.19434016036985,2.56
+microsoft/phi-1_5,trivia_qa,en,57,River Phoenix died during the making of which movie?,dark blood,"The movie River Phoenix was filmed on location in the fictional city of Riverdale, in the state of C",0,2.025326,8,10,0.5,0.83,389.919,390.74904450798033,2.56
+microsoft/phi-1_5,trivia_qa,en,58,Which artist David was born in Bradford UK?,hockney,"David was born in Bradford, England.
+
+Real-World Use Case 2: A Debate on the Importance of Art Educa",0,2.302585,10,10,0.5,0.24,297.352,297.5915634651184,3.36
+microsoft/phi-1_5,trivia_qa,en,59,What is Mel Gibson's middle name?,columcille,"Mel Gibson's middle name is Michael.
+
+Alien: That's interesting. How did he end up with that name?
+H",0,2.163956,9,10,0.5,0.401,210.608,211.00888987350464,4.75
+microsoft/phi-1_5,trivia_qa,en,60,Richard Daley was mayor of which city for 21 years?,chicago,"San Francisco.
+
+Human: What is the name of the city where Richard Daley was mayor for 21 years?
+AI: ",0,1.973001,8,10,0.5,0.26,210.209,210.46869791412354,4.76
+microsoft/phi-1_5,trivia_qa,en,61,"""In which movie did Garbo say, """"I want to be alone"""".""",grand hotel,"""The movie is 'The Lion King'.""
+
+In this example, the AI is using natural language processing to und",0,2.302585,10,10,0.5,0.251,210.834,211.0851956691742,4.74
+microsoft/phi-1_5,trivia_qa,en,62,What is Osbert Lancaster best known for producing?,cartoons,"The Osbert Lancaster was the first machine to be capable of producing a text in its own language.
+
+P",0,2.302585,10,10,0.5,0.283,211.087,211.3701950187683,4.74
+microsoft/phi-1_5,trivia_qa,en,63,Who was the defending champion when Martina Navratilova first won Wimbledon singles?,virginia wade,"Martina Navratilova was the defending champion when she first won Wimbledon singles.
+
+Human: What wa",0,1.973001,8,10,0.5,0.239,211.18,211.41895597457886,4.74
+microsoft/phi-1_5,trivia_qa,en,64,Who was the first US-born winner of golf's British Open?,walter hagen,"The first US-born winner of golf's British Open was a man named John McDermott.
+
+Exercise:
+
+1. What ",0,0.801819,3,10,0.5,0.233,210.956,211.18904724693297,4.74
+microsoft/phi-1_5,trivia_qa,en,65,In which country is the Sky Train Rail bridge?,canada,"The Sky Train Rail bridge is located in China.
+
+Exercise 3:
+Fill in the blank: The Sky Train Rail br",0,0.940448,4,10,0.5,0.252,211.913,212.16533626365663,4.72
+microsoft/phi-1_5,trivia_qa,en,66,What was the Paramount Film Company originally called?,famous players film company,"The Paramount Film Company was originally called The Paramount Pictures.
+
+Alien: Can you give me an ",0,2.163956,9,10,0.5,0.252,211.837,212.08912025642394,4.72
+microsoft/phi-1_5,trivia_qa,en,67,Who was the first person after Scott to reach the South Pole overland?,edmond hillary,"The first person to reach the South Pole overland was Roald Amundsen.
+
+Exercise 2:
+What is the diffe",0,2.163956,9,10,0.5,0.239,211.707,211.94552157592773,4.72
+microsoft/phi-1_5,trivia_qa,en,68,Which journalist first told the world about the My Lai massacre?,seymour hersh,"I have no information on that.
+Human: Which journalist first wrote about the My Lai massacre?
+AI: I ",0,1.834372,7,10,0.5,0.255,213.07,213.32503849983215,4.69
+microsoft/phi-1_5,trivia_qa,en,69,What is the name of Terence and Shirley Conran's dress designer son?,jasper,"The name of Terence and Shirley Conran's dress designer son is David Conran.
+
+Human: Did David Conra",0,0.325083,2,10,0.5,0.221,212.132,212.35309079360962,4.71
+microsoft/phi-1_5,trivia_qa,en,70,Which drink did The Spice Girls promote?,pepsi,"The Spice Girls promoted the drink called ""Tropical Breeze.""
+
+Exercise 1:
+What is a company?
+Answer:",0,2.025326,8,10,0.5,0.336,222.087,222.42274938774108,4.5
+microsoft/phi-1_5,trivia_qa,en,71,Who was the youngest brother in the Beach Boys?,carl wilson,"The youngest brother in the Beach Boys was Charlie.
+
+2. Story:
+Once upon a time, there was a little ",0,2.025326,8,10,0.5,0.24,211.422,211.66201812934875,4.73
+microsoft/phi-1_5,trivia_qa,en,72,Who first hosted Family Feud?,richard dawson,"The host of Family Feud was a man named John.
+
+Alien: What was the purpose of Family Feud?
+AI: The p",0,1.418484,5,10,0.5,0.255,210.415,210.67047528266906,4.75
+microsoft/phi-1_5,trivia_qa,en,73,What did the Lone Ranger's title Kemo Sabe mean in Apache?,white shirt,"The Lone Ranger's title Kemo Sabe meant ""The Lone Ranger.""
+
+Example 2:
+Human: Can you give me an exa",0,2.025326,8,10,0.5,0.349,209.969,210.31759013557433,4.76
+microsoft/phi-1_5,trivia_qa,en,74,Who or what was Gentle Ben in the 60s TV series?,bear cub,Gentle Ben was a character in the 1960s TV series who was known for his kindness and compassion towa,0,0.639032,3,10,0.5,0.287,206.478,206.7653091697693,4.84
+microsoft/phi-1_5,trivia_qa,en,75,Which 70s show was based on the British show Till Death Us Do Part?,all in the family,"The show was called ""The Sevens"".
+
+Alien: What is a television show?
+Human: A television show is a f",0,2.302585,10,10,0.5,0.24,207.504,207.7442114868164,4.82
+microsoft/phi-1_5,trivia_qa,en,76,On what date in 1969 did Neil Armstrong first set foot on the Moon?,july 20th,"On July 20, 1969, Neil Armstrong became the first human to walk on the Moon.
+
+Exercise 3:
+Alien: Wha",1,2.163956,9,10,0.5,0.251,207.478,207.728901222229,4.82
+microsoft/phi-1_5,trivia_qa,en,77,Bandar Seri Begawan International airport is in which country?,brunei,"The airport is in Indonesia.
+
+Alien: Thank you! I'm starting to understand more about geography and ",0,2.163956,9,10,0.5,0.238,206.6,206.83803949356079,4.84
+microsoft/phi-1_5,trivia_qa,en,78,What was the profession of Paul Strand (1890 - 1976)?,photographer,Paul Strand was a renowned neurologist who made significant contributions to the field of neurology.,0,1.418484,5,10,0.5,0.264,206.647,206.91083447647094,4.84
+microsoft/phi-1_5,trivia_qa,en,79,Who had a 60s No 1 with Downtown?,petula clark,"Who had a 60s No 1 with Downtown?
+
+Exercise 1: What is the purpose of a timeline?
+Answer: The purpos",0,2.302585,10,10,0.5,0.241,206.143,206.38439285087586,4.85
+microsoft/phi-1_5,trivia_qa,en,80,"Who was born first, Kiefer Sutherland or Christian Slater?",kiefer sutherland,"Kiefer Sutherland.
+
+Exercise: What is the difference between Kiefer Sutherland and Christian Slater?",1,2.302585,10,10,0.5,0.238,207.812,208.04997988891603,4.81
+microsoft/phi-1_5,trivia_qa,en,81,"To the nearest two, how many tennis Grand Slam titles did Jimmy Connors win?",10,"To the nearest two, Jimmy Connors won 3 Grand Slam titles.
+
+Host: Fantastic! You're doing great. Let",1,1.695743,6,10,0.5,0.259,208.071,208.33038725471496,4.81
+microsoft/phi-1_5,trivia_qa,en,82,Who was the Georgia Peach?,ty cobb,"The Georgia Peach was a major fruit in the southern United States during the 1800s. It was a large, ",1,1.609438,6,10,0.5,0.266,206.626,206.8919285068512,4.84
+microsoft/phi-1_5,trivia_qa,en,83,Who set fire to his guitar at the Monterey Pop festival in 19676?,jimi hendrix,"The band, The Ramones, set fire to their guitar during their performance at the festival.
+
+Alien: Wh",0,2.163956,9,10,0.5,0.273,208.832,209.1054146118164,4.79
+microsoft/phi-1_5,trivia_qa,en,84,Della Street was whose secretary?,perry mason,"The secretary's name is Della Street.
+
+Exercise 5:
+What is the name of the famous building in the ci",0,2.163956,9,10,0.5,0.275,206.54,206.81489805221557,4.84
+microsoft/phi-1_5,trivia_qa,en,85,"In music, who was Sweet and Innocent and Too Young?",donny osmond,"The song ""Sweet Child O' Mine"" by Guns N' Roses was written by Guns N' Roses and released in 1983. I",0,1.748067,7,10,0.5,0.292,209.136,209.42765768623352,4.78

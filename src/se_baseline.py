@@ -27,8 +27,8 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    # "microsoft/phi-1_5",
+    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "microsoft/phi-1_5",
     # "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
@@ -67,18 +67,12 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
-<<<<<<< HEAD
-Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True) 
-Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
-Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
-=======
-Path("results/metrics/tinyllama").mkdir(parents=True, exist_ok=True)
-Path("results/outputs/tinyllama").mkdir(parents=True, exist_ok=True)
-Path("results/figures/tinyllama").mkdir(parents=True, exist_ok=True)
->>>>>>> abbeb1b590c780efa3cbb7cc876fa296c78b9ef5
+Path("results/metrics/phi").mkdir(parents=True, exist_ok=True) 
+Path("results/outputs/phi").mkdir(parents=True, exist_ok=True)
+Path("results/figures/phi").mkdir(parents=True, exist_ok=True)
 
-RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
-AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/phi/se_results.csv"
+AUROC_CSV   = "results/metrics/phi/se_auroc_summary.csv"
 
 # ──────────────────────────────────────────────────
 # PIPELINE
