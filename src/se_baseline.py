@@ -28,7 +28,7 @@ import torch
 from sklearn.metrics import roc_auc_score
 
 from utils.metrics import ResultsLogger, get_ram_usage_mb
-from utils.model_utils import build_prompt, load_model_and_tokenizer, unload_model, generate_responses, generate_best_answer
+from utils.model_utils import build_prompt, load_model_and_tokenizer, unload_model, generate_responses, generate_best_answer, set_seed
 from utils.data_loader import load_dataset_by_name
 from utils.scoring import is_correct, wrete_macro_f1, best_squad_f1, best_gold_recall
 from utils.semantic_entropy import SemanticEntropyCalculator
@@ -97,6 +97,7 @@ BEST_TEMPERATURE = 0.1   # temperature rendah utk 'best generation' (correctness
 TOP_P         = 0.95
 DEVICE        = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 F1_THRESHOLD  = 0.5
+SEED          = 42   # untuk reproducibility antar-run
 
 RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
 AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
@@ -183,6 +184,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
             model=model, tokenizer=tokenizer, prompt=prompt,
             M=M, max_new_tokens=MAX_TOKENS,
             temperature=TEMPERATURE, top_p=TOP_P,
+            seed=SEED + q_idx,
         )
         all_throughput.append(gen_stats["tokens_per_sec"])
 
@@ -191,6 +193,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         best_answer = generate_best_answer(
             model=model, tokenizer=tokenizer, prompt=prompt,
             max_new_tokens=MAX_TOKENS, temperature=BEST_TEMPERATURE, top_p=TOP_P,
+            seed=SEED + 10000 + q_idx,   # offset agar beda dari seed sampel SE
         )
 
         se_start  = time.time()
@@ -280,6 +283,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
 
 def main():
+    set_seed(SEED)
     print("=" * 55)
     print("SE BASELINE")
     print("=" * 55)

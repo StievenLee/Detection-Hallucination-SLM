@@ -1,8 +1,24 @@
 import gc
 import time
+import random
+import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from .metrics import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
+
+
+def set_seed(seed: int = 42):
+    """
+    Set semua sumber keacakan agar hasil reproducible.
+    Panggil SEKALI di awal main() sebelum eksperimen.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    # warn_only=True: jangan crash kalau ada op yang belum punya versi deterministik
+    torch.use_deterministic_algorithms(True, warn_only=True)
 
 
 # Chat template fallback manual untuk model yang tidak support apply_chat_template
@@ -121,10 +137,15 @@ def generate_responses(
     max_new_tokens: int = 100,
     temperature: float = 0.5,
     top_p: float = 0.95,
+    seed: int = None,
 ) -> tuple[list[str], dict]:
     """
     Generate M sampel dari satu prompt.
     Return: (list of response strings, timing & token stats)
+
+    seed: kalau diisi, sampling M respons jadi reproducible antar-run
+          (tetap acak ANTAR sampel dalam satu panggilan, tapi identik
+          bila dijalankan ulang dengan seed sama).
     """
     # inputs = tokenizer(prompt, return_tensors="pt")
     # input_len = inputs["input_ids"].shape[-1]
@@ -132,6 +153,11 @@ def generate_responses(
     input_len = inputs["input_ids"].shape[-1]
     device = next(model.parameters()).device
     inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    if seed is not None:
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
 
     responses = []
     total_new_tokens = 0
@@ -179,6 +205,7 @@ def generate_best_answer(
     max_new_tokens: int = 30,
     temperature: float = 0.1,
     top_p: float = 0.95,
+    seed: int = None,
 ) -> str:
     """
     Hasilkan SATU jawaban 'best generation' pada temperature rendah (default 0.1),
@@ -187,10 +214,18 @@ def generate_best_answer(
 
     Temperature rendah -> jawaban paling mungkin (mode distribusi) -> stabil,
     tidak berisik seperti mengambil satu sampel acak dari T=0.5.
+
+    seed: kalau diisi, satu jawaban ini reproducible antar-run (penting agar
+          label 'correct' stabil, karena do_sample=True tetap dipertahankan).
     """
     inputs = tokenizer(prompt, return_tensors="pt")
     device = next(model.parameters()).device
     inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    if seed is not None:
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
 
     input_len = inputs["input_ids"].shape[-1]
     with torch.no_grad():
