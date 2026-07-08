@@ -19,6 +19,7 @@ Jalankan:
 import sys
 import time
 from pathlib import Path
+import json
 
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -135,6 +136,7 @@ def build_dataset_prompt(dataset_name: str, sample: dict, language: str):
 # PIPELINE
 # ──────────────────────────────────────────────────
 def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
+    
     ds_name = dataset_cfg["name"]
     dataset = load_dataset_by_name(
         name=ds_name,
@@ -146,6 +148,9 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
         print(f"[Skip] Dataset kosong: {ds_name}")
         return None
 
+    samples_path = f"results/samples/{ds_name}_samples.jsonl"
+    Path(samples_path).parent.mkdir(parents=True, exist_ok=True)
+    samples_file = open(samples_path, "w", encoding="utf-8")
     language = dataset[0]["language"]
     se_calc.similarity_threshold = SIMILARITY_THRESHOLDS[language]
 
@@ -200,6 +205,13 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
                                  dataset_name=ds_name, mode="gold_recall"))
         f1_squad = None if ds_name == "wrete" else round(best_squad_f1(best_answer, sample), 4)
 
+        samples_file.write(json.dumps({
+            "question": sample["question"],
+            "samples": responses,        # semua M sampel T=0.5 (untuk SE)
+            "correct": correct,          # label dari best_answer T=0.1
+        }, ensure_ascii=False) + "\n")
+        samples_file.flush()
+
         predictions.append(best_answer)
         samples_kept.append(sample)
 
@@ -243,6 +255,9 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
     print(f"  AURAC    : {aurac_result['aurac']}")
     print(f"  Accuracy : {accuracy:.2%}")
     print(f"  Avg SE   : {np.mean(entropies):.4f} ± {np.std(entropies):.4f}")
+
+    samples_file.close()
+    print(f"[Samples] Tersimpan: {samples_path}")
 
     unload_model(model)
 
