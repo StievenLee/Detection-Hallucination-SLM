@@ -2,7 +2,7 @@ import gc
 import time
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from .metrics_old import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
+from .metrics import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
 
 
 # Chat template fallback manual untuk model yang tidak support apply_chat_template
@@ -160,3 +160,35 @@ def generate_responses(
     print(f"  Throughput  : {stats['tokens_per_sec']} tokens/s")
 
     return responses, stats
+
+
+def generate_best_answer(
+    model,
+    tokenizer,
+    prompt: str,
+    max_new_tokens: int = 30,
+    temperature: float = 0.1,
+    top_p: float = 0.95,
+) -> str:
+    """
+    Hasilkan SATU jawaban 'best generation' pada temperature rendah (default 0.1),
+    mengikuti Farquhar et al. [3]. Dipakai HANYA untuk menilai correctness,
+    TERPISAH dari M sampel T=0.5 yang dipakai menghitung semantic entropy.
+
+    Temperature rendah -> jawaban paling mungkin (mode distribusi) -> stabil,
+    tidak berisik seperti mengambil satu sampel acak dari T=0.5.
+    """
+    inputs = tokenizer(prompt, return_tensors="pt")
+    input_len = inputs["input_ids"].shape[-1]
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            max_length=None,
+            do_sample=True,
+            temperature=temperature,
+            top_p=top_p,
+            pad_token_id=tokenizer.pad_token_id,
+        )
+    new_tokens = outputs[0][input_len:]
+    return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
