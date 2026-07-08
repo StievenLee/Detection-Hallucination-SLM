@@ -73,11 +73,17 @@ def load_model_and_tokenizer(model_name: str, device: str = "cpu"):
         tokenizer.pad_token = tokenizer.eos_token
 
     start = time.time()
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     model_name,
+    #     device_map=device,
+    #     trust_remote_code=True,
+    #     dtype=torch.float32,  # CPU-safe
+    # )
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        device_map=device,
+        torch_dtype=torch.float16,
+        device_map="auto",
         trust_remote_code=True,
-        dtype=torch.float32,  # CPU-safe
     )
     model.eval()
 
@@ -120,8 +126,12 @@ def generate_responses(
     Generate M sampel dari satu prompt.
     Return: (list of response strings, timing & token stats)
     """
+    # inputs = tokenizer(prompt, return_tensors="pt")
+    # input_len = inputs["input_ids"].shape[-1]
     inputs = tokenizer(prompt, return_tensors="pt")
     input_len = inputs["input_ids"].shape[-1]
+    device = next(model.parameters()).device
+    inputs = {k: v.to(device) for k, v in inputs.items()}
 
     responses = []
     total_new_tokens = 0
@@ -179,6 +189,9 @@ def generate_best_answer(
     tidak berisik seperti mengambil satu sampel acak dari T=0.5.
     """
     inputs = tokenizer(prompt, return_tensors="pt")
+    device = next(model.parameters()).device
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
     input_len = inputs["input_ids"].shape[-1]
     with torch.no_grad():
         outputs = model.generate(

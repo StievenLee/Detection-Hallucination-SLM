@@ -23,6 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 import numpy as np
+import torch
 from sklearn.metrics import roc_auc_score
 
 from utils.metrics import ResultsLogger, get_ram_usage_mb
@@ -93,7 +94,7 @@ MAX_TOKENS    = 30
 TEMPERATURE   = 0.5
 BEST_TEMPERATURE = 0.1   # temperature rendah utk 'best generation' (correctness), ikut [3]
 TOP_P         = 0.95
-DEVICE        = "cpu"
+DEVICE        = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 F1_THRESHOLD  = 0.5
 
 RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
@@ -227,7 +228,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
     total_time = time.time() - start_total
 
-    from utils.metrics_old import compute_auroc, compute_aurac
+    from utils.metrics import compute_auroc, compute_aurac
     auroc = compute_auroc(correctness, entropies)
     aurac_result = compute_aurac(correctness, entropies)
     accuracy = sum(correctness) / len(correctness)
@@ -265,7 +266,7 @@ def run_experiment(model_name, dataset_cfg, se_calc, q_logger):
 
 def main():
     print("=" * 55)
-    print("SE BASELINE — OPSI A + prompt per-dataset (anti-echo)")
+    print("SE BASELINE")
     print("=" * 55)
     print(f"Models: {len(MODELS)} | Datasets: {[d['name'] for d in DATASETS]}")
     print(f"M: {M} | MAX_TOKENS: {MAX_TOKENS}")
