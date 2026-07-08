@@ -17,7 +17,7 @@ import pandas as pd
 # Pastikan src/ ada di path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from utils.metrics import ResultsLogger, get_ram_usage_mb, get_total_ram_mb
+from utils.metrics_old import ResultsLogger, get_ram_usage_mb, get_total_ram_mb
 from utils.model_utils import (
     build_prompt,
     load_model_and_tokenizer,

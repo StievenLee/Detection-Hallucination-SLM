@@ -2,7 +2,7 @@ import gc
 import time
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from .metrics import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
+from .metrics_old import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
 
 
 # Chat template fallback manual untuk model yang tidak support apply_chat_template

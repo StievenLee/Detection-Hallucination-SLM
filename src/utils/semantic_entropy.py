@@ -2,7 +2,7 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 import math
 import gc
-from .metrics import get_ram_usage_mb
+from .metrics_old import get_ram_usage_mb
 
 
 class SemanticEntropyCalculator:
