@@ -1,0 +1,16 @@
+model,dataset,language,question_idx,question,answer_gt,prediction,sample0_for_se,correct,f1_squad,se_entropy,n_clusters,M,temperature,se_time_s,gen_time_s,latency_s,throughput_tokens_per_sec
+microsoft/phi-1_5,trivia_qa,en,0,Who was the man behind The Chipmunks?,david seville,"The man behind The Chipmunks was a famous filmmaker named Steven Spielberg. He directed the movie and made it a huge success.
+
+Debate",The man behind The Chipmunks was a scientist named Dr. Smith. He was interested in studying the behavior of chipmunks and wanted to observe,0,0.0,2.163956,9,10,0.5,0.354,121.092,121.44636820983887,2.48
+microsoft/phi-1_5,trivia_qa,en,1,Which Lloyd Webber musical premiered in the US on 10th December 1993?,sunset boulevard,"The Lloyd Webber musical premiered in the US on 10th December 1993.
+
+Human: What is the difference between a play and a musical?","The musical premiered in the US on 10th December 1993.
+
+Human: The movie ""The Phantom of the Opera"" is a classic.",0,0.0,1.748067,7,10,0.5,0.114,130.004,130.1177797832489,2.31
+microsoft/phi-1_5,trivia_qa,en,2,Who was the next British Prime Minister after Arthur Balfour?,campbell-bannerman,"The next British Prime Minister after Arthur Balfour was Clement Attlee.
+
+Exercise 3:
+Exercise: What was the significance of","The next British Prime Minister after Arthur Balfour was Clement Attlee.
+
+Exercise 5:
+Question: Who was the first female Prime",0,0.0,0.940448,4,10,0.5,0.142,121.914,122.05613180541992,2.46

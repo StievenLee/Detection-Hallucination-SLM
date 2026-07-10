@@ -37,8 +37,8 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    # "microsoft/phi-1_5",
+    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "microsoft/phi-1_5",
     # "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
@@ -99,8 +99,8 @@ DEVICE        = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 F1_THRESHOLD  = 0.5
 SEED          = 42   # untuk reproducibility antar-run
 
-RESULTS_CSV = "results/metrics/tinyllama/se_results.csv"
-AUROC_CSV   = "results/metrics/tinyllama/se_auroc_summary.csv"
+RESULTS_CSV = "results/metrics/phi/se_results.csv"
+AUROC_CSV   = "results/metrics/phi/se_auroc_summary.csv"
 
 
 # ──────────────────────────────────────────────────
