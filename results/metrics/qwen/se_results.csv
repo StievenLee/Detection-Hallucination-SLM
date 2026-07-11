@@ -1,0 +1,777 @@
+model,dataset,language,question_idx,question,answer_gt,prediction,sample0_for_se,correct,f1_squad,se_entropy,n_clusters,M,temperature,se_time_s,gen_time_s,latency_s,throughput_tokens_per_sec
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,0,Who was the man behind The Chipmunks?,david seville,"The man behind The Chipmunks is Charles M. Schulz, an American cartoonist and animator who created the beloved animated characters in the 1",The man behind The Chipmunks is Chuck Jones.,0,0.0,1.834372,7,10,0.5,0.281,214.095,214.37571093559265,0.73
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,1,Which Lloyd Webber musical premiered in the US on 10th December 1993?,sunset boulevard,"The Lloyd Webber musical that premiered in the US on 10th December 1993 is ""The Phantom of the Opera"".",West Side Story (1993),0,0.0,0.500402,2,10,0.5,0.084,445.524,445.60750801467896,0.58
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,2,Who was the next British Prime Minister after Arthur Balfour?,campbell-bannerman,David Cameron.,John Major.,0,0.0,1.497866,6,10,0.5,0.034,110.382,110.41600015830994,0.41
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,3,Who had a 70s No 1 hit with Kiss You All Over?,exile,"Kiss You All Over was a 1973 song by the British rock band The Rolling Stones, released as their first single from their album",Kiss You All Over was a 70s No 1 hit by the American rock band Kiss.,0,0.0,0.500402,2,10,0.5,0.088,389.786,389.8735201225281,0.72
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,4,What claimed the life of singer Kathleen Ferrier?,cancer,"Kathleen Ferrier died on February 27, 1986.","Kathleen Ferrier was killed by a car accident on December 16, 2005.",0,0.0,1.695743,6,10,0.5,0.068,294.014,294.08151465797425,0.67
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,5,Rita Coolidge sang the title song for which Bond film?,octopussy,"""Goldfinger"" (1964)",Casino Royale (1967),0,0.0,1.227529,5,10,0.5,0.05,196.515,196.5645171546936,0.58
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,6,What was the last US state to reintroduce alcohol after prohibition?,utah,Alaska.,Alaska.,0,0.0,-0.0,1,10,0.5,0.024,93.752,93.77600135993957,0.41
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,7,Which actress was voted Miss Greenwich Village in 1942?,lauren bacall,Joan Crawford,Alice Comden and Anne Hathaway.,0,0.4,2.302585,10,10,0.5,0.051,115.619,115.66950587654114,0.45
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,8,What is the Japanese share index called?,nikkei,Nikkei 225 Index,Nikkei 225 Index,1,0.5,-0.0,1,10,0.5,0.045,168.082,168.12700937461852,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,9,What was the name of Michael Jackson's autobiography written in 1988?,moonwalk,"The name of Michael Jackson's autobiography written in 1988 is ""Michael Jackson: The Life and Times.""","The name of Michael Jackson's autobiography written in 1988 is ""Moonwalk: The Autobiography of Michael Jackson"".",0,0.0,0.610864,2,10,0.5,0.099,326.425,326.5235269546509,0.67
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,10,In which decade did stereo records first go on sale?,1930s,1950s,1940s,0,0.0,-0.0,1,10,0.5,0.029,118.857,118.88551510047913,0.54
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,11,In what year's Olympics were electric timing devices and a public-address system used for the first ,"in 1912, in stockholm",1908.,1908.,0,0.0,0.610864,2,10,0.5,0.05,122.453,122.50314514923096,0.49
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,12,Which volcano in Tanzania is the highest mountain in Africa?,kilimanjaro,Mount Kilimanjaro,Mount Kilimanjaro.,1,1.0,-0.0,1,10,0.5,0.028,115.417,115.44499916267395,0.53
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,13,The flag of Libya is a plain rectangle of which color?,green,White,White,0,0.0,-0.0,1,10,0.5,0.023,81.146,81.16939053153992,0.3
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,14,Of which African country is Niamey the capital?,niger,Nigeria,Nigeria,0,0.0,-0.0,1,10,0.5,0.023,91.287,91.31000763130189,0.37
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,15,Who was the director of the CIA from 1976-81?,george bush,Carl Rove.,James Baker.,0,0.0,1.359237,5,10,0.5,0.031,113.676,113.7070070514679,0.48
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,16,Which musical featured the song The Street Where You Live?,my fair lady,"The musical that featured the song ""The Street Where You Live"" is ""West Side Story.""",The Musical: West Side Story (1957),0,0.125,1.695743,6,10,0.5,0.073,244.525,244.59792652130128,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,17,"""Who was the target of the failed """"Bomb Plot"""" of 1944?""",hitler,Ernest Holmes,Ernesto Cerdá.,0,0.0,2.163956,9,10,0.5,0.103,239.035,239.13752046585083,0.64
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,18,Who had an 80s No 1 hit with Hold On To The Nights?,richard marx,The Beatles.,Madonna.,0,0.0,1.220607,4,10,0.5,0.057,140.553,140.60951688575744,0.54
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,19,Who directed the classic 30s western Stagecoach?,john ford,John Ford,John Ford,1,1.0,-0.0,1,10,0.5,0.025,90.91,90.93497673034668,0.35
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,20,Dave Gilmore and Roger Waters were in which rock group?,pink floyd,The Rolling Stones.,The Rolling Stones.,0,0.0,1.0889,4,10,0.5,0.065,144.152,144.21672063064574,0.57
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,21,Which highway was Revisited in a classic 60s album by Bob Dylan?,61,Highway to Hell,Highway to Hell,0,0.0,1.279854,4,10,0.5,0.094,191.621,191.7145184955597,0.62
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,22,Which was the only eastern bloc country to participate in the 1984 LA Olympics?,rumania,East Germany (GDR),East Germany (GDR),0,0.0,-0.0,1,10,0.5,0.035,126.464,126.49900008583069,0.52
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,23,Which 90s sci fi series with James Belushi was based on Bruce Wagner's comic strip of the same name?,wild palms,"The 90s sci-fi series with James Belushi that was based on Bruce Wagner's comic strip of the same name is ""The X-","The 90s sci-fi series with James Belushi that was based on Bruce Wagner's comic strip of the same name is ""The X-",0,0.0,0.639032,3,10,0.5,0.131,402.159,402.2896083202362,0.69
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,24,If I Were A Rich Man Was a big hit from which stage show?,fiddler on the roof,Broadway.,Broadway.,0,0.0,0.897946,3,10,0.5,0.232,205.576,205.8079710254669,0.63
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,25,Men Against the Sea and Pitcairn's Island were two sequels to what famous novel?,mutiny on the bounty,Pitcairn's Island.,Pitcairn's Island.,0,0.0,0.943348,3,10,0.5,0.093,302.189,302.2815190448761,0.64
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,26,What was Truman Capote's last name before he was adopted by his stepfather?,persons,Truman Capote.,Truman.,0,0.0,1.168282,4,10,0.5,0.093,138.307,138.40006263923644,0.43
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,27,"In Lewis Carroll's poem The Hunting of the Snark, what did the elusive, troublesome snark turn into ",a boojum,The Snark turned into a beautiful white rabbit.,The Snark turned into a chicken.,0,0.0,1.497866,6,10,0.5,0.061,208.48,208.5410008239746,0.51
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,28,"In the Bible, who did the sun and moon stand still before?",joshua,Jehovah God.,Adam and Eve.,0,0.0,1.973001,8,10,0.5,0.144,166.191,166.33456637001038,0.48
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,29,What Michelle Pfeiffer movie got a boost from the Coolio song Gangsta's Paradise?,dangerous minds,Gangsta's Paradise (1985),Gangsta's Paradise (1986),0,0.0,1.643418,6,10,0.5,0.112,380.411,380.5234532222748,0.63
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,30,What was President Gerald Ford's middle name?,rudolph,Ford,Ford,0,0.0,-0.0,1,10,0.5,0.02,75.379,75.3985107460022,0.28
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,31,Art Garfunkel trained for which profession although he didn't qualify?,architect,Musician,Musician,0,0.0,0.801819,3,10,0.5,0.034,102.226,102.25951640701294,0.37
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,32,Who was the last inmate of Spandau jail in Berlin?,rudolf hess,Wolfgang Klemm,Albert Einstein,0,0.0,2.025326,8,10,0.5,0.036,151.779,151.81451721572876,0.48
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,33,What was Eddie Murphy's first movie?,48 hours,"Eddie Murphy's first movie is ""The Nutty Professor"" (1984).","Eddie Murphy's first movie is ""The Nutty Professor"" (1996), directed by Robert Zemeckis and starring him as",0,0.0,1.609438,6,10,0.5,0.078,319.566,319.64351607894895,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,34,In the 80s who wrote the novel Empire of The Sun?,j. g. ballard,J.G. Ballard.,JFK,0,0.6667,1.609438,6,10,0.5,0.033,121.795,121.82791082382202,0.42
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,35,Kagoshima international airport is in which country?,japan,Japan,Japan,1,1.0,-0.0,1,10,0.5,0.072,74.076,74.1475274810791,0.27
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,36,In which sport could the Pacers take on the Pistons?,a: basketball,Basketball.,Basketball.,1,1.0,-0.0,1,10,0.5,0.024,99.915,99.93900088310242,0.39
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,37,Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was interrupted for one week by which song?,stars on 45 medley,"""Cherry Pie"" by The Beach Boys.","""Cherry Pie"" by The Crickets.",0,0.0,2.163956,9,10,0.5,0.069,235.258,235.32673512268067,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,38,Where in Canada is the Lion's Gate bridge?,vancouver,"Ottawa, Ontario, Canada","Ottawa, Ontario, Canada",0,0.4,0.500402,2,10,0.5,0.033,140.459,140.4915176715851,0.47
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,39,What was Walter Matthau's first movie?,the kentuckian,"The first movie that Walter Matthau starred in was ""On the Waterfront"" (1954).","""Breakfast at Tiffany's"" (1967)",0,0.0,1.0889,4,10,0.5,0.119,376.803,376.9218633441925,0.63
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,40,Otis Barton was a pioneer in exploring where?,underwater,place,place,0,0.0,0.940448,4,10,0.5,0.028,79.981,80.0085056362152,0.3
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,41,Where in England was actor Nigel Hawthorne born?,coventry,"London, United Kingdom.","Nigel Hawthorne was born in London, England.",0,0.6667,1.418484,5,10,0.5,0.054,209.252,209.30550661277772,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,42,"What mythological beast has the head of a man, the body of a lion, and the tail and feet of a dragon",a manticore,Centaur.,Centaur,0,0.0,1.279854,4,10,0.5,0.029,109.805,109.83400385856629,0.35
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,43,"In Greek mythology, who were Arges, Brontes and Steropes?",cyclopes,"Arges, Brontes, and Steropes were three gods in Greek mythology who were known for their bravery and heroism. Arges was the","Arges, Brontes, and Steropes were three siblings of Zeus, the king of gods in Greek mythology. They were born on the same",0,0.0,0.610864,2,10,0.5,0.145,456.1,456.2449203491211,0.63
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,44,Which musician founded the Red Hot Peppers?,jelly roll morton,Joni Mitchell.,Joni Mitchell.,0,0.0,0.940448,4,10,0.5,0.03,114.344,114.37418116950988,0.43
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,45,Where did the Shinning Path terrorists operate?,peru,The Shining Path terrorist organization operated in Peru from 1980 to 1992.,Unknown.,1,0.1667,1.643418,6,10,0.5,0.11,360.986,361.0955154285431,0.64
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,46,How old was Jimi Hendrix when he died?,27,"Jimi Hendrix passed away on May 18, 1970.","Jimi Hendrix passed away on July 31, 1970 at the age of 25.",0,0.0,0.325083,2,10,0.5,0.055,328.588,328.6427664165497,0.6
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,47,Which Brit broke the land speed record in 1990 in Thrust 2?,richard noble,Richard Branson.,Michael Schumacher,0,0.5,2.025326,8,10,0.5,0.033,125.86,125.89299808502197,0.42
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,48,In which state was Gene Vincent born?,virginia,New York,New York,0,0.0,0.500402,2,10,0.5,0.034,94.976,95.00951855278015,0.38
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,49,How was the European Recovery Program in the 1940s more commonly known?,marshall plan,The European Recovery Program (ERP) in the 1940s was more commonly known as the Marshall Plan.,The European Recovery Program (ERP) in the 1940s was more commonly known as the Marshall Plan.,1,0.375,-0.0,1,10,0.5,0.102,410.979,411.0805381813049,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,50,Brandon Lee died during the making of which movie?,the crow,"The movie Brandon Lee died during the making of ""The Crow.""","""Clash of the Titans"" (1984)",1,0.2222,0.940448,4,10,0.5,0.119,301.227,301.34636545372007,0.6
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,51,Who had a 70s No 1 hit with Let's Do It Again?,the staple singers,"The 70s No 1 hit with ""Let's Do It Again"" was performed by The Beatles.","The 70s No 1 hit with ""Let's Do It Again"" was performed by The Beatles.",0,0.0,1.168282,4,10,0.5,0.082,276.036,276.1175153121948,0.58
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,52,Who had a Too Legit To Quit Tour?,mc hammer,"The band ""Too Legit To Quit"" had a tour.",Lil Wayne.,0,0.1818,2.025326,8,10,0.5,0.076,140.587,140.6625145549774,0.47
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,53,"""According to Rudyard Kipling what were the """"two imposters"""" to meet and treat the same day?""",triumph and disaster,Two Impostors (1897) by Rudyard Kipling,Two Imposters (1897) by Rudyard Kipling.,0,0.0,1.695743,6,10,0.5,0.089,373.296,373.38451504325866,0.62
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,54,Who is the most successful UK solo artist in the USA?,elton john,Taylor Swift,"The most successful UK solo artist in the USA is Taylor Swift, who has achieved numerous chart-topping hits and sold over 275 million records",0,0.0,1.504788,5,10,0.5,0.09,210.597,210.68651687812806,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,55,Which country does the airline TAAG come from?,angola,TAAG is an airline that comes from Germany.,Tunisia,0,0.0,1.05492,3,10,0.5,0.144,153.769,153.91283268356324,0.49
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,56,Which US No 1 single came from Diana Ross's platinum album Diana?,upside down,"""Love Story""","""Reflections""",0,0.0,1.834372,7,10,0.5,0.082,188.57,188.65151960372924,0.51
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,57,River Phoenix died during the making of which movie?,dark blood,"The movie that River Phoenix died during the making of is ""Romeo and Juliet.""","The movie that River Phoenix died during the making of is ""Romeo and Juliet"".",0,0.0,1.748067,7,10,0.5,0.084,310.643,310.7265347175598,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,58,Which artist David was born in Bradford UK?,hockney,David,David,0,0.6667,-0.0,1,10,0.5,0.061,73.797,73.85800010871887,0.27
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,59,What is Mel Gibson's middle name?,columcille,Gibson,Gibson.,0,0.0,0.943348,3,10,0.5,0.037,99.641,99.67800017929078,0.39
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,60,Richard Daley was mayor of which city for 21 years?,chicago,Chicago,Chicago,1,1.0,0.325083,2,10,0.5,0.037,104.852,104.88900065612793,0.37
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,61,"""In which movie did Garbo say, """"I want to be alone"""".""",grand hotel,"In the movie ""The Thin Man,"" Marlowe (played by William Powell) says the famous line, ""I want to be alone,"" as","""Gloria Swanson said, ""I want to be alone,"" in the 1937 film ""The Man Who Would Be King",0,0.0,2.163956,9,10,0.5,0.128,452.962,453.08952509117125,0.66
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,62,What is Osbert Lancaster best known for producing?,cartoons,"Osbert Lancaster is best known for producing television and radio programs, particularly his long-running sketch comedy series ""The Lark"" which aired from 1","Osbert Lancaster is best known for producing comedy television shows and radio programs. Some of his most popular productions include ""The Comic Strip,"" ""The Ro",0,0.0,1.497866,6,10,0.5,0.154,422.143,422.29729925918576,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,63,Who was the defending champion when Martina Navratilova first won Wimbledon singles?,virginia wade,Martina Navratilova.,Martina Navratilova.,0,0.0,0.801819,3,10,0.5,0.025,159.605,159.63018463134765,0.49
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,64,Who was the first US-born winner of golf's British Open?,walter hagen,Jack Nicklaus,Jack Nicklaus,0,0.0,0.940448,4,10,0.5,0.028,106.785,106.81300059318542,0.39
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,65,In which country is the Sky Train Rail bridge?,canada,Japan,Japan.,0,0.0,1.834372,7,10,0.5,0.098,85.036,85.13353918647766,0.33
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,66,What was the Paramount Film Company originally called?,famous players film company,Paramount Pictures,Paramount Pictures,0,0.0,-0.0,1,10,0.5,0.029,105.454,105.4834005870819,0.41
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,67,Who was the first person after Scott to reach the South Pole overland?,edmond hillary,Anton Zavolotsky.,John Muir.,0,0.0,1.470808,5,10,0.5,0.066,150.9,150.96606769561768,0.48
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,68,Which journalist first told the world about the My Lai massacre?,seymour hersh,James F. Byrd,Robert Schutte,0,0.0,1.497866,6,10,0.5,0.03,117.425,117.45500116348266,0.43
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,69,What is the name of Terence and Shirley Conran's dress designer son?,jasper,The name of Terence and Shirley Conran's dress designer son is Christopher Conran.,Tom Conran.,0,0.0,0.673012,2,10,0.5,0.073,187.419,187.4920082988739,0.54
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,70,Which drink did The Spice Girls promote?,pepsi,"Spice Girls promoted a variety of drinks during their career, including:
+
+1. Pepsi: They were one of the first pop stars to endorse Pepsi,",Spice Girl's official poster.,0,0.1429,1.643418,6,10,0.5,0.128,342.804,342.93205318832395,0.66
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,71,Who was the youngest brother in the Beach Boys?,carl wilson,Mike Love.,Mike Beachy.,0,0.0,0.801819,3,10,0.5,0.04,107.303,107.34300616073608,0.44
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,72,Who first hosted Family Feud?,richard dawson,Steve Harvey.,Jeepers Creeps! That would be Steve Harvey. He hosted the first season of Family Feud from 1985 to 1,0,0.0,2.025326,8,10,0.5,0.277,297.5,297.7772767543793,0.63
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,73,What did the Lone Ranger's title Kemo Sabe mean in Apache?,white shirt,"Kemo Sabe was the Apache warrior and leader of the Comanche tribe. In Apache culture, the title ""Kemo Sabe"" referred to","Kemo Sabe means ""white man"" in Apache.",0,0.0,1.279854,4,10,0.5,0.105,306.278,306.3831223278046,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,74,Who or what was Gentle Ben in the 60s TV series?,bear cub,"Gentle Ben was a fictional character on the 1960s TV series ""The Andy Griffith Show."" He was a recurring character played","Gentle Ben was a fictional character on the 1960s TV series ""The Andy Griffith Show."" He was a small town police",0,0.0,-0.0,1,10,0.5,0.109,446.927,447.03552837562563,0.66
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,75,Which 70s show was based on the British show Till Death Us Do Part?,all in the family,Till Death Us Do Part.,"The 70s show that was based on the British show Till Death Us Do Part is ""Till Death Us Do Part.""",0,0.2,0.639032,3,10,0.5,0.103,403.245,403.34793459892273,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,76,On what date in 1969 did Neil Armstrong first set foot on the Moon?,july 20th,"July 20, 1969.","July 20, 1969",1,0.8,-0.0,1,10,0.5,0.034,209.504,209.53811722183227,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,77,Bandar Seri Begawan International airport is in which country?,brunei,Malaysia,Indonesia,0,0.0,1.470808,5,10,0.5,0.041,126.25,126.29100108146667,0.44
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,78,What was the profession of Paul Strand (1890 - 1976)?,photographer,Photographer.,Photographer.,1,1.0,0.325083,2,10,0.5,0.027,102.091,102.11751047706603,0.35
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,79,Who had a 60s No 1 with Downtown?,petula clark,Downtown,Downtown by The Beatles (1965),0,0.0,1.418484,5,10,0.5,0.099,247.295,247.39383189201354,0.61
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,80,"Who was born first, Kiefer Sutherland or Christian Slater?",kiefer sutherland,"Christian Slater was born first, on January 27, 1960, in Los Angeles, California.","Christian Slater was born first, on April 12, 1960.",0,0.0,0.639032,3,10,0.5,0.088,389.996,390.08351678466795,0.64
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,81,"To the nearest two, how many tennis Grand Slam titles did Jimmy Connors win?",10,2. Wimbledon,2. Wimbledon,0,0.0,1.05492,3,10,0.5,0.07,102.567,102.63748296928405,0.35
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,82,Who was the Georgia Peach?,ty cobb,"Georgia Peach is a type of peach that originated in Georgia, United States. It is known for its sweet and juicy flesh, which is often used in",Georgia Peach is a popular dessert that originated in the state of Georgia in the United States. The recipe for a classic peach pie typically includes sliced fresh pe,1,0.2857,-0.0,1,10,0.5,0.107,458.485,458.59188185691835,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,83,Who set fire to his guitar at the Monterey Pop festival in 19676?,jimi hendrix,Jerry Garcia.,Jerry Garcia,0,0.0,-0.0,1,10,0.5,0.025,114.711,114.73600033378601,0.33
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,84,Della Street was whose secretary?,perry mason,Della Street was the secretary of President Franklin D. Roosevelt during his time as the 32nd President of the United States.,Mrs. Della Street was the secretary of the household.,0,0.1429,1.834372,7,10,0.5,0.091,266.062,266.1531903381348,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,85,"In music, who was Sweet and Innocent and Too Young?",donny osmond,"Sweet and Innocent is a song by American singer-songwriter Andy Williams, released in 1957 as his first hit single. The song","The song ""Sweet and Innocent"" by The Beatles is about a young girl named Mary Jane Lennon, who is described as being sweet, innocent,",0,0.087,2.163956,9,10,0.5,0.12,413.631,413.7505256710052,0.66
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,86,Who is featured on Puff Daddy's Can't Hold Me Down?,mase,"Puff Daddy's ""Can't Hold Me Down"" features the song ""I Want It That Way"" by Backstreet Boys.",Puff Daddy's Can't Hold Me Down features rapper DMX.,0,0.0,2.025326,8,10,0.5,0.128,316.054,316.1822479763031,0.66
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,87,What had Edmond Hillary worked at before taking up mountain climbing?,bee keeping,"Edmond Hillary had previously worked as a mountaineer and climber for various organizations and expeditions, including the British Mountaineering Council, the",Edmond Hillary had worked as a mountaineer and climber for various organizations and companies prior to taking up mountain climbing. Some of the notable organizations,0,0.0,0.325083,2,10,0.5,0.115,419.351,419.46577041244507,0.67
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,88,In which American state is the Isabella Stewart Gardner Museum?,massachusetts,Massachusetts.,Massachusetts.,1,1.0,-0.0,1,10,0.5,0.031,103.022,103.05301086616517,0.39
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,89,Benina international airport is in which country?,libya,Benin,Benina International Airport is located in the country of Benin.,0,0.0,0.673012,2,10,0.5,0.057,195.93,195.98650639533997,0.55
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,90,Beloved in 1999 was whose first movie since The Color Purple in 1985?,oprah winfrey,Meryl Streep.,The Color Purple (1985),0,0.0,1.359237,5,10,0.5,0.032,161.409,161.44100006484985,0.46
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,91,Which Star Trek star directed Three Men and a Baby?,leonard nimoy,William Shatner.,David P. Leitch,0,0.0,1.609438,6,10,0.5,0.035,124.978,125.013001039505,0.45
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,92,Which sitcom star appeared on the big screening The Object of My Affection?,jennifer aniston,Marlon Brando,Julie Andrews,0,0.0,1.609438,6,10,0.5,0.034,118.997,119.03100015830994,0.42
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,93,"""Which character did Julia """"Roberts play in Steven Spielberg's Hook?""",tinkerbell,"Julia Roberts played the role of Mrs. Doubtfire in Steven Spielberg's 1983 film ""Hook.""","Julia Roberts played the role of Mrs. Doubtfire in Steven Spielberg's 1987 film ""Hook.""",0,0.0,0.325083,2,10,0.5,0.088,405.22,405.3076398086548,0.62
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,94,Which US president did Anthony Hopkins play in a film whose title was simply his name?,nixon,"Anthony Hopkins played the role of President Theodore Roosevelt in the 1932 film ""Theodore Roosevelt,"" which is simply titled ""Roosevelt","Anthony Hopkins played the role of President Theodore Roosevelt in the 1972 film ""Theodore Roosevelt.""",0,0.1739,2.025326,8,10,0.5,0.122,401.481,401.60298638916015,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,95,Which movie was a biopic about the life of David Helfgott?,shine,"The movie ""David Helfgott: A Life"" is a biopic about the life of David Helfgott, an American composer and","The movie ""David Helfgott: A Life"" is a biopic about the life of David Helfgott, a German composer known",0,0.0,1.227529,5,10,0.5,0.108,443.947,444.0545179576874,0.65
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,96,Which film director guested as the FBI Director in The Silence of the Lambs?,roger corman,Francis Ford Coppola.,Christopher Nolan.,0,0.0,1.0889,4,10,0.5,0.042,134.364,134.4061977043152,0.45
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,97,In which sci fi classic did the space ship Nostromo first appear?,alien,Star Trek: The Wrath of Khan (1982),Star Trek: The Original Series (1967),0,0.0,0.801819,3,10,0.5,0.106,274.635,274.7408201789856,0.6
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,98,Nigel Hawthorne was Oscar nominated for The Madness of which King?,george,Oscar.,Oscar.,0,0.0,1.418484,5,10,0.5,0.044,161.22,161.26351687431335,0.51
+Qwen/Qwen1.5-1.8B-Chat,trivia_qa,en,99,Which Swedish actress won the Best Supporting Actress Oscar for Murder on the Orient Express?,ingrid bergman,Meryl Streep,Meryl Streep,0,0.0,1.834372,7,10,0.5,0.034,122.788,122.82155836868286,0.41
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,0,Which thyroid hormone transporter is implicated in thyroid hormone resistance syndrome?,th monocarboxylate transporter 8 (mct8) mutation is implicated in the th resistance syndrome,TSH transporter 1 (TSHR1),TSH transporter 3 (TSHr3),0,0.125,0.500402,2,10,0.5,0.05,65.758,65.80801473426818,1.55
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,1,Name synonym of Acrokeratosis paraneoplastica.,bazex syndrome,Acrokeratosis paraneoplastica is also known as acrodermatitis continua (ACD).,"Acrokeratosis paraneoplastica is often referred to as ""paranocytic keratitis.""",0,0.0,1.359237,5,10,0.5,0.108,87.615,87.7230572605133,2.81
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,2,Orteronel was developed for treatment of which cancer?,castration-resistant prostate cancer,Cancer.,Orteronel was developed for the treatment of prostate cancer.,0,0.5,1.279854,4,10,0.5,0.35,68.211,68.56113437271118,1.86
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,3,Which is the protein that is encoded by the gene GLT8D1?,glycosyltransferase 8 domain containing 1,GLT8D1 is the gene encoding the protein glutamate-tartrate transaminase (GLT8D1).,GLT8D1 is the gene that encodes the protein glutamic acid-tetrahydrofuran dehydrogenase (GLT8,0,0.0,-0.0,1,10,0.5,0.102,95.819,95.9209434928894,2.88
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,4,Where is the protein Pannexin1 located?,plasma membrane,Protein Pannexin1 is located in the cytoplasm of cells.,Protein Pannexin1 is located in the nucleus of cells.,0,0.0,-0.0,1,10,0.5,0.382,73.628,74.00950930404663,2.8
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,5,What is the mode of inheritance of Wilson's disease?,autosomal recessive,Mutation.,Mutation.,0,0.0,0.325083,2,10,0.5,0.166,81.438,81.60404614257813,0.7
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,6,What is the mode of inheritance of Facioscapulohumeral muscular dystrophy (FSHD)?,autosomal dominant,Mutation.,Autosomal dominant (AD),0,0.0,1.470808,5,10,0.5,0.114,70.289,70.40309974098206,1.34
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,7,What kind of chromatography is HILIC?,hydrophilic interaction chromatography,HILIC stands for High-Resolution Liquid Chromatography. It is a type of liquid chromatography that uses high-resolution columns to separate and analyze,HILIC (High-Resolution Liquid Chromatography) is a type of chromatography that uses a liquid chromatographic column to separate and analyze molecules,0,0.2222,0.325083,2,10,0.5,0.194,106.192,106.38585838508605,2.67
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,8,What is the structural fold of bromodomain proteins?,all-alpha-helical fold,Protein folding.,Protein folding.,0,0.0,0.639032,3,10,0.5,0.123,67.833,67.95556050109863,1.09
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,9,Which MAP kinase phosphorylates the transcription factor c-jun?,c-jun nh2-terminal kinase,c-Jun.,c-Jun.,0,0.5,0.693147,2,10,0.5,0.12,68.085,68.2048501586914,1.54
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,10,"What is the meaning of the acronym ""TAILS"" used in protein N-terminomics?",tails: terminal amine isotopic labeling of substrates,Tails (Terminal Accessory Region) is an acronym used in protein N-terminomics to refer to the region at the end of a protein sequence,Tails (Translation Intron Encodings) is an acronym used in protein N-terminomics to refer to introns that enclose the coding regions,0,0.2308,2.302585,10,10,0.5,0.192,114.757,114.94935992431641,2.39
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,11,Which fusion protein is involved in the development of Ewing sarcoma?,ews/fli1,Ewing Sarcoma Fusion Protein (ESFP),Ewing Sarcoma Fusion Protein (ESFP),0,0.0,0.500402,2,10,0.5,0.246,107.507,107.7531051940918,1.66
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,12,Treatment of which disease was investigated in the MR CLEAN study?,acute ischemic stroke,MR CLEAN study investigated the treatment of psoriasis.,MRCLEAN study investigated the treatment of multiple sclerosis (MS).,0,0.0,1.470808,5,10,0.5,0.207,94.573,94.78011278915405,1.76
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,13,Which enzyme is targeted by Evolocumab?,proprotein convertase subtilisin/kexin type 9,Evolocumab is targeted by an enzyme called FcγRIIb.,"Evolocumab is targeted by an enzyme called monoclonal antibody (mAb), specifically an Fc fragment of human IgG1.",0,0.0,0.801819,3,10,0.5,0.227,99.779,100.0055453338623,2.23
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,14,What is the methyl donor of DNA (cytosine-5)-methyltransferases?,s-adenosyl-l-methionine,NADPH (nicotinamide adenine dinucleotide phosphate),Cytosine-5-methyltransferase (CTMTR) is an enzyme that catalyzes the transfer of a methyl group from cy,0,0.0,1.695743,6,10,0.5,0.135,94.445,94.58013326644897,1.61
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,15,Which signaling pathway does sonidegib inhibit?,hedghog signalling pathway,Sonic Glandular Signaling Pathway (SGSP),Signal pathway: cAMP-dependent protein kinase B (cAMP-KAKB) activation.,0,0.25,2.163956,9,10,0.5,0.087,57.441,57.52789618110657,2.51
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,16,In which phase of the cell cycle arrest is impaired in Fanconi anemia?,"in fanconi anemia cells, the s-phase checkpoint is inefficient.",Phase 2 of the cell cycle arrest is impaired in Fanconi anemia.,Phase 2 of the cell cycle arrest is impaired in Fanconi anemia.,0,0.4211,0.940448,4,10,0.5,0.08,62.717,62.796509973526,2.52
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,17,Mutation of which gene is implicated in the familial isolated pituitary adenoma?,aryl hydrocarbon receptor interacting protein,Pituitary Adenoma (PIA),Pituitary adenoma.,0,0.0,1.609438,6,10,0.5,0.124,69.352,69.47551942062378,2.78
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,18,GV1001 vaccine targets which enzyme?,human telomerase reverse transcriptase,Enzyme: Glycoprotein 1001 (gp1001),Enzyme: Glycoprotein 1001 (gp1001),0,0.0,1.168282,4,10,0.5,0.054,67.487,67.54073907089233,1.93
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,19,Which is the E3 ubiquitin ligase which ubiquitinates IkB leading to its proteasomal degradation?,scf(β-trcp),E3 ubiquitin ligase: Cdc20.,E3 ubiquitin ligase: E2 ubiquitin ligase,0,0.0,0.639032,3,10,0.5,0.074,80.671,80.74450683212281,1.96
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,20,Is there a crystal structure of Greek Goat Encephalitis?,no crustal structure of greek goat encephalitis found,"Yes, there is a crystal structure of Greek Goat Encephalitis (GGE). The GGE is a viral infection caused by the Epstein-B","Yes, there is a crystal structure for Greek Goat Encephalitis (GGE), also known as the ""goat encephalitis crystal",0,0.5556,-0.0,1,10,0.5,0.093,101.147,101.2399126739502,2.97
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,21,Mutation of which gene is implicated in the Brain-lung-thyroid syndrome?,thyroid transcription factor 1,Brain-lung-thyroid syndrome (BLTS) is caused by mutations in the gene called TRIM20. This gene encodes a protein,SRY (sex determining region Y) gene.,0,0.0,2.025326,8,10,0.5,0.053,70.139,70.19189077758789,1.51
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,22,Which enzyme is targeted by the drug Imetelstat?,human telomerase,Imetelstat is a drug that targets the enzyme 5'-methyltetrahydrofolate reductase (MTHFR). M,Iметelstat is a medication that targets the enzyme acetyl-CoA carboxylase (ACC). This enzyme plays a crucial role in the,0,0.0,2.025326,8,10,0.5,0.362,96.488,96.84978994178772,2.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,23,In which breast cancer patients can palbociclib be used?,"hormone receptor-positive, human epidermal growth factor receptor 2-negative",Palbociclib is a drug that can be used in breast cancer patients who have progressed beyond standard chemotherapy and other treatments. It works by inhib,"Palbociclib is a medication that can be used in breast cancer patients who have received treatment for hormone receptor-positive (HR+) breast cancer,",0,0.0,-0.0,1,10,0.5,0.092,103.507,103.59851792526246,2.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,24,What is the method FASP used for?,proteomic sample preparation,"FASP stands for ""Fastest Asynchronous Single-Phase Switching,"" which is a switching technology used in power electronics systems to switch between two phases",FASP (Fastest Asynchronous Single Pass) is a parallel programming technique used to optimize sequential algorithms by executing multiple instructions simultaneously on different threads or processors,0,0.0,1.279854,4,10,0.5,0.112,98.738,98.84999927330017,3.04
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,25,Which gene is required for the efficient function of clopidogrel?,"cytochrome p450, cypc19",CYP2C19.,The gene that is required for the efficient function of clopidogrel is CYP2C19.,0,0.0,1.609438,6,10,0.5,0.253,78.02,78.27260543823242,2.13
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,26,Which transcription factor is considered as a master regulator of lysosomal genes?,transcription factor eb (tfeb),Lysosomal gene transcription factor (Lyt6) is considered as a master regulator of lysosomal genes.,Lysosomal gene transcription factor (LATS) is considered as a master regulator of lysosomal genes.,0,0.2353,0.325083,2,10,0.5,0.068,74.038,74.1060046081543,1.99
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,27,Which technique is used for detection of EWS/FLI1 fusion transcripts?,reverse transcription - polymerase chain reaction (rt-pcr),RNA测序 (RNA-seq),RNA interference (RNAi),0,0.0,0.943348,3,10,0.5,0.1,86.014,86.11407953643798,1.72
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,28,What is the application of the Bimolecular Fluorescence Complementation (BiFC) assay in Drosophila e,the study of protein-protein interactions in a physiologically relevant developing context.,"The BiFC assay is used to study the interaction between two proteins, called biotinylated transcription factors (TFs), and their binding partners",The Bimolecular Fluorescence Complementation (BiFC) assay is used to study the interaction between two fluorescent proteins in Drosophila embryos,0,0.0714,0.943348,3,10,0.5,0.081,111.727,111.80750751686097,2.69
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,29,What is the genetic basis of Rubinstein-Taybi syndrome?,mutations or/and deletions in the genes of the camp-response element binding protein-bp (crebbp) (50-60% of the cases) and of the homologous gene e1a-binding protein (ep300) at 22q13 (5%).,"The genetic basis of Rubinstein-Taybi syndrome (RTS) is an autosomal recessive disorder characterized by a combination of intellectual disability, facial",Rubinstein-Taybi syndrome (RTS) is caused by mutations in the gene called RB1. The RB1 gene encodes a protein that,0,0.0976,-0.0,1,10,0.5,0.266,138.603,138.869361951828,2.16
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,30,What is the function of the AIRE gene at the embryonic stage?,stem cell renewal and self-immune tolerance,"Function: The AIRE (Adenosine Receptor Gene) plays a crucial role in the development and differentiation of the neural tube, which is the",Function: The AIRE (Adenosine Receptor Integrator and Effector) gene plays a crucial role in the development of the nervous system during,0,0.087,2.025326,8,10,0.5,0.125,99.222,99.34721028518676,3.02
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,31,Which is the genetic defect causing Neurofibromatosis type 1?,mutation in nf1 gene.,NF1.,Neurofibromatosis type 1 (NF1) is caused by a specific genetic mutation called NF1 gene. This mutation occurs in approximately,0,0.4,0.500402,2,10,0.5,0.194,63.134,63.32837861442566,1.47
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,32,Which is the human selenoprotein that contains several Se-Cys residues?,selenoprotein p,Selenocysteine (SeCys),Leucine.,0,0.0,1.168282,4,10,0.5,0.042,73.786,73.82800673103333,1.38
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,33,Which package is available for analysing genomic interactions in R/Bioconductor?,r3cseq,"""Genomic Interaction Analysis"" is the package available for analysing genomic interactions in R/Bioconductor.","""Genome_interaction_analysis"" is the package available for analysing genomic interactions in R/Bioconductor.",0,0.0,0.940448,4,10,0.5,0.103,111.049,111.15151450538636,2.4
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,34,How many clinical trials for off-label drugs in neonates are cited in the literature.,none,10,10,0,0.0,1.834372,7,10,0.5,0.12,79.724,79.84417369270325,1.73
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,35,What enzyme is inhibied by Opicapone?,catechol-o-methyltransferase,CYP2D6.,NADPH oxidase.,0,0.0,0.801819,3,10,0.5,0.068,65.215,65.28300484657288,1.41
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,36,Do archaeal genomes contain one or multiple origins of replication?,mostly multiple,"Yes, archaeal genomes contain one origin of replication. Archaea are a group of prokaryotic microorganisms that have unique genetic and biochemical features","Yes, archaeal genomes do contain one or multiple origins of replication. Archaea are prokaryotic organisms that have distinct genetic and genomic features from",0,0.0,0.610864,2,10,0.5,0.131,106.313,106.44371346282959,2.82
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,37,Which is the genetic basis of Spinal Muscular Atrophy (SMA)?,"the molecular genetic basis of spinal muscular atrophy (sma), an autosomal recessive neuromuscular disorder, is the loss of function of the survival motor neuron gene (smn1)",The genetic basis of Spinal Muscular Atrophy (SMA) is caused by mutations in the gene called SMN1 or SMN2.,The genetic basis of Spinal Muscular Atrophy (SMA) is caused by mutations in the SMN1 and SMN2 genes. These,0,0.5128,0.801819,3,10,0.5,0.341,101.712,102.05301748466492,2.76
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,38,Which is the third subunit of the TSC1-TSC2 complex upstream of mTORC1?,tbc1d7,Tuberous Sclerosis Complex (TSC) 1-TSC2 complex上游的第三亚单位是mTORC1。,Tuberous Sclerosis Complex (TSC) 3.,0,0.0,1.168282,4,10,0.5,0.204,90.149,90.35344297790527,1.01
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,39,Which kinase is inhibited by the small molecule KN-93?,the calcium/calmodulin-dependent protein kinase-ii,"KN-93 is an inhibitor of the protein tyrosine kinase (PTK) family member PTK2. Specifically, it inhibits the","KN-93 is an inhibitor of the protein tyrosine phosphatase (PTP) family of kinases. Specifically, it inhibits",0,0.1429,0.325083,2,10,0.5,0.118,106.773,106.89115237998962,2.68
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,40,"What are 'vildagliptin', 'sitagliptin', 'saxagliptin', 'alogliptin', 'linagliptin', and 'dutogliptin",dipeptidyl peptidase-4 (dpp-4) inhibitors,"Vildagliptin, Sitagliptin, Saxagliptin, Alogliptin, Linagliptin, and Dutog","Vildagliptin, Sitagliptin, Saxagliptin, Alogliptin, Linagliptin, and Dutog",0,0.0,0.940448,4,10,0.5,0.173,130.26,130.43341995239257,2.3
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,41,Which is the most important prognosis sub-classification in Chronic Lymphocytic Leukemia?,the mutational status of the ighv genes.,"Prognosis Sub-Classification in Chronic Lymphocytic Leukemia (CLL) is based on several factors, including the stage of disease",Prognosis Sub-Classification in Chronic Lymphocytic Leukemia (CLL) is based on various factors such as the stage of disease,0,0.0952,0.325083,2,10,0.5,0.177,115.184,115.36105583572387,2.25
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,42,What is needed for MMP proteins to be functional?,zinc,"MMP (matrix metalloproteinase) proteins are a family of enzymes that play a crucial role in various cellular processes such as wound healing, bone",MMP proteins need a specific sequence of amino acids that is conserved across different types of mammalian cells and tissues. The exact sequence required for MMP,0,0.0,1.220607,4,10,0.5,0.107,105.836,105.94313243484497,2.83
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,43,What is hyperosmia,increased olfactory acuity,Hyperosmia is a condition characterized by an excessive sensitivity to light and a reduced ability to perceive and maintain visual acuity in low-light conditions. It,Hypoxia is a medical condition characterized by reduced oxygen supply to the body's tissues and organs. It occurs when the amount of oxygen in the,0,0.0833,1.643418,6,10,0.5,0.364,90.49,90.85362695693969,3.32
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,44,What is the number of long non coding RNAs in the human genome,"between 10,000 and 20,000","23,000","23,000",0,0.0,1.168282,4,10,0.5,0.107,65.348,65.45454425621033,1.27
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,45,Which is the most known bacterium responsible for botulism (sausage-poisoning)?,clostridium botulinum,Bacillus cereus.,Bacillus cereus.,0,0.0,0.500402,2,10,0.5,0.096,73.83,73.92550094604492,1.61
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,46,What is the association of spermidine with α-synuclein neurotoxicity?,spermidine protects against α-synuclein neurotoxicity,"Spermidine is associated with α-synuclein neurotoxicity through its ability to bind and stabilize α-synuclein proteins,","Spermidine is associated with α-synuclein neurotoxicity through its ability to bind and stabilize α-synuclein proteins,",0,0.3,-0.0,1,10,0.5,0.095,112.012,112.10712448310852,2.57
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,47,Where is the histone variant CENPA preferentially localized?,centromeres,CENPA (Clustered Nucleus of Pericytes and Adipocytes) is a chromatin protein that plays a role in regulating gene,CENPA (Clusterin 20a) is a chromatin-associated protein that has been shown to preferentially localize to the nucleosome-bound,0,0.0,1.0889,4,10,0.5,0.1,107.274,107.3744273891449,2.8
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,48,Which is the prognostic meaning of delayed enhancement documented in patients hypertrophic cardiomyo,delayed enhancement by cmr has prognostic value in predicting adverse cardiovascular events among hcm patients.,Prognostic meaning: Delayed enhancement refers to an abnormal increase in cardiac size and function that occurs after a delay (usually weeks to months),"Prognostic meaning of delayed enhancement documented in patients hypertrophic cardiomyopathy: The term ""delayed enhancement"" refers to an imaging technique used",0,0.2222,0.673012,2,10,0.5,0.344,99.62,99.96385633468628,3.01
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,49,Which is the cellular localization of the protein Opa1?,mitochondrial intermembrane space,Opa1 is a protein that belongs to the family of opalins and is primarily localized to the cytoplasm of cells. It plays a,"Opa1 is a protein that is primarily localized to the nucleus and cytoplasm. It is part of the Opi family of proteins, which",0,0.0,0.940448,4,10,0.5,0.091,82.097,82.1875179977417,2.85
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,50,Which genome browser database for DNA shape annotations is available?,gbshape,NCBI (National Center for Biotechnology Information),NCBI nucleotide sequence database.,0,0.0,1.609438,6,10,0.5,0.08,58.532,58.61182730865478,1.83
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,51,What is the enzymatic activity of the breast cancer associated gene BRCA1?,e3 ubiquitin ligase activity,Enzymatic activity of the breast cancer associated gene BRCA1 is low.,The enzymatic activity of the breast cancer associated gene BRCA1 is low.,0,0.1429,0.610864,2,10,0.5,0.086,79.543,79.62852050590516,2.69
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,52,What is the function of Neu5Gc (N-Glycolylneuraminic acid)?,neu5gc is an immune message to self,"Function: Neu5Gc is a glycosylation modification that occurs on the N-terminus of proteins, particularly in the extracellular domain.","Neu5Gc is a glycosylation pattern found on certain proteins, particularly in the brain and nervous system, where it serves as a biom",0,0.1905,0.801819,3,10,0.5,0.323,97.078,97.40121882247925,3.09
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,53,Which metabolite activates AtxA?,co2,ATP.,ATP.,0,0.0,0.639032,3,10,0.5,0.111,54.172,54.28297002029419,1.83
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,54,Which amino acid residue appears mutated in most of the cases reported with  cadasil syndrome?,cysteine,CadaSil Syndrome is caused by mutations in the cysteine (Cys) residue at position 196 in the gene encoding the cyst,CadaSil Syndrome is an autosomal recessive disorder characterized by mutations in the cysteine-rich domain (CRD) of the protein cystath,1,0.1111,1.609438,6,10,0.5,0.107,92.559,92.6658103313446,2.8
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,55,Is the transcriptional regulator BACH1 an activator or a repressor?,repressor,BACH1 is an activator.,BACH1 is an activator.,0,0.0,0.325083,2,10,0.5,0.099,60.993,61.092112272262575,1.93
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,56,Which disease is characterized by congenital absence of intrinsic ganglion cells of the gastrointest,aganlionic megacolon or hirschsprung disease,Gastrointestinal stromal tumor (GIST),Celiac disease.,0,0.0,1.695743,6,10,0.5,0.105,63.332,63.436828119277955,1.8
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,57,"What is the disease in which patients are sensitive to DNA crosslinking agents, presenting with a hi",fanconi anemia,Chromosomal instability (CIN),Cancer.,0,0.0,1.359237,5,10,0.5,0.105,76.501,76.60633595085145,2.01
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,58,How is oprozomib administered?,orally,Oprozomib is administered orally.,Oprozomib is administered intravenously (IV).,1,0.4,0.639032,3,10,0.5,0.109,75.019,75.12825149917603,2.87
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,59,Which syndrome is associated with mutant DVL1?,robinow syndrome,Autism spectrum disorder (ASD),Sickle cell anemia (SCA),0,0.0,1.359237,5,10,0.5,0.298,63.382,63.68000271987915,2.18
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,60,What is the target of the drug Olaparib?,poly(adp-ribose) polymerase,Olaparib is a medication used to treat certain types of cancer that have resistance to other chemotherapy drugs. The primary target of olaparib,The target of the drug Olaparib is ovarian cancer.,0,0.0,1.029653,3,10,0.5,0.104,83.096,83.19986204719544,3.03
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,61,Inhibition of which transporter is the mechanism of action of drug Canagliflozin?,sodium glucose co-transporter 2,Transporter: SGLT2 (Sodium-glucose cotransporter 2),Transporter: SGLT2 (Sodium-glucose cotransporter 2),0,0.4444,0.940448,4,10,0.5,0.079,72.997,73.07563879203796,2.25
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,62,What is the prognostic role of thyroid hormone in patients with heart failure?,there is a relationship between altered thyroid profile and mortality in patients with heart failure,The prognostic role of thyroid hormone in patients with heart failure (HF) is to support and maintain normal cardiac function by regulating the production and release,"Thyroid hormone plays a prognostic role in patients with heart failure by modulating the body's response to stress and inflammation, which can contribute",0,0.4211,-0.0,1,10,0.5,0.331,95.497,95.82815363121033,3.14
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,63,Which gene strand is targeted by transcription-coupled repair (TCR)?,the transcribed strand,TCR (Transcription-Linked Repair) targets the DNA strand that has been damaged or mutated during replication.,TCR (Transcription-Triggered Repair) targets the telomere sequence on chromosome 9.,0,0.125,1.227529,5,10,0.5,0.08,68.857,68.93734706115723,2.44
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,64,Which is the branch site consensus sequence in U12-dependent introns?,uuccuuaac,U12-dependent introns.,"U12-dependent introns are typically characterized by their high degree of conservation and specific location within the genome, which can make them difficult to study using",0,0.0,0.897946,3,10,0.5,0.117,69.07,69.18729645729064,2.42
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,65,What is the suggested therapy for Mycobacterium avium infection?,"rifampin 10 mg/kg daily, ciprofloxacin 500 mg twice daily, clofazimine 100 mg every day, and ethambutol 15 mg/kg orally daily for 24 weeks, with or without amikacin 10 mg/kg intravenously or intramuscularly 5 days weekly for the first 4 weeks",Antibiotics.,Antibiotics.,0,0.0,0.940448,4,10,0.5,0.105,58.611,58.71598213768005,1.84
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,66,What is the genetic basis of tuberous sclerosis?,tsc1 and tsc2 genes,"Tuberous sclerosis (TS) is an autosomal recessive genetic disorder characterized by progressive neurological and skin abnormalities, including brain tumors, seizures, and","Tuberous sclerosis (TS) is an autosomal dominant genetic disorder characterized by the accumulation of abnormal proteins in various organs, including the brain, skin",0,0.0833,-0.0,1,10,0.5,0.092,88.234,88.32590917015075,3.4
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,67,What is the molecular function of the Chd1 protein?,chd1 is an atp-dependent dna helicase,Chd1 protein is a nuclear factor that plays a role in regulating gene expression by binding to DNA and controlling the transcription process. It is involved in,Chd1 (Clustered Heat Shock Protein 1) is a member of the heat shock protein family and plays a crucial role in regulating cellular temperature,0,0.24,1.497866,6,10,0.5,0.103,92.044,92.14747771644592,3.04
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,68,Which enzyme does MLN4924 inhibit?,nedd8-activating enzyme,MLN4924 inhibits the enzyme ribonucleotide reductase (RnR).,MLN4924 is an inhibitor of the enzyme ribonucleotide reductase (RnR).,0,0.25,1.168282,4,10,0.5,0.093,83.061,83.15435851669312,3.24
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,69,Which protein has been found to interact with phospholamban (PLN) and is also an anti-apoptotic prot,the hs-1 associated protein x-1,Protein: Bcl-2,Protein: Bcl-2,0,0.3333,1.0889,4,10,0.5,0.048,58.9,58.948454761505126,1.22
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,70,What is the number of protein coding genes in the human genome?,"between 20,000 and 25,000","230,000","230,000",0,0.0,1.029653,3,10,0.5,0.035,53.092,53.12657260131836,1.45
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,71,What is the indication for prophylactic use of antibiotics in COPD?,reduction of number of exacerbations,The indication for prophylactic use of antibiotics in chronic obstructive pulmonary disease (COPD) is to prevent or slow down the progression of the,The indication for prophylactic use of antibiotics in chronic obstructive pulmonary disease (COPD) is based on the presence of bacterial infections that may,0,0.16,1.359237,5,10,0.5,0.102,76.374,76.47570531272888,2.63
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,72,What is the generic name of Gliolan?,5-aminolevulinic acid,Gliolan is a chemical compound that belongs to the class of benzene derivatives and has the molecular formula C6H5CH2Cl. It,Gliolan is a chemical compound that belongs to the class of pyridine derivatives and has the molecular formula C6H10N2O,0,0.0,1.227529,5,10,0.5,0.381,116.002,116.38317480278015,2.59
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,73,How many genes does the human hoxD cluster contain?,9,20,23,0,0.0,0.801819,3,10,0.5,0.022,58.681,58.70303106880188,0.55
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,74,Which protein is the E3-ubiquitin ligase that targets the tumor suppressor p53 for proteasomal degra,the mouse double minute 2 (mdm2),Proteasome.,p53.,0,0.0,1.279854,4,10,0.5,0.286,75.402,75.68847756576538,1.09
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,75,What is the proportion of non canonical splice sites in the human genome?,between 1% and 2%,The proportion of noncanonical splice sites in the human genome varies widely and can range from 10% to 50%. Noncanonical splice sites,"The proportion of noncanonical splice sites in the human genome can vary significantly depending on several factors such as gene structure, gene regulation, and genomic context.",0,0.0952,1.168282,4,10,0.5,0.469,112.296,112.76508593177796,1.69
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,76,"What is the causative agent of the ""Panama disease"" affecting bananas?",fusarium oxysporum f. sp. cubense,Plasmodium falciparum.,The causative agent of the Panama disease (TPZ) affecting bananas is a soil bacterium called Pseudomonas syringae pv. tr,0,0.0,1.19355,4,10,0.5,0.446,108.47,108.91558668136597,1.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,77,Which biomarker is widely used in the diagnosis of Ewing sarcoma?,cd99,Tumor protein CD20.,Sertoli cell marker (SCM),0,0.0,1.748067,7,10,0.5,0.167,73.88,74.0465415763855,1.65
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,78,Which signalling pathway is involved in Tuberous Sclerosis?,tuberous sclerosis is caused by hyperactivation of the mtor signalling pathway.,"Tuberous sclerosis (TS) is a genetic disorder characterized by the accumulation of abnormal proteins in various tissues, including the brain and skin. One signaling","Tuberous sclerosis (TS) is a genetic disorder characterized by the presence of tubers, which are large, thick, and cystic masses that",0,0.3448,0.801819,3,10,0.5,0.151,111.529,111.68017311477661,2.69
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,79,Which is the relation between sweating and anaerobic threshold?,there is no clear evidence of the relationship between sweating and anaerobic threshold,"Sweating is an exergogenic response that occurs when the body generates heat through the process of thermogenesis, which involves the breakdown of glucose to","Sweating is related to the anaerobic threshold through the process of thermoregulation, which involves the body's response to environmental changes such",0,0.1875,1.227529,5,10,0.5,0.125,103.317,103.44179400634765,2.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,80,Name monoclonal antibody against SLAMF7.,signaling lymphocytic activation molecule-f7,Monoclonal Antibody against SLAMF7 (SLAMF7 Monoclonal Antibody),Monoclonal antibody (mAb) against SLAMF7.,0,0.0,-0.0,1,10,0.5,0.093,82.694,82.7874534072876,2.41
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,81,Which enzyme deficiency can cause GM1 gangliosidoses?,β-galactosidase,GM1 gangliosidoses is caused by a deficiency of the enzyme galactose-1-phosphate uridyltransferase (GALT,GM1 gangliosidoses is caused by a deficiency of the enzyme galactosyltransferase 1 (GalT1). This enzyme,0,0.0,0.325083,2,10,0.5,0.181,107.757,107.93754151535035,2.78
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,82,What is the characteristic feature of the Dyke-Davidoff-Masson syndrome.,cerebral hemiatrophy,The characteristic feature of the Dyke-Davidoff-Masson syndrome (DDMS) is the presence of multiple anomalies in the cranial and skeletal,"The Dyke-Davidoff-Masson syndrome is characterized by the presence of multiple congenital anomalies, including:
+
+1. Uric aciduria (",0,0.0,1.418484,5,10,0.5,0.118,87.461,87.57949665641785,2.29
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,83,Which gene is involved in the development of Barth syndrome?,tafazzin (taz) gene,Barth Syndrome is caused by mutations in the gene called COL4A15.,Barth syndrome is associated with mutations in the gene called COL4A13. This gene codes for the protein collagen type IV alpha 13,0,0.1538,0.639032,3,10,0.5,0.15,99.808,99.95785442161561,2.77
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,84,How many genes are in the gene signature screened by MammaPrint?,70 genes,"MammaPrint screens for 100,000 genes.",273,0,0.2857,1.497866,6,10,0.5,0.139,69.002,69.14135923576355,1.49
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,85,How many genera comprise the Flaviviridae family?,three,"Flaviviridae is a family of viruses that includes 10 genera:
+
+1. Flavivirus
+2. Flavivirus-like","Flaviviridae comprises 12 genera: 
+
+1. flavivirus
+2. flavivirus-like (flavivirus-like)
+3",0,0.0,1.168282,4,10,0.5,0.144,90.448,90.59190683174133,2.24
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,86,Mutation of which gene is associated with Achondroplasia?,fibroblast growth factor receptor 3 (fgfr3),Achondroplasia is associated with the gene called achondroplasia-dominant (AD) mutation. This mutation leads to the,Chromosome 7.,0,0.0,1.366159,4,10,0.5,0.332,82.605,82.93671916007996,1.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,87,Which type of lung cancer is the most strongly associated with Lambert-Eaton syndrome?,small-cell lung cancer,"Lambert-Eaton syndrome (LES) is a rare disorder characterized by weakness and fatigue that can be caused by a variety of conditions, including lung","Lambert-Eaton syndrome (LES) is a rare disorder characterized by weakness and fatigue that can be caused by a variety of conditions, including lung",0,0.0833,1.168282,4,10,0.5,0.131,96.375,96.5059187412262,2.56
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,88,What distinguishes lantibiotics from antibiotics?,lantibiotics are post-translationally modified natural peptides containing lanthionine,"Antibiotics are drugs that target specific bacterial infections, while lantibiotics are a type of antibiotic that specifically targets gram-negative bacteria, which are","Antibiotics are drugs that target and kill bacteria, while lantibiotics are a specific type of antibiotic that specifically targets and kills bacteria that live",0,0.1379,-0.0,1,10,0.5,0.123,94.612,94.73516870689392,3.17
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,89,The antibodies MK-3475 and CT-011 have shown promising results in treating malignancies. Which prote,pd-1,Protein: MTK-3475 (mitogen activated tyrosine kinase 3475) and CT-011,Protein: Mismatched Kinase 3475 (MK-3475) and CT-011 (CT-,0,0.0,1.418484,5,10,0.5,0.099,84.501,84.59999497032166,2.26
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,90,What family do mDia proteins belong in?,mdia proteins are members of the formin family,MDia proteins belong to the family of actinomycete proteins. Actinomycetes are a group of bacteria that play important roles in,MDia proteins belong to the family of actinomycete proteins.,0,0.5333,1.227529,5,10,0.5,0.139,93.105,93.24388239860535,2.9
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,91,"Which is the most common measure of differences between dinucleotide relative abundance ""genomic sig",delta-distance,Number.,Number of base pairs (bp),0,0.0,1.279854,4,10,0.5,0.093,55.107,55.20027507019043,1.31
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,92,Name a method for enrichment of arginine-methylated peptides.,immunoaffinity purification,"Enzymatic modification: A common method for enriching arginine-methylated peptides is through enzymatic modification, specifically by using enzymes such as arg",Enzymatic modification of arginine-methylated peptides is typically achieved through the use of an enzyme called arginine methyltransferase (AMT).,0,0.0,1.279854,4,10,0.5,0.121,88.883,89.00372777748107,2.73
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,93,Rindopepimut is an analog of which growth factor?,egfrviii,Rindopepimut is an analog of transforming growth factor beta (TGF-β).,Rindopepimut is an analog of transforming growth factor-beta (TGF-β).,0,0.0,0.610864,2,10,0.5,0.085,81.666,81.7506345424652,2.55
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,94,From which tissue was the NCI-H520 cell-line derived?,non-small cell lung cancer,NCI-H520 cell-line was derived from human embryonic kidney (HEK) 293 cells.,NCI-H520 cell-line was derived from human embryonic kidney (HEK) 293 cells.,0,0.0,0.325083,2,10,0.5,0.092,95.781,95.87310586547852,2.65
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,95,What is the incidence of Edwards syndrom in the european population?,1:5000,The incidence of Edwards syndrome (DS) in the European population is approximately 1:2000 to 1:3000.,The incidence of Edwards syndrome (ES) in the European population is approximately 1:4000 to 1:6000 live,0,0.0,0.639032,3,10,0.5,0.155,103.073,103.22783808517455,2.76
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,96,What is the substrate of the microbial enzyme inulinase?,"the inulinase acts on the beta-(2,1)-d-fructoside links in inulin releasing d-fructose.",Lactose.,Substrate: Inulin,0,0.0,1.609438,6,10,0.5,0.119,54.06,54.17933970451355,1.48
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,97,"What tyrosine kinase, involved in a Philadelphia- chromosome positive chronic myelogenous leukemia, ",bcr-abl,Phospho Tyrosine Kinase 2 (PTK2),Phospho-TYR1355.,0,0.0,1.834372,7,10,0.5,0.068,85.434,85.50157020950317,1.81
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,98,When was empagliflozin FDA approved?,2014,"Empagliflozin (Zestril) was FDA approved on December 29, 2013.","Empagliflozin (Zelnidex) was FDA-approved on February 28, 2019.",0,0.0,1.504788,5,10,0.5,0.096,87.576,87.67193200683593,2.65
+Qwen/Qwen1.5-1.8B-Chat,bioasq,en,99,Which R/bioconductor package is used for integrative genomics visualizations?,sushi.r,"R/Bioconductor package: ""ggplot2""","R/Bioconductor package used for integrative genomics visualizations is ""ggplot2"".",0,0.0,0.801819,3,10,0.5,0.238,74.142,74.37972978782653,2.25
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,0,Kelompok apakah yang menyatakan bertanggung jawab atas ledakan di Srinagar ?,hezb-ul mujahedeen,Milletan Kashmir yang terbesar.,Kelompok itu menyatakan bertanggung jawab atas ledakan di Srinagar.,0,0.0,0.325083,2,10,0.5,0.371,123.882,124.25327757072449,0.75
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,1,"Di pulau manakah , PT Mutiara Indopearl berlokasi sebelum dekade 2000 - an",pulau makassar,PT Mutiara Indopearl berlokasi di Pulau Makassar.,PT Mutiara Indopearl berlokasi di Pulau Makassar.,1,0.4444,-0.0,1,10,0.5,0.142,216.39,216.531948223114,1.0
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,2,Apakah warna pasir pada pesisir pantai Baturumah yang terletak antara pantai Wembrak dan pantai Warm,putih halus,"Yes, the color of the beach at Baturumah is typically a light shade of white or cream due to its location between the warm and cool","Yes, the color of the beach at Baturumah is typically white due to its sandy and white sand beaches. The combination of warm, bright",0,0.0,-0.0,1,10,0.5,0.384,201.725,202.1093719959259,1.49
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,3,Apa nama perusahaan China yang bekerja sama dengan PT Indelberg Indonesia mengembangkan sejumlah lap,sinopec southwest petroleum biro,"PT Indelberg Indonesia, Sinopec Southwest Petroleum Biro, dan kerja sama ini di Sumatera Selatan telah menciptakan beberapa","PT Indelberg Indonesia, Sinopec Southwest Petroleum Biro, dan Sichuan, Perseroan Utara Indonesia, telah merancang",1,0.381,0.801819,3,10,0.5,0.466,190.24,190.70574950218202,0.97
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,4,Siapa yang akan memindahkan Patung Kartini dalam waktu dekat ini ?,pemerintah dki jakarta,"Patung Kartini di Jalan Taman Suropati, Jakarta Pusat, tidak perlu dipindahkan oleh Pemerintah DKI","Patung Kartini di Jalan Taman Suropati, Jakarta Pusat, tidak perlu dipindahkan oleh Pemerintah DKI",1,0.3529,-0.0,1,10,0.5,0.285,197.843,198.1279004268646,1.52
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,5,Berapa kapasitas PLTS yang sudah dapat digunakan masyarakat Yogyakarta sekarang ?,200 wattjam,PLTS memiliki kapasitas 200 wattjam yang dapat digunakan oleh masyarakat Yogyakarta sekarang.,PLTS memiliki kapasitas 200 wattjam yang dapat digunakan masyarakat Yogyakarta sekarang.,1,0.2857,0.639032,3,10,0.5,0.185,213.57,213.75474674224853,1.02
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,6,"Tanggal berapa Presiden Susilo Bambang Yudhoyono memimpin rapat kabinet terbatas dari Missouri , Ame",12/9,"Membimbing rapat kabinet terbatas melalui videoconference dari Missouri, Amerika Serikat, pada tanggal 12",Januari 2023.,0,0.0,0.940448,4,10,0.5,0.107,235.197,235.30439636421204,1.11
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,7,Siapa nama presiden Indonesia sekarang ?,susilo bambang yudhoyono,Menteri Sekretaris Negara Yusril Ihza Mahendra,Menteri Sekretaris Negara Yusril Ihza Mahendra.,0,0.0,-0.0,1,10,0.5,0.042,165.608,165.65000553894043,0.99
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,8,Apakah nama kapsul karya Rusia yang dikembangkan menjadi Shenzhou sehingga menjadi kunci utama progr,soyuz,"Yes, the name ""Shenzhou"" was developed from the Soyuz spacecraft and has become a key component of China's space program. Compared to","Yes, the name ""Shenzhou"" was developed from the Soviet Union's Soyuz spacecraft and has become a key component of China's space program",1,0.0952,-0.0,1,10,0.5,0.283,244.159,244.44232209587096,1.23
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,9,Apakah istilah untuk hasil pencampuran antara bioetanol dan bensin ?,gasohol,"Yes, the term ""bioetanol"" can be used to describe a potential alternative fuel source between biodiesel and gasoline, potentially offering a sustainable and","Yes, the term ""bioetanol"" can be used to describe a potential alternative fuel source for gasoline that is derived from biomass, such as agricultural",0,0.0,-0.0,1,10,0.5,0.532,158.054,158.5860110321045,1.9
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,10,Siapakah yang membatalkan kunjungan Menteri Luar Negeri Jepang sebagai balasan atas kunjungan Perdan,pemerintah china,Menteri Luar Negeri Jepang telah membatalkan kunjungan tersebut sebagai balasan atas kunjungan Perdana M,Menteri Luar Negeri Jepang telah membatalkan kunjungan tersebut sebagai balasan atas kunjungan Perdana M,0,0.0,-0.0,1,10,0.5,0.278,246.785,247.06309810638427,1.22
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,11,Berapa ton Indonesia mengimpor gandum untuk produksi terigu dari negara lain per tahun ?,"4,5 juta ton","4,5 ton Indonesia mengimpor gandum untuk produksi terigu dari negara lain per tahun.","4,5 ton Indonesia memperoleh gandum tahunan.",0,0.25,-0.0,1,10,0.5,0.305,240.967,241.27154587936403,0.97
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,12,"Apakah nama suaka margasatwa di pesisir kepala burung , Sorong dan Manokwari , yang merupakan pusat ",jamursbamedi,Yes.,"Yes. The name of the famous bird migration site in Pesisir Kepala Burung, Sorong and Manokwari is ""S",0,0.0,1.470808,5,10,0.5,0.134,301.63,301.7640866088867,0.82
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,13,Kemana pesawat Mandala Airlines RI - 020 rute Jakarta-Jambi return to base / RTB ?,bandara soekarno-hatta,Mandala Airlines RI - 020 rute Jakarta-Jambi return to base / RTB.,Mandala Airlines RI - 020 dari Jakarta-Jambi ke Soekarno-Hatta menggunakan RTB pada pukul 1,0,0.0,-0.0,1,10,0.5,0.089,221.071,221.1598123512268,1.23
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,14,Apakah nama klub bulu tangkis terkuat di Amerika Serikat yang dilatih oleh Tony Gunawan ?,orange county,Tony Gunawan adalah nama klub bulu tangkis terkuat di Amerika Serikat yang dilatih olehnya.,"Tony Gunawan merupakan nama klub bulu tangkis terkuat di Amerika Serikat yang dibuat olehnya. Namun, ini",0,0.0,-0.0,1,10,0.5,0.081,279.396,279.4774852714539,1.07
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,15,Partai apakah yang mencalonkan Noaman Gomaa pada pemilu pertama multikandidat di Mesir tahun 2005,partai wafd,Partai Nasional Demokrasi,Partai Nasional Demokrasi,0,0.4,0.325083,2,10,0.5,0.272,230.631,230.90304823493958,0.49
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,16,Berapa hektar luas Taman Nasional Sebangau ?,568.700 hektar,"Taman Nasional Sebangau memiliki luas sekitar 568.700 hektar, terletak di Kab","Taman Nasional Sebangau memiliki luas sekitar 568.700 hektar, terletak di Kab",1,0.3077,-0.0,1,10,0.5,0.19,173.013,173.2033727054596,1.44
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,17,Jalan tol mana saja yang tidak dikenai tarif baru jalan tol ?,jalan tol lingkar luar jakarta sedyatmo arah bandara soekarno-hatta cikampek-purwakarta-padalarang cipularang pondok aren-ulujami,"Jalan tol di seluruh Indonesia, apart from Jalan tol lingkar luar Jakarta, Sedyatmo, Cikampek-P","Jalan tol di kota-kota di seluruh Indonesia yang tidak dikenai tarif baru adalah:
+
+  * Jalan tol lingkar",0,0.4444,0.325083,2,10,0.5,0.101,183.058,183.15852847862243,1.64
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,18,Presiden Direktur perusahaan apakah Yue Shao Dong ?,sinopec southwest petroleum biro,"Yes, President Director of the company is Yue Shao Dong.","Yes, the President of the Director General of a company is called ""Yue Shao Dong"" in Chinese and refers to the person in charge of",0,0.0,0.639032,3,10,0.5,0.11,155.894,156.003516620636,1.5
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,19,"Siapa nama Perwakilan Direktur Jenderal untuk Pemberantasan Polio dari WHO Geneva , Swiss , di Jakar",dr david l heymann,"Dr David L Heymann, Perwakilan Direktur Jenderal untuk Pemberantasan Polio dari WHO Geneva, Swiss, di","David Heymann, Direktur Jenderal untuk Pemberantasan Polio dari WHO Geneva, Swiss, di Jakarta, Rabu (2",1,0.4211,0.673012,2,10,0.5,0.081,163.754,163.83546023750304,1.25
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,20,"Pada tahun berapakah , SEA Games terakhir diadakan di Vietnam",2003,2003.,2003.,1,1.0,0.500402,2,10,0.5,0.07,130.843,130.91252953338622,0.81
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,21,Siapa Menteri Luar Negeri Korea Selatan ?,ban ki-moon,"Ban Ki-Moon, Menteri Luar Negeri Korea Selatan, menyatakan bahwa beberapa negara terlibat dalam program n","Ban Ki-Moon, Menteri Luar Negeri Korea Selatan, menyatakan bahwa sebagian negara di Asia Teng",1,0.2353,0.940448,4,10,0.5,0.385,218.794,219.17906054878236,1.37
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,22,Pada tahun berapa debut naskah drama Harold Pinter berjudul The Room dipentaskan pertama kali di Bri,1957,Tahun 1957.,"The Room, dipentaskan pertama kalinya di Bristol, Inggris, pada tahun 1957.",1,0.6667,0.897946,3,10,0.5,0.094,174.746,174.8403627357483,0.79
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,23,Berapa tim peneliti yang berhasil menemukan bukti-bukti yang mengarah pada pemenuhan kriteria Warisa,delapan tim peneliti,Delapan tim peneliti sejak tahun 2003 telah berhasil menemukan bukti-bukti yang mengarah pada pem,Delapan tim peneliti sejak tahun 2003 telah menemukan bukti-bukti yang mengarah pada pemenu,1,0.3529,-0.0,1,10,0.5,0.075,194.802,194.87737245750426,1.54
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,24,"Siapakah yang membuka pameran lukisan Spirit of Natura di Inna Muara Hotel , Padang , Sumatera Barat","gamawan fauzi , gubernur sumatera barat",Wakidi (1890-1979) adalah salah satu pelukis naturalistik Indonesia terkemuka pada tahun,Wakidi (1890-1979) adalah salah satu pelukis naturalistik Indonesia yang terkemuka pada zam,0,0.0,-0.0,1,10,0.5,0.116,168.49,168.60603379249574,1.78
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,25,Kapankah bakal diadakannya pemilihan umum federal di Jerman ?,18 september,Kapankah bakal diadakannya pemilihan umum federal di Jerman?,"Berikut adalah jawaban singkat yang sesuai dengan bacaan tersebut:
+
+Kapankah bakal diadakan pemilihan umum federal",0,0.0,1.0889,4,10,0.5,0.087,105.94,106.02651685714721,2.44
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,26,Siapakah Presiden Otoritas Palestina ?,mahmoud abbas,Arafat (65) is the current President of Palestine.,Arafat (65),0,0.0,0.325083,2,10,0.5,0.089,89.701,89.78952982521056,1.51
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,27,Di kota manakah letak kantor pusat PBB ?,new york,"London, negara anggota G-8, tidak cukup serius untuk meringankan beban negara-negara pengutang dan",London.,0,0.0,0.673012,2,10,0.5,0.098,116.876,116.97352154350281,1.5
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,28,Apa nama bunga tertinggi di dunia ?,bunga bangkai ( amorphophalus titanum ),"Pinus mercusii strain Kerinci, kayu pacet, dan bunga raflesia, serta bunga bangkai, adalah beberapa",Raflesia arnoldi adalah bunga tertinggi di dunia.,0,0.2222,0.610864,2,10,0.5,0.091,131.097,131.18802749824525,2.07
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,29,Berapa lamakah acara Konser Tribute to Teguh Karya berlangsung,90 menit,"Acara Konser Tribute to Teguh Karya akan dilaksanakan pada tanggal 18 Oktober 2023, dengan peny",Acara Konser Tribute to Teguh Karya yang ditayangkan oleh kedua penyanyi asli lagu-lagu tersebut akan dil,0,0.0,0.325083,2,10,0.5,0.086,135.641,135.72744080162047,2.14
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,30,"Tanggal berapakah dukungan 14 negara terhadap pemulihan dan pembangunan kembali Unsyiah , Banda Aceh",23/8,"Bandung, Kompas - Ratusan ilmuwan dari 14 negara mendeklarasikan dukungan mereka terhadap",Dukungan 14 negara terhadap pemulihan dan pembangunan kembali Universitas Syiah Kuala (Unsyiah),0,0.0,0.801819,3,10,0.5,0.07,156.709,156.77900660896302,1.78
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,31,Berapa orang warga Muslim Thailand yang melarikan diri ke Malaysia untuk menghindari kerusuhan berda,131 warga,131 orang warga Muslim Thailand yang melarikan diri ke Malaysia untuk menghindari kerusuhan berdarah di tempat as,131 orang warga Muslim Thailand yang melarikan diri dan berlindung di Malaysia dari aksi-aksi kekerasan yang,1,0.2105,0.325083,2,10,0.5,0.074,136.759,136.83252423667906,2.19
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,32,Siapa yang diantar Mubarak sendiri ke perbatasan ketika kembali ke Jalur Gaza pada tahun 1994 ?,mendiang pemimpin palestina yasser arafat,Mubarak mengantar sendiri kepada Yasser Arafat untuk mendengarkan keperbatasan ketika Arafat kembali ke Jal,Mubarak.,0,0.2105,0.610864,2,10,0.5,0.073,107.205,107.27800686836243,2.03
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,33,Apa nama suku Kurdi yang dibantai Saddam Hussein pada tahun 1983 ?,mullah mustafa barzani,"Salam Saddam, kurdi dari rumpun Mullah Mustafa Barzani.",Suu Kurdi yang dibantai Saddam Hussein pada tahun 1983 adalah Suu Kurdi dari Mulla Mustafa Barzani,1,0.5455,-0.0,1,10,0.5,0.085,138.86,138.94461236953737,2.15
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,34,"Lulusan akademi militer manakah , Jenderal Sonthi Boonyaratglin yang diangkat menjadi Panglima Angka",akademi militer chulachomklao,"Sonthi Boonyaratglin, seorang alumnus Akademi Militer Chulachomklao, telah ditugaskan","Sonthi Boonyaratglin, juga dikenali sebagai Sonthi, seorang anggota Akademi Militer Chulach",1,0.5,-0.0,1,10,0.5,0.099,140.016,140.11452123260497,2.14
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,35,"Di negara manakah , lokasi Universite des Sciences et Techniques du Languedoc Montpellier",perancis,"Université des Sciences et Techniques du Languedoc Montpellier, France.","Université des Sciences et Techniques du Languedoc Montpellier, France.",0,0.0,0.325083,2,10,0.5,0.088,109.073,109.16052036094665,1.71
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,36,Dari departemen apakah data tentang sejumlah penderita diare di beberapa propinsi ?,departemen kesehatan,"Yes, data tentang sejumlah penderita diare di beberapa propinsi telah diberikan oleh Departemen Kesehatan I Nyoman K","Yes, data tentang sejumlah penderita diare di beberapa propinsi telah diberi dalam Data Pengendalian Penyakit dan Peny",1,0.2105,-0.0,1,10,0.5,0.087,121.789,121.87570711517334,2.46
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,37,Departemen manakah yang berencana untuk memberlakukan pungutan ekspor terhadap komoditas tambang,departemen keuangan,Menteri Energi dan Sumber Daya Mineral.,Menteri Energi dan Sumber Daya Mineral.,0,0.0,-0.0,1,10,0.5,0.046,111.91,111.95551601409912,1.24
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,38,Siapakah Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilacap,budhi darmawan,"Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilacap, Budhi Darmawan, menyatakan","Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilacap, Budhi Darmawan, menyatakan",1,0.2857,-0.0,1,10,0.5,0.091,159.491,159.5815284881592,1.85
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,39,Siapakah yang menyerahkan bendera FISU kepada Wali Kota Bangkok pada penutupan Universiade Izmir 200,presiden fisu george killian,Wali Kota Bangkok menyerahkan bendera FISU pada penutupan Universiade Izmir 2005.,Wali Kota Bangkok yang menyerahkan bendera FISU kepada Presiden George Killian pada penutupan Universiade Izmir,0,0.1333,0.610864,2,10,0.5,0.076,163.7,163.77551622390746,1.37
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,40,Siapakah presiden Venezuela saat ini ? ?,hugo chavez,Presiden Venezuela saat ini adalah Hugo Chavez.,Presiden Venezuela saat ini adalah Hugo Chavez.,1,0.4444,-0.0,1,10,0.5,0.045,115.393,115.43800961303711,0.87
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,41,apa judul sinetron yang mengangkat tema Si Doel Anak Betawi ( 1973 ) yang ditayangkan mulai tahun 19,si doel anak sekolahan,Sinetron Si Doel Anak Gedongan,Sinetron Si Doel Anak Gedongan,0,0.6667,0.500402,2,10,0.5,0.081,137.413,137.4940570716858,0.99
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,42,Faham apakah yang ingin dihentikan oleh Partai Kiri Jerman ?,neoliberalisme,Neoliberalisme tidak akan dihentikan oleh Partai Kiri Jerman karena ini adalah salah satu kebijakan politik yang telah menjadi sim,Apakah Partai Kiri Jerman ingin dihentikan oleh politik alternatif?,1,0.1,0.801819,3,10,0.5,0.078,96.761,96.8385179862976,2.02
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,43,"Melalui kesepakatan apa , para pakar teknologi pembangkit listrik tenaga surya memberlakukan skema p",protokol kyoto,"Melalui kesepakatan Protokol Kyoto, para pakar teknologi pembangkit listrik tenaga surya memberlakukan sk","Melalui kesepakatan Protokol Kyoto, para pakar teknologi pembangkit listrik tenaga surya memberlakukan sk",1,0.2667,-0.0,1,10,0.5,0.08,204.056,204.13552642440797,1.47
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,44,Dimanakah sidang tahunan ke - 60 dari Jeunesses Musicales International diselenggarakan ?,bali,"Sidang tahunan ke - 60 di Bali, 15-19 Agustus ini, diselenggarakan oleh Je",Sidang tahunan ke - 60 diselenggarakan di Bali pada 15-19 Agustus 202,1,0.1538,-0.0,1,10,0.5,0.062,219.999,220.0610059967041,1.35
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,45,Apa mayor yang dipilih Sander saat melanjutkan studinya di Universitas Illinois Urbana Champaign ?,matematika dan komputer,Sander memilih mayor matematika dan komputer.,Sander memilih mayor matematika dan komputer.,1,0.6667,0.325083,2,10,0.5,0.079,168.154,168.2325150527954,1.31
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,46,Apakah yang menjadi tujuan obyek wisata kaum ekspatriat yang datang ke Banten,krakatau,Tujuan utama obyek wisata kaum ekspatriat yang datang ke Banten adalah untuk memilih Krakatau sebagai tempat,Tujuan utama obyek wisata kaum ekspatriat di Banten adalah untuk mengalahkan daerah lain seperti suku Bad,1,0.1176,0.950271,3,10,0.5,0.281,193.317,193.5976875705719,1.52
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,47,Berapa dosen Unsyiah yang meninggal karena tsunami ?,211,"Dosen Unsyiah yang meninggal karena tsunami adalah 211 dari 1.367, termasuk tiga profesor","Untuk menjelaskan, selain dari 211 dosen meninggal tergantung pada tsunami, suatu situasi lain juga",1,0.1429,0.325083,2,10,0.5,0.072,161.693,161.76452724266053,1.86
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,48,"Siapa pembuat video kampanye lingkungan hidup "" Fish Don't Cry "" ?",aji gunawan,"Cipto Aji Gunawan adalah pembuat video kampanye lingkungan hidup ""Fish Don't Cry"".",Cipto Aji Gunawan.,1,0.2857,0.500402,2,10,0.5,0.078,192.953,193.03052799987793,1.25
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,49,"Di negara manakah kecelakaan pesawat jet Boeing 737-200 pada Selasa , 23 Agustus 2005 lalu ?",brasil,Perang terjadi di Indonesia.,"Perjananan ke Iquitos, sebuah kawasan hutan wisata di utara Peru yang berdekatan dengan perbatasan Kolomb",0,0.0,1.470808,5,10,0.5,0.077,164.221,164.29753164863587,0.91
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,50,Apakah nama topan yang menyerang New Orleans pada Agustus 2005 ?,katrina,"Yes, the name of the hurricane that hit New Orleans on August 2005 was Hurricane Katrina.","Yes, the name of the hurricane that hit New Orleans on August 2005 was Hurricane Katrina. The hurricane caused significant damage and loss of",1,0.1176,-0.0,1,10,0.5,0.102,186.417,186.5186914844513,1.43
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,51,Sejak kapankah PT PIM berhenti beroperasi ?,8 september 2005,PT PIM telah berhenti beroperasi pada 8 September 2005 karena tidak mendapat pasokan gas alam c,PT PIM telah berhenti beroperasi pada 8 September 2005 karena tidak mendapat pasokan gas alam c,1,0.3158,-0.0,1,10,0.5,0.059,190.192,190.25077017974854,1.58
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,52,Siapa Kepala Pusat Penelitian Biologi LIPI Bogor ?,dr dedy darnedi,"Dr Dedy Darnedi, Kepala Pusat Penelitian Biologi LIPI Bogor, menyatakan bahwa kawasan c","Dr Dedy Darnedi, kepala pusat penelitian biologi LIPI Bogor, menyatakan bahwa kawasan c",1,0.375,-0.0,1,10,0.5,0.07,165.532,165.60151785087587,1.78
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,53,Negara manakah yang diwakili Javad Vaeidi pada IAEA,iran,Iran.,Iran.,1,1.0,0.610864,2,10,0.5,0.059,115.796,115.85470723724366,0.89
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,54,Kapankah Undang-Undang Nomor 27 dikeluarkan ?,tahun 2003,"Untuk mengetahui apakah Undang-Undang Nomor 27 dikeluarkan, kita dapat menggunakan informasi yang ters","Untuk mengetahui apakah Undang-Undang Nomor 27 dikeluarkan, kita dapat menggunakan bacaan yang",0,0.0,0.325083,2,10,0.5,0.066,230.246,230.3115734539032,1.3
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,55,Memegang rekor dunia untuk nomor apakah Said Saaeef Shaheen saat ini ?,nomor lari 3.000 meter halang rintang,Said Saaeef Shaheen memiliki rekord dunia nomor lari 3.000 meter halang rintang,Said Saaeef Shaheen memiliki rekord dunia nomor lari 3.000 meter halang rintang,1,0.6667,-0.0,1,10,0.5,0.067,213.787,213.8542698020935,1.4
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,56,Berapa luas DAS Merawu ?,218 kilometer persegi,"DAS Merawu memiliki luas 218 kilometer persegi lebih dari DAS Serayu, dengan rata-rata ting",DAS Merawu memiliki luas 218 kilometer persegi lebih besar dari DAS Serayu dengan luas 67,1,0.3529,-0.0,1,10,0.5,0.143,240.169,240.31186971092225,1.25
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,57,Siapakah yang menata kawasan Dieng untuk dijadikan daerah tujuan wisata ?,pemkab banjarnegara,"Pemerintah pusat, Departemen Dalam Negeri, Departemen Pendidikan Nasional, dan Kementerian Keb","Pemerintahan pusat, Departemen Dalam Negeri, Departemen Pendidikan Nasional, dan Kementerian Keb",0,0.0,1.359237,5,10,0.5,0.078,212.07,212.1480940055847,1.3
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,58,Berapakah angka pertumbuhan ekonomi Indonesia ?,"antara 3,4 persen dan 6,35 persen","Angka pertumbuhan ekonomi Indonesia terjadi dari 3,4 persen hingga 6,35 persen, namun","Berapakah angka pertumbuhan ekonomi Indonesia? 6,35 persen.",0,0.4444,-0.0,1,10,0.5,0.068,172.747,172.81450822067262,1.49
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,59,Tahun berapakah Tembok Berlin runtuh ?,1989,Tahun berapakah Tembok Berlin runtuh? Tahun 1989.,Tahun berapakah Tembok Berlin runtuh? Tahun 1989.,0,0.0,0.500402,2,10,0.5,0.039,187.417,187.4555091304779,0.99
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,60,Di organisasi dunia apakah terjadinya skandal Program Minyak untuk Pangan ?,pbb,"Skandal Program Minyak untuk Pangan merupakan skandal dalam organisasi New York yang terjadi pada tahun 1970, dan se",Skandal Program Minyak untuk Pangan (OFP) merupakan skandal di organisasi Dunia yang mempengaruhi kebutuhan dan,0,0.0,0.325083,2,10,0.5,0.077,173.222,173.29852425765992,1.66
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,61,"Kejuaraan apakah yang dibuka di Gelanggang Mahasiswa Soemantri Brojonegoro , Jakarta tanggal 22/8 ?",kejuaraan nasional sepak takraw xvii,"Kejuaraan Nasional Sepak Takraw XVII, Senin (22/8) dimainkan di Gelanggang Mahasiswa","Kejuaraan Nasional Sepak Takraw XVII, Senin (22/8) di Gelanggang Mahasiswa Soemantri",1,0.625,-0.0,1,10,0.5,0.235,184.061,184.29591740226746,1.63
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,62,Data dari dinas apakah yang menyatakan hutan alam Riau tahun 2004 tinggal 16 persen atau hanya tersi,dinas kehutanan provinsi riau,"Hutan alam Riau tahun 2004 terletak sekitar 1,5 juta hektar dari total","Hutan alam Riau terletak sekitar 1,5 juta hektar pada tahun 2004,",0,0.125,-0.0,1,10,0.5,0.048,255.039,255.0865172996521,1.18
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,63,Siapakah pimpinan legislatif China ?,wu bangguo,Pimpinan legislatif China adalah Wu Bangguo.,Pimpinan legislatif China adalah Wu Bangguo.,1,0.5,-0.0,1,10,0.5,0.045,180.577,180.62171254348755,0.75
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,64,"Manakah provinsi yang berhasil mencapai cakupan sebesar 101,4 persen pada PIN polio putaran pertama",sulawesi tengah,"Provinsi yang berhasil mencapai cakupan sebesar 101,4 persen pada PIN polio putaran pertama",Riau,0,0.0,1.359237,5,10,0.5,0.056,233.834,233.8899973716736,0.88
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,65,Apa nama bahan bakar untuk kapal ikan berbobot di atas 30 grosston yang meningkat dari Rp 2.200 menj,solar,"Kepada kapal ikan dengan bobot di atas 30 grosston, bahan bakar yang paling efektif adalah kap",Bahan bakar untuk kapal ikan berbobot di atas 30 grosston yang meningkat dari Rp 2.200,0,0.0,-0.0,1,10,0.5,0.067,234.759,234.82551425361632,1.28
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,66,Berapakah usia PBB,60,50 years old,60 tahun.,0,0.0,-0.0,1,10,0.5,0.036,114.345,114.38075325012207,0.55
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,67,Perwakilan Direktur Jenderal untuk Pemberantasan Polio Dr David L Heymann berasal dari organisasi ap,who,Organisasi yang berasal dari Perwakilan Direktur Jenderal untuk Pemberantasan Polio Dr David L Heymann,"Organisasi yang berasal dari Perwakilan Direktur Jenderal untuk Pemberantasan Polio dari WHO Geneva, Switzerland",0,0.0,-0.0,1,10,0.5,0.1,182.584,182.68420089149475,1.64
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,68,siapakah Menteri Luar Negeri ( Menlu ) Belanda saat ini ?,bernard bot,"Bernard Bot, Menteri Luar Negeri (Menlu) Belanda, telah menyampaikan proklamasi kemerde",Bernard Bot.,1,0.3077,0.500402,2,10,0.5,0.065,163.881,163.94600601768494,1.53
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,69,Berapakah harga jual rumput laut kering di pasar internasional ?,"rp 4,5 juta per ton","Rumput laut kering di pasar internasional memiliki harga yang berbeda karena beberapa faktor seperti volume produksi, harga local, kom","Rumput laut kering di pasar internasional memiliki harga yang tergantung pada beberapa faktor seperti volume produksi, harga local,",0,0.0,-0.0,1,10,0.5,0.233,234.061,234.29431475257874,1.26
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,70,Berapa elevasi Danau Tamblingan pada tahun 1992 ?,1.214 m,1.231 meter.,"Tahun 1992, Danau Tamblingan memiliki elevation 1.214 meter di atas permukaan laut.",0,0.0,0.610864,2,10,0.5,0.07,166.879,166.948518327713,0.87
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,71,Berapa tinggi Gunung Masurai ?,2.935 meter di atas permukaan laut / dpl,Gunung Masurai memiliki tinggi 2.935 meter di atas permukaan laut / dpl.,Gunung Masurai memiliki tinggi 2.935 meter di atas permukaan laut / dpl.,1,0.7778,-0.0,1,10,0.5,0.065,201.976,202.04103701210022,1.3
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,72,Apa judul buku yang ditulis oleh Samuel P Huntington ?,the clash of civilizations and the remaking of world order,"Samuel Huntington's book is titled ""The Clash of Civilizations and the Remaking of World Order"" (also known as ""The West and the","Samuel Huntington's book is titled ""The Clash of Civilizations and the Remaking of World Order"" (also known as ""The West and the",1,0.625,-0.0,1,10,0.5,0.105,213.923,214.0275756340027,1.4
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,73,Di negara manakah lokasi kota Sao Paolo ?,brasil,"Sao Paolo, Brasil.","Sao Paulo, Brasil",1,0.5,-0.0,1,10,0.5,0.04,139.096,139.13614372825623,0.8
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,74,Kapan berlangsungnya final Kejuaraan Dunia Bulu Tangkis tahun ini ?,21/8,Final Kejuaraan Dunia Bulu Tangkis tahun ini adalah pada Minggu (21/8) pada tanggal 21/,Kejuaraan Dunia Bulu Tangkis tahun ini telah berlangsung pada Minggu (21/8) waktu setempat,1,0.1333,-0.0,1,10,0.5,0.228,189.368,189.59574457931518,1.58
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,75,Berapakah dana yang dibutuhkan untuk restorasi candi Arjuna ?,500 juta,Dana yang dibutuhkan untuk restorasi Candi Arjuna adalah Rp 500 juta.,"Dana yang dibutuhkan untuk restorasi candi Arjuna adalah RM 500 juta, namun setiap p",1,0.3077,-0.0,1,10,0.5,0.055,209.347,209.40201317977906,1.32
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,76,Berapakah usia Richard R Schrock pada saat menerima Nobel Kimia 2005,60,"Richard R Schrock adalah seorang penulis kimia yang memenangkan Nobel Kimia 2005 pada Rabu, tanggal 5","Richard R Schrock adalah seorang penulis kimia yang telah memenangkan Nobel Kimia 2005 pada Rabu, tanggal",0,0.0,0.325083,2,10,0.5,0.07,175.147,175.2168525905609,1.56
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,77,Berapa kalikah batas maksimum pendaratan yang diizinkan bagi maskapai penerbangan sesuai ketentuan D,70.000,"Dephub memiliki batas maksimum pendaratan sebesar 35 tahun atau 70.000 kali mendarat,",Dephub memiliki batas maksimum pendaratan yang diizinkan untuk maskapai penerbangan sesuai ketentuan Dephub,1,0.1538,0.801819,3,10,0.5,0.069,223.849,223.91800644302367,1.12
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,78,siapakah nama wakil Ketua Perhimpunan Onkologi Indonesia yang mendapat penghargaan dari WHO Awards d,profesor dr roemwerdiniadi soedoko sppa,Roemwerdiniadi Soedoko SpPA.,Roemwerdiniadi Soedoko SpPA.,0,0.75,-0.0,1,10,0.5,0.071,166.192,166.26316317749024,0.77
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,79,Kapan pesawat Air France Airbus A304 dari Paris tergelincir di Bandara Toronto Kanada ?,2 agustus,"Air France Airbus A304 tergelincir di Bandara Toronto Kanada pada tanggal 2 Agustus, kemudian menabr","Air France Airbus A304 tergelincir di Bandara Toronto pada 2 Agustus, dan kemudian menabrak land",1,0.2353,-0.0,1,10,0.5,0.067,192.848,192.91500372695924,1.46
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,80,Apakah nama partai yang dipimpin oleh Aung San Suu Kyi,liga nasional untuk demokasi ( nld ),Apakah nama partai yang dipimpin oleh Aung San Suu Kyi adalah NLD?,Apakah nama partai yang dipimpin oleh Aung San Suu Kyi adalah NLD?,0,0.1176,0.325083,2,10,0.5,0.088,168.047,168.1345163078308,1.36
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,81,Berapa penghasilan devisa pabrik aromatik pertama per tahun ?,600 juta dollar as,500 juta dollar AS.,500 juta dollar AS.,0,0.75,-0.0,1,10,0.5,0.031,173.151,173.18200633621217,0.55
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,82,Apa nama lengkap bahan perusak Ozon CFCs ?,chlorofluorocarbons,Ozon CFCs adalah nama lengkap bahan perusak ozon.,Ozon CFCs adalah nama lengkap dari bahan perusak ozon.,0,0.0,-0.0,1,10,0.5,0.069,211.866,211.93500620460512,1.08
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,83,Jenis musik apakah yang disinergikan dengan musik tradisi India oleh kelompok Maha Visnu,jazz,"Musik tradisi India disinfeksi oleh kelompok Maha Visnu karena pendidikan di Australian Institute of Music, Sydney, tahun",Jenis musik disinfegikan dengan musik tradisi India oleh kelompok Maha Visnu adalah Jazz.,0,0.0,0.325083,2,10,0.5,0.07,183.582,183.651518327713,1.32
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,84,Di yayasan mana Sofyan bekerja ?,yayasan leuser internasional,Sofyan dan Arwin harus menggunakan jembatan yang telah ditentukan oleh YLI untuk menjaga habitat asli orangutan.,"Sofyan bekerja di stasiun pengamatan Ketambe, yang disebut Yayasan Leuser Internasional (YLI",0,0.0,1.609438,6,10,0.5,0.079,191.178,191.25665929603576,1.46
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,85,Kapan didirikannya Holcim Foundation ?,pada tahun 2003,Holcim Foundation diperkenalikan pada tahun 2003 sebagai organisasi global pembangunan berkelanjutan untuk menduk,Holcim Foundation ditetapkan diterima pada tahun 2003 sebagai organisasi yang bertujuan untuk mendukung ke,1,0.375,-0.0,1,10,0.5,0.081,215.126,215.2066760787964,1.39
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,86,Badan apakah yang harus ikut turun tangan dalam restorasi candi Arjuna selain Pemkab Banjarnegara da,"pemerintah pusat , departemen dalam negeri , departemen pendidikan nasional atau kementerian kebudayaan dan pariwisata","Badan harus ikut turun tangan dalam restorasi Candi Arjuna, karena restorasi tersebut memerlukan lebih banyak",Badan harus ikut turun tangan di Pemkab Banjarnegara dan BP3 karena restorasi tersebut memiliki uang,0,0.0714,0.610864,2,10,0.5,0.069,233.777,233.84601240348815,1.28
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,87,Dimanakah bandar udara Toronto berada ?,kanada,"Toronto, Kanada.","Toronto, Kanada.",1,0.6667,-0.0,1,10,0.5,0.094,141.094,141.18787564659118,0.42
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,88,"Di negara manakah , lokasi bandara internasional Pearson",kanada,"Toronto, Kanada","Toronto, Kanada.",1,0.6667,-0.0,1,10,0.5,0.087,127.898,127.98454499053955,0.41
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,89,Lembaga manakah yang telah melakukan upaya revitalisasi hutan di Sulawesi Selatan dengan Gerakan Reh,dinas kehutanan sulsel,Dinas Kehutanan Sulsel telah melakukan upaya revitalisasi hutan untuk memperbaiki 23.000 he,Dinas Kehutanan Sulsel telah melakukan upaya revitalisasi hutan untuk memperbaiki 23.000 he,1,0.4,-0.0,1,10,0.5,0.232,199.949,200.18067562484742,1.5
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,90,Untuk jenis film apakah Komite Seleksi Televisi memilih Kiamat Sudah Dekat produksi PT Demi Gisela C,film berseri,Televisi.,PT Demi Gisela Citra Sinema,0,0.0,1.279854,4,10,0.5,0.237,164.821,165.05773152923584,1.1
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,91,Berapakah jumlah bom yang meledak di Srinagar pada 15 Agustus 2005 ?,tiga,Jumlah bom yang meledak di Srinagar pada 15 Agustus 2005 adalah tiga bom.,"Setidaknya tiga bom tersebut terjadi di Srinagar, sebuah negara di Kashmir India, pada tanggal 15 Agustus",1,0.1429,0.610864,2,10,0.5,0.066,168.835,168.90090819358826,1.36
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,92,siapakah Director of Cancer Division WHO,yan tsyenwart,Roem,Roem,0,0.0,-0.0,1,10,0.5,0.069,89.496,89.56521410560607,0.34
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,93,Apakah kepanjangan dari JICA ?,japan international cooperation agency,"Yes, the Japanese International Cooperation Agency (JICA) has experienced significant changes in its development over time, particularly with regards to the impact of severe natural","Yes, the Japanese International Cooperation Agency (JICA) has experienced significant economic changes since its inception in 1972 through various disasters such as",0,0.2069,0.940448,4,10,0.5,0.341,203.432,203.77278550338744,1.47
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,94,Apa nama topan yang menghantam daratan pantai Louisiana hari Senin ( 29/8 ) pagi ?,katrina,"New Orleans, Louisiana, Topan Katrina","New Orleans, Louisiana, Saturday",1,0.3333,-0.0,1,10,0.5,0.089,155.298,155.38727083015442,0.52
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,95,"Sebagai ketua dari lembaga apakah , Prof Sjamsul Arifin Achmad sekarang",jalinan nasional kimia bahan alam di indonesia,"Yes, Prof Sjamsul Arifin Achmad is currently the president of the Indonesian National Association for Organic Agriculture (Himpunan Kimia","Yes, Prof Sjamsul Arifin Achmad is currently the president and CEO of the Indonesian National Association for Chemical Industry (Himpunan",0,0.0769,-0.0,1,10,0.5,0.129,205.653,205.78234231758117,1.46
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,96,Apakah nama latin dari penyu sisik semu,lepidochelys olivacea,"Yes, the Latin name of the species ""Lepidochelys olivacea"" is ""Chelonia mydas"". This is because","Penyu sisik semu adalah ""Lepidochelys olivacea"".",1,0.2857,0.943348,3,10,0.5,0.109,127.673,127.78229155349732,2.02
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,97,Apa nama komite yang diketuai oleh Prof Sri Redjeki ?,komite nasional penanggulangan dan pengkajian kejadian ikutan pasca imunisasi ( kipi ),Komite Nasional Penanggulangan dan Pengkajian Kejadian Ikutan Pasca Imunisasi (KIPI),Komite Nasional Penanggulangan dan Pengkajian Kejadian Ikutan Pasca Imunisasi (KIPI),1,1.0,-0.0,1,10,0.5,0.073,171.66,171.73305359840393,1.75
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,98,Siapakah pendiri Freedom Institute ?,aburizal bakrie,"Aburizal Bakrie, Pelajar SMU Negeri 1 Serui, Papua, memberikan beasiswa Achmad Bakrie",Aburizal Bakrie.,1,0.2857,1.05492,3,10,0.5,0.074,201.845,201.9187874507904,1.1
+Qwen/Qwen1.5-1.8B-Chat,facqa,id,99,"Berfungsi sebagai apakah curcuma , yang dikandungi oleh temulawak dan kunyit ?",antisitokin,Apakah curcuma?,Apakah curcuma dapat digunakan sebagai antikoron?,0,0.0,0.325083,2,10,0.5,0.124,157.021,157.14501270866393,1.43
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,0,Berdasarkan pernyataan: 'Pada awalnya bangsa Israel hanya terdiri dari satu kelompok keluarga di ant,tidak,"Jawaban: ya
+
+Pernyataan tersebut menyebutkan bahwa pada awalnya, bangsa Israel hanya terdiri dari satu",Jawaban: ya,0,,0.897946,3,10,0.5,0.275,208.074,208.34899747276307,1.06
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,1,"Berdasarkan pernyataan: 'Salah satu tekniknya adalah periplus , deskripsi pada pelabuhan dan daratan",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama, karena itu tidak menyebabkan bahwa","Tidak. 
+
+Pernyataan berikut tersebut tidak dapat disimpulkan dari pernyataan pertama tersebut, karena itu tidak menyeb",1,,1.0889,4,10,0.5,0.336,281.052,281.3882882137299,0.88
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,2,Berdasarkan pernyataan: 'Etnolinguistik antropologi adalah ilmu yang mempelajari pelukisan tentang c,tidak,"Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa ethnolinguistik antropologi adalah ilmu yang mempelajari su","Ya.
+
+Pernyataan tersebut menyebut ""etnolinguistik antropologi"" sebagai ilmu yang mempelajari sumber",0,,0.801819,3,10,0.5,0.201,239.361,239.56221002197265,0.91
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,3,"Berdasarkan pernyataan: 'Sekarang , tidak ada yang tahu pasti kapan sejarah dimulai .'
+Apakah pernya",tidak,"Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama ""Sekarang,","Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa sejarah dimulai pada awal penciptaan manusia",1,,0.673012,2,10,0.5,0.342,229.324,229.66578638458253,1.31
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,4,"Berdasarkan pernyataan: 'Soekarno tidak memilih bahasanya sendiri , Jawa ( yang sebenarnya juga baha",tidak,"Yes. 
+
+The statement ""Soekarno tidak memilih bahasa本身, Jawa (which is actually the majority language in Indonesia at that","Jawaban: Ya. 
+
+Pernyataan tersebut menyebabkan konflik antara Soekarno dan Bahasa Indonesia,",0,,0.940448,4,10,0.5,0.137,286.182,286.3194709606171,0.97
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,5,"Berdasarkan pernyataan: 'Kanak-kanak biasanya sembuh lebih cepat berbanding orang dewasa .'
+Apakah p",ya,"Yes, the statement ""Anak-anak biasanya sembuh lebih cepat dibandingkan orang dewasa"" can be inferred from the given","Yes
+
+Pernyataan tersebut dapat disimpulkan bahwa anak-anak biasanya sembuh lebih cepat dibandingkan orang dewasa karena",1,,0.897946,3,10,0.5,0.077,241.266,241.34341570472716,1.24
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,6,Berdasarkan pernyataan: 'Banyak orang yang menangap yahudi adalah semua musuh agama termasuk umat Ch,tidak,"Jawaban: Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang","Jawaban: Tidak
+
+Pernyataan ini tidak dapat disimpulkan dari pernyataan yang diberikan, karena tidak ada",1,,0.500402,2,10,0.5,0.076,244.362,244.43782426071166,1.23
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,7,Berdasarkan pernyataan: 'Sitosol sel eukariota mengandung jaringan protein serat yang disebut sitosk,ya,"Yes. 
+
+The statement ""Sitosol sel eukariota mengandung jaringan protein serat yang disebut sitoskeleton","Yes. 
+
+Pernyataan tersebut dapat disimpulkan bahwa Jaringan protein serat sitoskeleton mempertahankan bentuk sel dan",1,,0.639032,3,10,0.5,0.135,275.713,275.84757012176516,0.99
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,8,"Berdasarkan pernyataan: 'Diperkirakan sebanyak 4.000 orang tewas dalam peristiwa tersebut , meskipun",tidak,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi",Jawaban: Tidak,1,,1.418484,5,10,0.5,0.198,265.515,265.71255029678343,0.96
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,9,"Berdasarkan pernyataan: 'Provinsi Aceh , Daerah Istimewa Yogyakarta , Provinsi Papua Barat , dan Pro",ya,"Yes. 
+
+The statement ""Provinsi Aceh, Daerah Istimewa Yogyakarta, Papua Barat, and Papua memiliki hak",Yes.,1,,0.801819,3,10,0.5,0.09,263.062,263.1515063877106,0.31
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,10,"Berdasarkan pernyataan: 'Setelah perang Pasifik berakhir pada tahun 1945 , di bawah tekanan organisa",tidak,"Ya. 
+
+Pernyataan tersebut menyebutkan bahwa setelah Perang Pasifik berakhir pada tahun 1945, di","Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa setelah Perang Pasifik berakhir pada tahun 1945, di",0,,1.366159,4,10,0.5,0.141,301.303,301.4439752368927,0.72
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,11,Berdasarkan pernyataan: 'Indonesia termasuk anggota dari Bahasa Melayu-Polinesia Timur sub kelompok ,tidak,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan karena itu tidak menyebabkan konflik antara",1,,1.029653,3,10,0.5,0.442,282.889,283.33103209877015,0.87
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,12,Berdasarkan pernyataan: 'Orang-orang Yahudi yang gila kekuasaan dan berdiaspora telah lama bercita-c,ya,"Yes. 
+
+The statement ""Orang-orang Yahudi yang gila kekuasaan dan berdiaspora telah lama bercita","Ya. 
+
+Pernyataan tersebut menyebutkan bahwa orang-orang Yahudi yang telah mengalami diaspora selama数百 tahun telah",1,,0.500402,2,10,0.5,0.095,250.523,250.61794972229004,0.97
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,13,"Berdasarkan pernyataan: 'Dalam novel-novel tersebut , dikisahkan mengenai persinggungan pemuda peran",ya,"Ya. 
+
+Pernyataan tersebut menyebutkan bahwa dalam sebuah novel-novel, minang adalah seorang pemuda yang terlibat","Yes. 
+
+The statement ""Dalam novel-novel tersebut, dikisahkan mengenai persinggungan pemuda perantau Minang",1,,0.897946,3,10,0.5,0.123,250.002,250.1245166320801,1.2
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,14,Berdasarkan pernyataan: 'Piranti lunak atau perangkat lunak adalah program komputer yang berfungsi s,ya,"Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa piranti lunak adalah program komputer yang berfungsi sebagai sarana interaksi","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa perangkat lunak atau piranti lunak adalah program komputer yang berfungsi",1,,0.325083,2,10,0.5,0.092,259.409,259.5007851924896,1.05
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,15,"Berdasarkan pernyataan: 'Di dataran tinggi Golan , garis pertahanan Israel yang hanya berjumlah 180 ",tidak,"Yes. 
+
+The statement ""Di dataran tinggi Golan, garis pertahanan Israel yang hanya ber jumlah 180 tank harus","Yes, the statement ""Sedangkan di terusan Suez , kurang dari 500 prajurit Israel berhadapan dengan",0,,0.950271,3,10,0.5,0.099,269.535,269.6344327068329,1.11
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,16,"Berdasarkan pernyataan: 'Seperti anak laki-laki lain yang berasal dari kelas atas di masa itu , masa",ya,"Yes. 
+
+The statement ""seperti anak laki-laki lain yang berasal dari kelas atas pada masa itu, masa kecilnya","Jawaban: Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena ia tidak mengandungi",1,,0.897946,3,10,0.5,0.271,242.835,243.10619565010072,1.24
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,17,"Berdasarkan pernyataan: 'Setelah kemerdekaan , empat orang Minangkabau duduk sebagai perdana menteri",ya,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mengandung","Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan berikut:
+
+- ""Empat orang duduk",0,,1.279854,4,10,0.5,0.079,360.858,360.9366340236664,0.83
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,18,"Berdasarkan pernyataan: 'Hal ini bertujuan untuk efisiensi kerja , karena dengan banyaknya organ tub",ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa hal ini bertujuan untuk efisiensi kerja karena dengan banyaknya organ tubuh",Yes,1,,0.610864,2,10,0.5,0.076,214.375,214.4509847164154,1.01
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,19,"Berdasarkan pernyataan: 'Secara tradisi , penggunaan berbagai dialek bahasa Bali ditentukan berdasar",ya,Ya,"Yes. 
+
+The given statement suggests that the traditional usage of Indonesian language is determined by the system of color in Hindu-Dharma and clan traditions, despite",1,,0.693147,2,10,0.5,0.138,238.345,238.4833454799652,0.68
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,20,"Berdasarkan pernyataan: 'Oleh karena elektron termasuk fermion , tiada dua elektron yang dapat mendu",ya,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""oleh karena elektron termasuk fermion","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena di antara p",0,,0.325083,2,10,0.5,0.077,250.341,250.4178427848816,1.2
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,21,"Berdasarkan pernyataan: 'Saat bangsa Assyria menaklukkan Kerajaan Israel di tahun 722 SM , Yerusalem",ya,"Ya. 
+
+Pernyataan tersebut menyebutkan bahwa pada tahun 722 SM, Yerusalem dikuatkan oleh ser","Ya
+
+Pernyataan tersebut menyebutkan bahwa saat berikutnya, Yerusalem dikuatkan oleh serombongan besar peng",1,,1.279854,4,10,0.5,0.091,237.972,238.06264745903016,1.03
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,22,"Berdasarkan pernyataan: 'Kedua kata ini ditulis dengan huruf kanji yang sama .'
+Apakah pernyataan be",tidak,"Yes, the statement ""Kedua kata ini ditulis dengan huruf kanji yang sama"" can be interpreted as ""Both of these words are","Yes. 
+
+The statement ""Kedua kata ini ditulis dengan huruf kanji yang sama"" suggests that the two words are written using the",0,,1.0889,3,10,0.5,0.084,210.5,210.5835998058319,1.43
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,23,"Berdasarkan pernyataan: 'Pada masa kolonial , kebanyakan dari mereka yang terpelajar ini datang dari",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi tentang raja Me","Yes. 
+
+Based on the given statement, it can be inferred that ""Raja Melewar"" is the first Raja of the State of",1,,1.227529,5,10,0.5,0.08,245.889,245.96945768737794,1.11
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,24,"Berdasarkan pernyataan: 'Filsafat Timur adalah tradisi falsafi yang terutama berkembang di Asia , kh",ya,Tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang menunjukkan",0,,1.279854,4,10,0.5,0.07,231.958,232.0277214603424,0.6
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,25,Berdasarkan pernyataan: 'Salah satu konsep penting dalam biologi adalah konsep bahwa kehidupan berub,ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa salah satu konsep penting dalam biologi adalah konsep bahwa kehidupan ber","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa salah satu konsep penting dalam biologi adalah konsep bahwa kehidupan ber",1,,0.610864,2,10,0.5,0.25,233.041,233.2908321533203,0.93
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,26,"Berdasarkan pernyataan: 'Bentuk ini dipakai oleh Kesultanan Malaka , yang perkembangannya kelak dise",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mengandung","Tidak. 
+
+Pernyataan berikut tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada pernyataan",1,,1.359237,5,10,0.5,0.084,225.183,225.26706162261962,1.21
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,27,Berdasarkan pernyataan: 'Pulau ini berpenduduk terbanyak di dunia dan merupakan salah satu wilayah t,tidak,"Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada inform","Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak menyeb",1,,1.168282,4,10,0.5,0.284,214.588,214.87240189361572,1.4
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,28,Berdasarkan pernyataan: 'Penemuan ini segera diikuti oleh isolasi virus dari manusia oleh sekelompok,ya,"Yes. 
+
+The statement ""Penemuan ini segera diikuti oleh isolasi virus dari manusia oleh sekelompok penel",Tidak,1,,1.359237,5,10,0.5,0.093,246.376,246.46886785125733,0.88
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,29,Berdasarkan pernyataan: 'Hal ini bermakna bahwa angka kemiskinan relatif di Britania Raya lebih besa,ya,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada informasi yang meng",Tidak,0,,1.168282,4,10,0.5,0.243,246.866,247.10881334877016,1.11
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,30,Berdasarkan pernyataan: 'Semua sel dibatasi oleh suatu membran yang disebut membran plasma dan daera,ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ""semua sel"" di dalam sel ini, yang disebut sitoplasma","Ya
+
+Pernyataan tersebut dapat disimpulkan karena ""membrane plasma"" dan ""daerah di dalam sel"" merupakan dua termasuk",1,,0.940448,4,10,0.5,0.12,244.717,244.83654092979432,1.23
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,31,"Berdasarkan pernyataan: 'Dia kemudian meneruskan pendidikannya di Meer Uitgebreid Lager Onderwijs , ",ya,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi tentang pernyata","Yes. 
+
+Based on the given statement, it can be inferred that the person in question completed their education at a secondary school in a junior level in",0,,1.695743,6,10,0.5,0.32,243.245,243.56507145881653,1.12
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,32,"Berdasarkan pernyataan: 'Jepang menduduki Bali selama Perang Dunia II , dan saat itu seorang perwira",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada informasi yang meng",Tidak,1,,1.366159,4,10,0.5,0.077,226.811,226.8876236782074,0.61
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,33,Berdasarkan pernyataan: 'Dalam artikel-artikelnya ia menerangkan bahwa ekonomi seharusnya tidak dite,ya,Ya,"Yes. 
+
+The statement ""Dalam artikelnya ia menerangkan bahwa ekonomi seharusnya tidak ditegaskan melalui",1,,0.943348,3,10,0.5,0.084,236.468,236.55200297164916,0.68
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,34,Berdasarkan pernyataan: 'Suku Bugis mayoritas adalah pedagang jadi tidak heran jika rata-rata pasar ,tidak,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena ""Suku Bug","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena ""Suku Bug",1,,0.610864,2,10,0.5,0.086,236.589,236.67497373962402,1.27
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,35,Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya prajurit Medangkemulan ini ingin m,tidak,"Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa sebelum raja memperintahkan patihnya untuk membawa","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi",0,,1.279854,4,10,0.5,0.127,278.309,278.43588446044924,0.88
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,36,Berdasarkan pernyataan: 'Jumlah protein yang dibutuhkan untuk membentuk capsid virus sperik ditentuk,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi tentang apakah ""","Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada inform",1,,1.029653,3,10,0.5,0.418,282.729,283.14663043403624,1.06
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,37,Berdasarkan pernyataan: 'DNA pertama kali berhasil dimurnikan pada tahun 1868 oleh ilmuwan Swiss Fri,ya,"Ya
+
+Pernyataan tersebut menyebutkan bahwa DNA pertama kali dimurnikan pada tahun 1868 oleh ilmuwan",Yes,1,,0.610864,2,10,0.5,0.179,280.546,280.72535371398925,0.77
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,38,Berdasarkan pernyataan: 'Masing-masing jenis tembang macapat memiliki jumlah gatra yang berbeda-beda,tidak,"Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa ""sekar macapat"" dan ""tembang macapat"" adalah dua bent","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ""sekar macapat"" dan ""tembang macapat"" dapat diartikan",0,,0.325083,2,10,0.5,0.09,230.195,230.28482563018798,1.18
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,39,Berdasarkan pernyataan: 'Port Moresby dengan penduduk sebesar 193.242 ( 1990 ) adalah ibukota Papua ,ya,"Tidak. 
+
+Pernyataan yang dapat disimpulkan dari pernyataan tersebut adalah bahwa Port Moresby adalah ibu kota","Tidak. 
+
+Pernyataan tersebut menyebutkan bahwa Port Moresby adalah ibukota Papua Nugini, yang merupakan ib",0,,0.897946,3,10,0.5,0.105,234.318,234.42279426383973,1.28
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,40,Berdasarkan pernyataan: 'Masing-masing daerah pemilihan memilih seorang anggota parlemen dengan cara,tidak,"Yes. 
+
+The statement ""Masing-masing daerah pemilihan memilih seorang anggota parlemen dengan cara pluralitas sederhana (","Yes.
+
+Based on the given statement, ""Masing-masing daerah pemilihan memilih seorang anggota parlemen dengan cara pluralitas s",0,,0.943348,3,10,0.5,0.262,230.911,231.17332838630676,1.3
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,41,"Berdasarkan pernyataan: 'Ada berbagai macam corak musik Dangdut , antara lain Dangdut Melayu , Dangd",ya,"Yes. 
+
+The statement ""Ada berbagai macam corak musik Dangdut, antara lain Dangdut Melayu","Yes. 
+
+The statement ""Ada berbagai macam corak musik Dangdut, antara lain Dangdut Melayu",1,,0.801819,3,10,0.5,0.189,327.576,327.7652745494843,0.67
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,42,Berdasarkan pernyataan: 'Bahasa-bahasa melayu di kalimantan dikarenakan seluruh manusia penuturnya m,ya,"Ya. 
+
+Pernyataan ini mengimplikasikan bahwa manusia Dayak memiliki banyak variasi dalam bahasa mereka karena bentuk v",Yes,1,,1.643418,6,10,0.5,0.21,398.618,398.82756563949584,0.34
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,43,Berdasarkan pernyataan: 'Lirik Hatikvah digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy pada,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan, karena ia tidak mengandungi","Jawaban: tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan, karena itu tidak meng",1,,0.801819,3,10,0.5,0.145,276.168,276.31344820785523,0.99
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,44,"Berdasarkan pernyataan: 'Sejak ditandatanganinya Perjanjian Jumat Agung pada tahun 1998 , sebagian b",ya,"Ya. 
+
+Pernyataan tersebut menyebutkan bahwa sejak ditandatanganinya Persetujuan Jumat Agung pada tahun",Yes,1,,0.897946,3,10,0.5,0.326,244.033,244.358945854187,0.43
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,45,Berdasarkan pernyataan: 'Alat musik tradisional yang merupakan alat musik khas Indonesia memiliki ba,ya,"Yes. 
+
+The statement ""Alat musik tradisional yang merupakan alat musik khas Indonesia memiliki banyak ragam dari pelbagai da","Yes. 
+
+The statement ""Alat musik tradisional yang merupakan alat musik khas Indonesia memiliki banyak ragam dari pelbagai da",1,,0.801819,3,10,0.5,0.126,236.017,236.14278582763671,0.34
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,46,Berdasarkan pernyataan: 'Britania Raya juga berhubungan erat dengan Republik Irlandia dalam hal berb,ya,"Yes. 
+
+The statement ""Britania Raya juga berhubungan erat dengan Republik Irlandia dalam hal berbagi Kawasan",Yes.,1,,0.801819,3,10,0.5,0.085,292.969,293.05407537841796,0.74
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,47,"Berdasarkan pernyataan: 'Meskipun ada pendidikannya yang tak selesai , Chairil mempunyai penguasaan ",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi tentang pernyata",Tidak,1,,1.19355,4,10,0.5,0.085,226.01,226.09541440963744,0.85
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,48,Berdasarkan pernyataan: 'Kekuasaan legislatif dipegang oleh sebuah lembaga bernama Majelis Permusyaw,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak menyebutkan apakah set","Yes. 
+
+The statement ""Setiap daerah diwakili oleh 4 orang yang dipilih langsung oleh rakyat di daerah",1,,0.693147,2,10,0.5,0.093,234.523,234.61622333335876,1.28
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,49,"Berdasarkan pernyataan: 'Di tahun ~ 445 SM , Raja Artaxerxes I dari Persia mengeluarkan dekrit yang ",ya,"Ya. 
+
+Pernyataan tersebut menyebutkan bahwa pada tahun 445 SM, Raja Artaxerxes I dari Pers","Ya.
+
+Pernyataan tersebut menyebutkan bahwa Raja Artaxerxes I dari Persia menjual debu pada tahun 4",1,,0.940448,4,10,0.5,0.101,204.01,204.1108574962616,1.34
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,50,"Berdasarkan pernyataan: 'Soeharto menambah kekayaannya dan keluarganya melalui praktik korupsi , kol",ya,Ya,"Yes. 
+
+The statement ""Soeharto menambah kekayaannya dan keluarganya melalui praktik korupsi yang mel",1,,0.801819,3,10,0.5,0.09,210.125,210.21538710594177,0.38
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,51,"Berdasarkan pernyataan: 'Dari tambo tersebut , konon pada suatu masa ada satu kerajaan asing yang da",tidak,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pada abad ke-14, kerajaan Majapahit melakukan eksp","Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama, karena itu menggambarkan bahwa se",0,,1.05492,3,10,0.5,0.089,191.328,191.41657250213623,1.57
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,52,Berdasarkan pernyataan: 'Struktur ini bisa bervariasi dari ukuran 20 nanometer hingga 400 nanometer ,tidak,"Yes. 
+
+The statement ""Struktur ini bisa bervariasi dari ukuran 20 nanometer hingga 400 nanometer","Yes. 
+
+Pernyataan tersebut dapat disimpulkan dari pernyataan pertama karena itu menggambarkan struktur virus sfer",0,,0.500402,2,10,0.5,0.105,209.218,209.3226257019043,1.43
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,53,"Berdasarkan pernyataan: 'Selama lebih dari tiga detik , nama Israel memiliki pengertian umum dan rel",tidak,"Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada inform","Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada inform",1,,0.943348,3,10,0.5,0.167,198.658,198.8250262813568,1.51
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,54,"Berdasarkan pernyataan: 'Enam agama besar yang paling banyak dianut di Indonesia , yaitu : agama Isl",ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ada enam agama besar yang paling banyak dianut di Indonesia, termasuk","Yes. 
+
+The given statement can be interpreted as follows:
+
+- The first part of the statement mentions that ""Enam agama besar"" is the",1,,0.801819,3,10,0.5,0.18,290.827,291.0071588535309,0.84
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,55,Berdasarkan pernyataan: 'Selubung nukleus terdiri dari dua membran yang masing-masing merupakan lapi,tidak,"Yes. 
+
+The statement ""Selubung nukleus melingkupi nukleus dan memisahkan isinya ( yang","Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan karena itulah salah satu bentuk selubung nukleus",0,,-0.0,1,10,0.5,0.229,282.75,282.9786899089813,1.06
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,56,"Berdasarkan pernyataan: 'Pembangunan Bait Kedua selesai di tahun 516 SM , selama kekuasaan Darius Ag",ya,"Yes. 
+
+Based on the given statement, ""Pembangunan Bait Kedua selesai di tahun 516 SM , sel","Ya. 
+
+Pernyataan tersebut menyebutkan bahwa pembangunan Bait Kedua telah terjadi dalam tahun 516",1,,1.0889,4,10,0.5,0.069,202.588,202.65650910186767,1.1
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,57,"Berdasarkan pernyataan: 'Chairil masuk Hollands Inlandsche School ( HIS ) , sekolah dasar untuk oran",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada informasi yang meng","Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada informasi tentang seberapa",1,,0.673012,2,10,0.5,0.282,202.903,203.18471610832214,1.48
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,58,Berdasarkan pernyataan: 'Keberadaan orang Tionghoa yang banyak di kota Singkawang dapat disamakan ko,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mengandung",Tidak,1,,1.359237,5,10,0.5,0.095,199.154,199.2485188999176,1.37
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,59,"Berdasarkan pernyataan: 'Mereka juga aktif dalam mengembangkan sastra Indonesia modern , di mana hal",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mungkin member","Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan, karena tidak ada informasi tentang",1,,1.279854,4,10,0.5,0.093,225.593,225.6855199985504,1.33
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,60,"Berdasarkan pernyataan: 'Meskipun teori dan eksperimen dikembangkan secara terpisah , mereka saling ",tidak,"Jawaban: Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""Meskipun teori dan eks","Yes
+
+Pernyataan tersebut dapat disimpulkan bahwa kemajuan dalam fisika biasanya mencari teori baru, karena itulah",1,,1.029653,3,10,0.5,0.093,186.78,186.87306740760803,1.61
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,61,Berdasarkan pernyataan: 'Kudeta G 30 S PKI yang gagal dan kekerasan anti-komunis selanjutnya di tahu,ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pada tahun 1965-66, kudeta G 30","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ""Kudeta G 30 S PKI"" yang gagal dan keker",1,,1.643418,6,10,0.5,0.106,255.124,255.2300001850128,1.07
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,62,Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya prajurit Medangkemulan ini ingin m,tidak,"Yes. 
+
+Based on the given statement, it can be inferred that the event described in the second sentence is a result of the actions taken by the","Jawaban: tidak
+
+Pernyataan tersebut menyebabkan bahwa pasangan Prajurit Medangkemulan sebelumnya",0,,1.695743,6,10,0.5,0.139,250.48,250.61920307159423,0.98
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,63,"Berdasarkan pernyataan: 'Pengkajian ruang bermula dengan geometri – khususnya , geometri euclid .'
+A",ya,"Yes. 
+
+The statement ""Pengkajian ruang bermula dengan geometri – khususnya, geometri Euclid""","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pengkajian ruang bermula dengan geometri, terutama dengan geomet",1,,0.325083,2,10,0.5,0.108,208.509,208.61695712471007,1.44
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,64,Berdasarkan pernyataan: 'Kerajinan batik ini pun sudah mulai ditiru oleh Malaysia dengan industri ba,ya,"Yes. 
+
+The statement ""Kerajinan batik ini pun sudah mulai ditiru oleh Malaysia dengan industri batiknya"" can be","Yes. 
+
+The statement ""Kerajinan batik ini pun sudah mulai ditiru oleh Malaysia dengan industri batiknya"" can be",1,,0.325083,2,10,0.5,0.108,195.274,195.38219792747498,1.39
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,65,Berdasarkan pernyataan: 'Interaksi ini diekspresikan secara matematis menggunakan persamaan Maxwell ,ya,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ""interaksi ini"" dimaksudkan secara matematis menggunakan persamaan Maxwell","Jawaban: Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan karena itu tidak menggambarkan interaksi yang secara matem",1,,0.610864,2,10,0.5,0.139,195.427,195.5655850906372,1.54
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,66,Berdasarkan pernyataan: 'Di dalam konstitusi disebutkan 2 bahasa yang dijadikan bahasa kerja yaitu b,tidak,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi","Yes, the statement ""Di dalam konstitusi disebutkan 2 bahasa yang dijadikan bahasa kerja yaitu bah",1,,0.943348,3,10,0.5,0.146,215.816,215.96179939842224,1.28
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,67,"Berdasarkan pernyataan: 'Ketika orang-orang Eropa datang pada awal abad ke-16 , mereka menemukan beb",ya,Ya,Yes,1,,0.943348,3,10,0.5,0.091,216.655,216.74594500541687,0.75
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,68,Berdasarkan pernyataan: 'Sekitar tahun 1930-an pemikiran ini banyak ditentang karena tidak mempunyai,tidak,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama, ""Sekitar","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama ""Sekitar tahun",1,,0.325083,2,10,0.5,0.092,237.803,237.89453580665588,1.14
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,69,Berdasarkan pernyataan: 'Epistemologi adalah tema yang mengkaji tentang pengetahuan ( episteme secar,ya,"Yes. 
+
+The statement ""Epistemologi mengkaji tentang pengetahuan (episteme secara harafiah berarti ‘penget","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa epistemologi adalah sebuah discipline yang mengkaji tentang cara dan cara bagaimana orang",1,,0.325083,2,10,0.5,0.113,206.238,206.35071333694458,1.32
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,70,"Berdasarkan pernyataan: 'Di daerah selatan Borneo Suku Dayak pernah membangun sebuah kerajaan .'
+Apa",ya,"Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa di daerah selatan Borneo Suku Dayak pernah","Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa di daerah selatan Borneo Suku Dayak pernah",1,,0.325083,2,10,0.5,0.096,198.678,198.7742619781494,1.51
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,71,"Berdasarkan pernyataan: 'Tesis ini terkadang dianggap sebagai prinsip dasar dari ilmu komputer .'
+Ap",ya,"Jawaban: Tidak.
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""Tesis ini terkadang di","Yes.
+
+The statement ""Tesis ini terkadang dianggap sebagai prinsip dasar dari ilmu komputer"" can be inferred from",0,,0.325083,2,10,0.5,0.091,197.973,198.06437988090516,1.52
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,72,"Berdasarkan pernyataan: 'Pada tahun 1953 , Churchil dianugrahkan penghargaan Nobel di bidang literar",ya,"Yes. 
+
+The statement ""Pada tahun 1953, Churchill dianugerahi penghargaan Nobel di bidang sastra karena",Yes,1,,0.943348,3,10,0.5,0.139,223.978,224.1165338306427,0.84
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,73,Berdasarkan pernyataan: 'Pada abad ke-15 berkembang bentuk yang dianggap sebagai bentuk resmi bahasa,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama, karena tidak ada informasi tentang sebelum","Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""Pada abad ke-15 berkemb",1,,1.313834,4,10,0.5,0.101,223.553,223.65428450393676,1.22
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,74,"Berdasarkan pernyataan: 'Sitoskeleton terdiri dari tiga jenis serat protein , yaitu mikrotubulus , f",tidak,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa sintoskeleton dapat ditemukan di dalam sel prokariota, karena sisis","Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan, karena itulah informasi tentang",0,,1.470808,5,10,0.5,0.145,229.783,229.92757416534423,1.31
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,75,"Berdasarkan pernyataan: 'Pada kedua hari pertama perang , Israel harus banyak mengundurkan diri , te",ya,"Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi","Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pada permulaan perang, Israel terpaksa menarik",0,,1.029653,3,10,0.5,0.127,209.697,209.82447287750244,1.16
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,76,"Berdasarkan pernyataan: 'Selain di pemerintahan , di masa Demokrasi Liberal parlemen Indonesia didom",ya,"Yes. 
+
+The statement ""Selain di pemerintahan, di masa Demokrasi Liberal parlemen Indonesia didominasi oleh orang Min","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pada masa demokrasi liberal, politisi Minang dominasi di Indonesia. Ini",1,,0.500402,2,10,0.5,0.104,204.717,204.82102631759645,1.47
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,77,"Berdasarkan pernyataan: 'Sugriwa , panglima wanara ( manusia kera ) dari pasukan Sr. Rama , mengirim",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mungkin member",Jawaban: Tidak,1,,1.418484,5,10,0.5,0.092,221.978,222.06983955192567,0.77
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,78,"Berdasarkan pernyataan: 'Chairil Anwar meninggal dalam usia muda karena penyakit TBC .'
+Apakah perny",ya,"Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan, karena tidak ada informasi yang meng","Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama, karena tidak ada informasi yang mengand",0,,0.943348,3,10,0.5,0.105,204.317,204.4216543121338,1.47
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,79,"Berdasarkan pernyataan: 'Dari sinilah kemudian Bahasa Melayu distandardisasikan .'
+Apakah pernyataan",ya,"Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""Dari sinilah kemud","Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan yang diberikan karena tidak ada informasi mengenai",0,,1.470808,5,10,0.5,0.113,202.636,202.74930366134643,1.48
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,80,Berdasarkan pernyataan: 'Perbedaan Bahasa Bawean dan Bahasa Madura dapat diibaratkan dengan perbedaa,ya,"Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa intonasi orang Bawean mudah dikenali di kalangan penut","Tidak. 
+
+Pernyataan tersebut menunjukkan bahwa perbedaan antara Bahasa Indonesia dan Bahasa Melayu menciptakan",1,,1.557113,5,10,0.5,0.25,199.547,199.79728085708618,1.11
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,81,Berdasarkan pernyataan: 'Lirik digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy in 1878 yang ,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena ia tidak mengandungi kata ""Har","Yes. 
+
+The statement ""Lirik digubah oleh Naphtali Herz Imber (1856-1909) di",1,,0.940448,4,10,0.5,0.246,212.074,212.31994235420228,1.29
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,82,"Berdasarkan pernyataan: 'Sebagai suatu disiplin ilmu , Ilmu Komputer lebih menekankan pada pemrogram",ya,"Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa Ilmu Komputer lebih menekankan pada pemrograman komputer, karena itu",Ya.,1,,0.693147,2,10,0.5,0.101,240.177,240.2775175113678,0.67
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,83,"Berdasarkan pernyataan: 'Dibandingkan dengan bahasa-bahasa Eropa , bahasa Indonesia tidak banyak men",ya,"Yes. 
+
+The statement ""Dibandingkan dengan bahasa-bahasa Eropa, bahasa Indonesia tidak menggunakan kata bergender"" can be","Jawaban: Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena ""dibanding",1,,0.673012,2,10,0.5,0.202,192.262,192.4637092704773,1.56
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,84,Berdasarkan pernyataan: 'Semua sel dibatasi oleh suatu membran yang mengatur perjalanan materi antar,tidak,"Yes. 
+
+The statement ""Semua sel dibatasi oleh suatu membran yang mengatur perjalanan materi antara sel tersebut dan","Ya
+
+Pernyataan ini dapat disimpulkan bahwa ""semua sel"" disebut ""situsoplasma"" karena membran",0,,-0.0,1,10,0.5,0.127,252.958,253.08495932388306,1.19
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,85,Berdasarkan pernyataan: 'Di bagian barat Indonesia penduduknya kebanyakan adalah suku Cina yang meru,tidak,"Yes. 
+
+Based on the given statement, ""Di bagian barat Indonesia penduduknya kebanyakan adalah suku Cina yang","Jawaban: Tidak
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan ""Orang-orang Cina memiliki",0,,-0.0,1,10,0.5,0.128,185.208,185.3358419494629,1.62
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,86,Berdasarkan pernyataan: 'Luas pulau ini 132.000 km dengan penduduk sekitar 114 juta ( kepadatan 864 ,tidak,"Tidak. 
+
+Pernyataan yang ditentukan adalah ""luas pulau ini 132.000 km dengan pend","Jawaban: tidak
+
+Pernyataan yang ditandai adalah bahwa luas pulau tersebut adalah 132.000",1,,0.940448,4,10,0.5,0.146,225.784,225.92951949501037,1.21
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,87,Berdasarkan pernyataan: 'Bahasa Gayo adalah bahasa yang dituturkan oleh suku Gayo di Nanggroe Aceh D,ya,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi tentang bagaimana","Yes. 
+
+Pernyataan tersebut secara tata cara menghasilkan bahwa ""Bahasa Gayo"" adalah bahasa yang digunakan etnik",0,,0.325083,2,10,0.5,0.089,198.409,198.49752672576903,1.51
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,88,Berdasarkan pernyataan: 'Beberapa ilmuwan terkagum kagum akan betapa effisien nya proses replikasi y,ya,"Yes. 
+
+The statement ""Proses replikasi ini walau rumit, juga dikenal karena effisiensinya"" can be interpreted","Yes.
+
+Based on the given statement, ""Proses replikasi ini walau rumit, juga dikenal karena efisiensinya,""",1,,0.897946,3,10,0.5,0.152,202.214,202.36635924720764,1.35
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,89,"Berdasarkan pernyataan: 'Sebutan Nippon sering digunakan dalam urusan resmi , termasuk nama negara d",tidak,"Yes. 
+
+The statement ""Sebutan Nippon sering digunakan dalam urusan resmi, termasuk nama negara dalam u","Yes.
+
+Pernyataan tersebut menunjukkan bahwa ""sebutan Nippon"" ditemukan di mana-nya memiliki huruf kan",0,,0.940448,4,10,0.5,0.428,302.659,303.08661397361755,0.9
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,90,Berdasarkan pernyataan: 'Olahraga yang paling populer di Indonesia adalah badminton dan sepak bola ;,tidak,"Yes. 
+
+The statement ""Olahraga yang paling populer di Indonesia adalah badminton dan sepak bola ; Liga Indonesia adalah l","Yes. 
+
+The statement ""Olahraga yang paling populer di Indonesia adalah badminton dan sepak bola ; Liga Indonesia adalah l",0,,1.279854,4,10,0.5,0.332,243.217,243.54901909065248,0.89
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,91,Berdasarkan pernyataan: 'Mikrofilamen dan mikrotubulus tersusun atas protein globular yang dapat den,tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan pertama karena tidak ada informasi yang mengandung","Ya. 
+
+Pernyataan tersebut menyebut ""mikrofilamen dan mikrotubulus tersusun atas protein globular yang",1,,0.639032,3,10,0.5,0.244,271.756,272.00042958831784,1.1
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,92,Berdasarkan pernyataan: 'Filsafat muncul ketika orang-orang mulai berpikir-pikir dan berdiskusi akan,ya,"Yes. 
+
+The statement ""Filsafat muncul ketika orang-orang mulai memikirkan dan berdiskusi akan ke","Yes. 
+
+The statement ""Filsafat muncul ketika orang-orang mulai memikirkan dan berdiskusi akan ke",1,,0.673012,2,10,0.5,0.281,306.272,306.5532302112579,0.63
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,93,Berdasarkan pernyataan: 'Lirik Hatikvah digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy pada,tidak,"Yes. 
+
+The statement ""Lirik Hatikvah digubah oleh Naphtali Herz Imber (1856-19","Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa Lirik Hatikvah digubah oleh Naphtali Herz Imber di J",0,,0.673012,2,10,0.5,0.173,276.842,277.0154192371368,1.08
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,94,Berdasarkan pernyataan: 'Bentuknya yang unik menyerupai bunga mawar laba-laba atau huruf K besar yan,ya,"Yes. 
+
+The given statement describes a unique shape that is formed by three clusters of flowers, each with a large K-shaped flower bud from the top","Ya. 
+
+Pernyataan tersebut dapat disimpulkan bahwa bentuknya yang unik mencakup bunga mawar laba-l",1,,1.279854,4,10,0.5,0.127,256.6,256.72697577476504,0.63
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,95,Berdasarkan pernyataan: 'Proses pembukaan rantai DNA ini dibantu oleh beberapa jenis protein yang da,tidak,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa pada DNA manusia, ada beberapa point tempat terjadinya proses inisiasi","Yes. 
+
+Pernyataan tersebut dapat disimpulkan bahwa pada DNA manusia, ada beberapa point tempat terjadinya proses inis",0,,0.500402,2,10,0.5,0.118,214.652,214.77034812164305,1.4
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,96,"Berdasarkan pernyataan: '3 kabupaten dan 1 desa ini merupakan wilayah inti suku Gayo .'
+Apakah perny",ya,"Jawaban: ya
+
+Pernyataan tersebut dapat disimpulkan bahwa ""keempat daerah ini"" adalah wilayah inti su","Jawaban: Tidak.
+
+Pernyataan tersebut hanya menyebutkan bahwa ada patrilinealitas dalam suku Gayo,",1,,1.168282,4,10,0.5,0.11,189.967,190.0774555130005,1.58
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,97,"Berdasarkan pernyataan: 'Secara umum , semakin kompleks suatu gejala , semakin kompleks pula alat ( ",tidak,"Tidak. 
+
+Pernyataan tersebut tidak dapat disimpulkan dari pernyataan berikut:
+
+""Pernyataan 1:","Yes. 
+
+The statement ""Secara umum matematika adalah pelajaran yang sangat di benci oleh murid-murid sekolah""",1,,1.168282,4,10,0.5,0.098,230.358,230.45592041778565,1.19
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,98,"Berdasarkan pernyataan: 'Dalam agama Islam , Yerusalem ( Al-Quds ) merupakan tempat suci ketiga sete",tidak,"Ya
+
+Pernyataan tersebut dapat disimpulkan bahwa Jerusalem (Al-Quds) adalah tempat suci ketiga setelah Mekkah","Ya
+
+Pernyataan tersebut menyebutkan bahwa Jerusalem, yang merupakan tempat suci ketiga dalam agama Islam, dimiliki oleh",0,,-0.0,1,10,0.5,0.106,210.358,210.46361752319336,1.43
+Qwen/Qwen1.5-1.8B-Chat,wrete,id,99,"Berdasarkan pernyataan: 'Ilmu komputer mencakup beragam topik yang berkaitan dengan komputer , mulai",ya,"Yes. 
+
+The statement ""Ilmu komputer mencakup beragam topik yang berkaitan dengan komputer, dari analisa ab",Ya,1,,0.897946,3,10,0.5,0.141,232.166,232.30686651802063,0.93
