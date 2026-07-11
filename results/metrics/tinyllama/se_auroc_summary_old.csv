@@ -1,5 +1,0 @@
-model,dataset,language,n_questions,M,temperature,auroc,aurac,best_threshold,accuracy,wrete_macro_f1,avg_entropy,std_entropy,total_time_s,similarity_calls_total,avg_latency_s,throughput_tok_s,peak_ram_mb,f1_threshold,max_tokens,load_time_s,model_size_mb,ram_after_load_mb,ram_available_mb
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,trivia_qa,en,100,10,0.5,0.7683,0.2801,,0.25,,0.7956,0.653,11525.3,4500,115.25,4.62,4426.5,0.5,30,5.062,4196.4,4426.5,2021.9
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,bioasq,en,100,10,0.5,0.6197,0.0366,,0.06,,0.4548,0.5853,6112.9,4500,61.13,4.65,5813.7,0.5,30,5.051,4196.4,5802.6,2426.6
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,facqa,id,100,10,0.5,0.6542,0.1496,,0.11,,0.9179,0.4428,7592.5,4500,75.92,3.96,5590.2,0.5,30,4.894,4196.4,5590.1,2309.2
-TinyLlama/TinyLlama-1.1B-Chat-v1.0,wrete,id,100,10,0.5,0.4169,0.0907,,0.14,0.213,0.4939,0.368,7397.4,4500,73.97,4.07,5228.2,0.5,30,5.204,4196.4,5037.9,2607.0
