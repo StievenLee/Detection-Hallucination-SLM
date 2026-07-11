@@ -57,7 +57,7 @@ M_VALUES = [3, 5, 7, 10]      # nilai M yang dievaluasi (Fig. 3)
 M_MAX    = max(M_VALUES)      # generate sekali sebanyak ini, sisanya subset
 DEVICE   = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-OUT_DIR      = Path("results/m_variation")
+OUT_DIR      = Path("../results/m_variation")
 RAW_CSV      = OUT_DIR / "m_variation_raw.csv"
 SUMMARY_CSV  = OUT_DIR / "m_variation_summary.csv"
 FIG_PDF      = OUT_DIR / "fig_m_variation.pdf"
