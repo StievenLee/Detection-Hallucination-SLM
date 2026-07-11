@@ -1,8 +1,24 @@
 import gc
 import time
+import random
+import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from .metrics import ResourceMonitor, get_ram_usage_mb, get_model_size_mb
+
+
+def set_seed(seed: int = 42):
+    """
+    Set semua sumber keacakan agar hasil reproducible.
+    Panggil SEKALI di awal main() sebelum eksperimen.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    # warn_only=True: jangan crash kalau ada op yang belum punya versi deterministik
+    torch.use_deterministic_algorithms(True, warn_only=True)
 
 
 # Chat template fallback manual untuk model yang tidak support apply_chat_template
@@ -73,11 +89,17 @@ def load_model_and_tokenizer(model_name: str, device: str = "cpu"):
         tokenizer.pad_token = tokenizer.eos_token
 
     start = time.time()
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     model_name,
+    #     device_map=device,
+    #     trust_remote_code=True,
+    #     dtype=torch.float32,  # CPU-safe
+    # )
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        device_map=device,
+        torch_dtype=torch.float16,
+        device_map="auto",
         trust_remote_code=True,
-        dtype=torch.float32,  # CPU-safe
     )
     model.eval()
 
@@ -115,13 +137,27 @@ def generate_responses(
     max_new_tokens: int = 100,
     temperature: float = 0.5,
     top_p: float = 0.95,
+    seed: int = None,
 ) -> tuple[list[str], dict]:
     """
     Generate M sampel dari satu prompt.
     Return: (list of response strings, timing & token stats)
+
+    seed: kalau diisi, sampling M respons jadi reproducible antar-run
+          (tetap acak ANTAR sampel dalam satu panggilan, tapi identik
+          bila dijalankan ulang dengan seed sama).
     """
+    # inputs = tokenizer(prompt, return_tensors="pt")
+    # input_len = inputs["input_ids"].shape[-1]
     inputs = tokenizer(prompt, return_tensors="pt")
     input_len = inputs["input_ids"].shape[-1]
+    device = next(model.parameters()).device
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    if seed is not None:
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
 
     responses = []
     total_new_tokens = 0
@@ -160,3 +196,47 @@ def generate_responses(
     print(f"  Throughput  : {stats['tokens_per_sec']} tokens/s")
 
     return responses, stats
+
+
+def generate_best_answer(
+    model,
+    tokenizer,
+    prompt: str,
+    max_new_tokens: int = 30,
+    temperature: float = 0.1,
+    top_p: float = 0.95,
+    seed: int = None,
+) -> str:
+    """
+    Hasilkan SATU jawaban 'best generation' pada temperature rendah (default 0.1),
+    mengikuti Farquhar et al. [3]. Dipakai HANYA untuk menilai correctness,
+    TERPISAH dari M sampel T=0.5 yang dipakai menghitung semantic entropy.
+
+    Temperature rendah -> jawaban paling mungkin (mode distribusi) -> stabil,
+    tidak berisik seperti mengambil satu sampel acak dari T=0.5.
+
+    seed: kalau diisi, satu jawaban ini reproducible antar-run (penting agar
+          label 'correct' stabil, karena do_sample=True tetap dipertahankan).
+    """
+    inputs = tokenizer(prompt, return_tensors="pt")
+    device = next(model.parameters()).device
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+
+    if seed is not None:
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
+
+    input_len = inputs["input_ids"].shape[-1]
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            max_length=None,
+            do_sample=True,
+            temperature=temperature,
+            top_p=top_p,
+            pad_token_id=tokenizer.pad_token_id,
+        )
+    new_tokens = outputs[0][input_len:]
+    return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()

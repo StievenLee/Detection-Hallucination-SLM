@@ -2,82 +2,20 @@
 Data loader untuk semua dataset yang digunakan:
   EN: TriviaQA, BioASQ
   ID: FacQA, WReTE
+
+Catatan: fungsi penilaian correctness (is_correct) sudah DIPINDAH ke utils/scoring.py
+(Opsi A: F1 SQuAD>0.5 untuk factoid, polaritas ya/tidak untuk WReTE).
 """
 
 import pandas as pd
 from pathlib import Path
 import ast
-import re
+
 # ── Helpers ──────────────────────────────────────
 
 def _normalize(text: str) -> str:
-    return text.strip().lower()
+    return str(text).strip().lower()
 
-import re
-
-# Kata polaritas (word-boundary, dukung Indonesia & Inggris)
-_POS_PAT = re.compile(r'\b(ya|iya|yes|benar|betul|correct|true|sure|setuju|tepat)\b')
-_NEG_PAT = re.compile(r'\b(tidak|tak|no|not|bukan|salah|incorrect|false|nope)\b')
-
-
-def _extract_yesno(prediction: str):
-    """
-    Deteksi polaritas ya/tidak dari respons SLM untuk task entailment (WReTE).
-
-    Tahan terhadap dua masalah khas SLM kecil:
-      1. Model mengutip kalimat soal -> kata 'ya'/'tidak'/'benar' di dalam
-         tanda kutip DIBUANG dulu agar tidak mencemari deteksi.
-      2. Model menjawab bertele-tele -> hanya pembuka jawaban (40 char
-         setelah kutipan dibuang) yang dibaca, karena polaritas ada di awal.
-
-    Return: 'ya', 'tidak', atau None (jika tak ada polaritas jelas,
-    mis. model mengulang prompt). None dihitung sebagai jawaban salah
-    di is_correct.
-    """
-    p = str(prediction).lower().strip()
-    # Buang teks di dalam tanda kutip (kutipan dari soal)
-    p = re.sub(r'"[^"]*"', ' ', p)
-    p = re.sub(r"'[^']*'", ' ', p)
-    # Fokus ke pembuka jawaban
-    head = p[:40]
-    neg = _NEG_PAT.search(head)
-    pos = _POS_PAT.search(head)
-    # Negasi diprioritaskan bila muncul lebih awal atau bersamaan
-    if neg and (not pos or neg.start() <= pos.start()):
-        return 'tidak'
-    if pos:
-        return 'ya'
-    return None
-
-
-def is_correct(prediction: str, sample: dict, dataset_name: str = None) -> bool:
-    # Task entailment biner (WReTE): banding polaritas, bukan substring
-    if dataset_name == "wrete" or str(sample.get("answer")).strip().lower() in ("ya", "tidak"):
-        pol = _extract_yesno(prediction)
-        return pol is not None and pol == str(sample["answer"]).strip().lower()
-
-    # Factoid QA (TriviaQA, BioASQ, FacQA): substring matching
-    pred = _normalize(prediction)
-    all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
-    for ans in all_answers:
-        ans = _normalize(ans)
-        if not ans:
-            continue
-        if ans in pred:
-            return True
-    return False
-
-# def is_correct(prediction: str, sample: dict) -> bool:
-#     pred = _normalize(prediction)
-#     all_answers = [sample["answer"]] + sample.get("answer_aliases", [])
-    
-#     for ans in all_answers:
-#         ans = _normalize(ans)
-#         if not ans:
-#             continue
-#         if ans in pred:
-#             return True
-#     return False
 
 # ── English Datasets ─────────────────────────────
 
@@ -110,15 +48,13 @@ def load_bioasq(split: str = "factoid", n: int = 100) -> list[dict]:
         if not question or question in seen:
             continue
 
-        # Coba 'answer' dulu, fallback ke 'ideal_answer'
         raw_ans = item.get("answer", "") or item.get("ideal_answer", "")
-        # print(f"RAW ANS TYPE: {type(raw_ans)} | VALUE: {raw_ans}")
         if isinstance(raw_ans, str):
             try:
                 raw_ans = ast.literal_eval(raw_ans)
             except Exception:
                 pass
-        
+
         if isinstance(raw_ans, list):
             flat = []
             for a in raw_ans:
@@ -151,21 +87,14 @@ def load_bioasq(split: str = "factoid", n: int = 100) -> list[dict]:
     print(f"[Loader] BioASQ: {len(samples)} sampel")
     return samples
 
+
 # ── Indonesian Datasets ───────────────────────────
+
 def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
     """
     FacQA — QA faktoid Bahasa Indonesia dari IndoNLU.
-
-    Format CSV:
-      - question  : list token pertanyaan (string repr of list)
-      - passage   : list token konteks   (string repr of list)
-      - seq_label : list BIO label       (string repr of list)
-                    B = awal jawaban, I = lanjutan, O = bukan jawaban
-
-    Pipeline extract jawaban:
-      zip(passage_tokens, bio_labels) → ambil token ber-label B atau I
+    Jawaban di-extract dari token berlabel B/I pada BIO sequence.
     """
-
     path = Path(csv_path)
     assert path.exists(), f"File tidak ditemukan: {csv_path}"
 
@@ -180,13 +109,6 @@ def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
             return str(raw).strip().split()
 
     def extract_answer(passage_tokens: list, bio_labels: list) -> str:
-        """
-        Ambil token dari passage yang berlabel B atau I.
-        Contoh:
-          passage = ["hezb-ul", "mujahedeen", ",", "kelompok", ...]
-          labels  = ["B",       "I",          "O", "O", ...]
-          result  = "hezb-ul mujahedeen"
-        """
         answer_tokens = [
             tok for tok, lbl in zip(passage_tokens, bio_labels)
             if lbl.upper() in ("B", "I")
@@ -204,18 +126,15 @@ def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
         if not raw_q or not raw_p or not raw_lbl:
             continue
 
-        question_tokens  = parse_list(raw_q)
-        passage_tokens   = parse_list(raw_p)
-        bio_labels       = parse_list(raw_lbl)
+        question_tokens = parse_list(raw_q)
+        passage_tokens  = parse_list(raw_p)
+        bio_labels      = parse_list(raw_lbl)
 
         question = " ".join(question_tokens).strip()
         answer   = extract_answer(passage_tokens, bio_labels)
 
-        # Skip kalau tidak ada jawaban terextract
         if not answer or not question:
             continue
-
-        # Skip duplikat
         if question in seen_questions:
             continue
         seen_questions.add(question)
@@ -235,6 +154,7 @@ def load_facqa(csv_path: str, n: int = 100) -> list[dict]:
     print(f"[Loader] FacQA: {len(samples)} sampel")
     return samples
 
+
 def load_wrete(csv_path: str, n: int = 100) -> list[dict]:
     path = Path(csv_path)
     assert path.exists(), f"File tidak ditemukan: {csv_path}"
@@ -253,22 +173,21 @@ def load_wrete(csv_path: str, n: int = 100) -> list[dict]:
         if label not in LABEL_MAP:
             continue
 
-        # ✅ Fix: pakai sent_A & sent_B sesuai kolom asli
         premise    = str(row.get("sent_A", "")).strip()
         hypothesis = str(row.get("sent_B", "")).strip()
-
         if not premise or not hypothesis:
             continue
 
+        # Framing entailment yang lebih tepat: apakah B dapat disimpulkan dari A.
         question = (
             f"Berdasarkan pernyataan: '{premise}'\n"
-            f"Apakah pernyataan berikut benar? '{hypothesis}'"
+            f"Apakah pernyataan berikut dapat disimpulkan? '{hypothesis}'"
         )
 
         samples.append({
             "question":       question,
             "answer":         LABEL_MAP[label],
-            "answer_aliases": ["benar"] if LABEL_MAP[label] == "ya" else ["salah", "tidak benar"],
+            "answer_aliases": [],          # ← aliases lama dihapus (tak dipakai di scoring WReTE)
             "language":       "id",
             "dataset":        "wrete",
         })
@@ -279,19 +198,10 @@ def load_wrete(csv_path: str, n: int = 100) -> list[dict]:
     print(f"[Loader] WReTE: {len(samples)} sampel")
     return samples
 
+
 # ── Utility ───────────────────────────────────────
 
-def load_dataset_by_name(
-    name: str,
-    split: str = "validation",
-    n: int = 100,
-    csv_path: str = None,
-) -> list[dict]:
-    """
-    Single entry point untuk semua dataset.
-
-    name: "trivia_qa" | "bioasq" | "facqa" | "wrete"
-    """
+def load_dataset_by_name(name, split="validation", n=100, csv_path=None):
     loaders = {
         "trivia_qa": lambda: load_trivia_qa(split, n),
         "bioasq":    lambda: load_bioasq(split, n),
