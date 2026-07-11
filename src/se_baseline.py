@@ -37,15 +37,15 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    # "microsoft/phi-1_5",
+    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "microsoft/phi-1_5",
     "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
 DATASETS = [
-    # {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
-    # {"name": "bioasq",    "split": "factoid",    "n": 100, "csv_path": None},
+    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
+    {"name": "bioasq",    "split": "factoid",    "n": 100, "csv_path": None},
     {"name": "facqa",     "split": None,         "n": 100,
      "csv_path": "data/raw/facqa/train_preprocess.csv"},
     {"name": "wrete",     "split": None,         "n": 100,
