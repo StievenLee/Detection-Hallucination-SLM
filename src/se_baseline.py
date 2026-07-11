@@ -44,10 +44,10 @@ MODELS = [
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
 DATASETS = [
-    # {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
-    # {"name": "bioasq",    "split": "factoid",    "n": 100, "csv_path": None},
-    # {"name": "facqa",     "split": None,         "n": 100,
-    #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
+    {"name": "bioasq",    "split": "factoid",    "n": 100, "csv_path": None},
+    {"name": "facqa",     "split": None,         "n": 100,
+     "csv_path": "data/raw/facqa/train_preprocess.csv"},
     {"name": "wrete",     "split": None,         "n": 100,
      "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
