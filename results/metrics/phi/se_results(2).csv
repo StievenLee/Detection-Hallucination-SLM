@@ -1,0 +1,453 @@
+model,dataset,language,question_idx,question,answer_gt,prediction,sample0_for_se,correct,f1_squad,se_entropy,n_clusters,M,temperature,se_time_s,gen_time_s,latency_s,throughput_tokens_per_sec
+microsoft/phi-1_5,facqa,id,0,Kelompok apakah yang menyatakan bertanggung jawab atas ledakan di Srinagar ?,hezb-ul mujahedeen,Pertanyaan: Kelompok apakah yang menyatakan bertanggung jawab atas ledakan,Pertanyaan: Kelompok apakah yang menyatakan bertanggung jawab atas ledakan,0,0.0,0.639032,3,10,0.5,0.29,107.305,107.59476297378541,2.8
+microsoft/phi-1_5,facqa,id,1,"Di pulau manakah , PT Mutiara Indopearl berlokasi sebelum dekade 2000 - an",pulau makassar,"Pertanyaan: Di pulau manakah, PT Mutiara Indopearl berlokasi sebelum dekade","Hi, I was wondering if you could help me understand the difference between AI and ML.
+
+Human: Sure, AI is the ability of machines",0,0.1667,0.940448,4,10,0.5,0.119,114.168,114.28651596832276,2.63
+microsoft/phi-1_5,facqa,id,2,Apakah warna pasir pada pesisir pantai Baturumah yang terletak antara pantai Wembrak dan pantai Warm,putih halus,Pertanyaan: Apakah warna pasir pada pesisir pantai Baturumah yang terletak antara,Tepat banyak pada pesisir pantai Baturumah yang terletak antara pantai Warma kata,0,0.0,0.325083,2,10,0.5,0.065,96.271,96.33635458564758,3.12
+microsoft/phi-1_5,facqa,id,3,Apa nama perusahaan China yang bekerja sama dengan PT Indelberg Indonesia mengembangkan sejumlah lap,sinopec southwest petroleum biro,Pertanyaan: Apa nama perusahaan China yang bekerja sama dengan PT Indelberg Indonesia mengem,Pertanyaan: Apa nama perusahaan China yang bekerja sama dengan PT Indelberg Indonesia mengem,0,0.0,-0.0,1,10,0.5,0.073,116.713,116.7858166103363,2.57
+microsoft/phi-1_5,facqa,id,4,Siapa yang akan memindahkan Patung Kartini dalam waktu dekat ini ?,pemerintah dki jakarta,Pertanyaan: Siapa yang akan memindahkan Patung Kartini dalam waktu dekat ini?,Pertanyaan: Siapa yang akan memindahkan Patung Kartini dalam waktu dekat ini?,0,0.0,0.897946,3,10,0.5,0.089,106.689,106.77752910995483,2.81
+microsoft/phi-1_5,facqa,id,5,Berapa kapasitas PLTS yang sudah dapat digunakan masyarakat Yogyakarta sekarang ?,200 wattjam,Pertanyaan: Berapa kapasitas PLTS yang sudah dapat digunakan masyarakat Y,Pertanyaan: Berapa kapasitas PLTS yang sudah dapat digunakan masyarakat Y,0,0.0,0.639032,3,10,0.5,0.048,128.335,128.38284727096558,2.34
+microsoft/phi-1_5,facqa,id,6,"Tanggal berapa Presiden Susilo Bambang Yudhoyono memimpin rapat kabinet terbatas dari Missouri , Ame",12/9,Pertanyaan: Tanggal berapa Presiden Susilo Bambang Yudhoyono memimpin rapat kabinet ter,Senin ( 12/9 ). Rapat kabinet jarak jauh ini akan dilakukan setiap h,0,0.0,0.639032,3,10,0.5,0.1,116.751,116.85143931007386,2.57
+microsoft/phi-1_5,facqa,id,7,Siapa nama presiden Indonesia sekarang ?,susilo bambang yudhoyono,"Pertanyaan: Siapa nama presiden Indonesia sekarang?
+
+Bacaan: Menteri Sekretaris Negara","Pertanyaan: Siapa nama presiden Indonesia sekarang?
+
+Bacaan: Menteri Sekretaris Negara",0,0.0,0.639032,3,10,0.5,0.095,109.921,110.0158874950409,2.73
+microsoft/phi-1_5,facqa,id,8,Apakah nama kapsul karya Rusia yang dikembangkan menjadi Shenzhou sehingga menjadi kunci utama progr,soyuz,Pertanyaan: Apakah nama kapsul karya Rusia yang dikembangkan menjadi Shenzhou se,Pertanyaan: Apakah nama kapsul karya Rusia yang dikembangkan menjadi Shenzhou se,0,0.0,-0.0,1,10,0.5,0.061,119.208,119.26883488464355,2.52
+microsoft/phi-1_5,facqa,id,9,Apakah istilah untuk hasil pencampuran antara bioetanol dan bensin ?,gasohol,"Biasanya menggalikan solar dan gasohol untuk bensin, seharusnya bisa jadi solusi",Bekah jadi bahan bakar minyak kelangkaan bahan bakar minyak kelangkaan b,1,0.1667,0.943348,3,10,0.5,0.073,96.174,96.24665996932984,3.12
+microsoft/phi-1_5,facqa,id,10,Siapakah yang membatalkan kunjungan Menteri Luar Negeri Jepang sebagai balasan atas kunjungan Perdan,pemerintah china,Pertanyaan: Siapakah yang membatalkan kunjungan Menteri Luar Negeri Jepang,Pertanyaan: Siapakah yang membatalkan kunjungan Menteri Luar Negeri Jepang,0,0.0,0.325083,2,10,0.5,0.074,138.28,138.35392764091492,2.17
+microsoft/phi-1_5,facqa,id,11,Berapa ton Indonesia mengimpor gandum untuk produksi terigu dari negara lain per tahun ?,"4,5 juta ton",Pertanyaan: Berapa ton Indonesia mengimpor gandum untuk produksi terigu dari negara lain per,Pertanyaan: Berapa ton Indonesia mengimpor gandum untuk produksi terigu dari negara lain per,0,0.125,-0.0,1,10,0.5,0.066,120.381,120.44711490249634,2.49
+microsoft/phi-1_5,facqa,id,12,"Apakah nama suaka margasatwa di pesisir kepala burung , Sorong dan Manokwari , yang merupakan pusat ",jamursbamedi,"Pertanyaan: Apakah nama suaka margasatwa di pesisir kepala burung, Sorong dan Man","Pertanyaan: Apakah nama suaka margasatwa di pesisir kepala burung, Sorong dan Man",0,0.0,-0.0,1,10,0.5,0.081,122.818,122.89891902732849,2.44
+microsoft/phi-1_5,facqa,id,13,Kemana pesawat Mandala Airlines RI - 020 rute Jakarta-Jambi return to base / RTB ?,bandara soekarno-hatta,"Kemana pesawat Mandala Airlines RI - 020 rute Jakarta-Jambi return to base / RTB?
+
+Baca","Kemana pesawat Mandala Airlines RI - 020 rute Jakarta-Jambi return to base / RTB?
+
+Baca",0,0.0,-0.0,1,10,0.5,0.085,161.575,161.66037578582763,1.86
+microsoft/phi-1_5,facqa,id,14,Apakah nama klub bulu tangkis terkuat di Amerika Serikat yang dilatih oleh Tony Gunawan ?,orange county,Pertanyaan: Apakah nama klub bulu tangkis terkuat di Amerika Serikat yang dil,Pertanyaan: Apakah nama klub bulu tangkis terkuat di Amerika Serikat yang dil,0,0.0,0.325083,2,10,0.5,0.071,180.317,180.38838252258302,1.66
+microsoft/phi-1_5,facqa,id,15,Partai apakah yang mencalonkan Noaman Gomaa pada pemilu pertama multikandidat di Mesir tahun 2005,partai wafd,Partai Apakah yang mencalonkan Noaman Gomaa pada pemilu pertama multikandidat di,Partai apakah yang mencalonkan Noaman Gomaa pada pemilu pertama multikandidat di,0,0.1538,0.325083,2,10,0.5,0.069,162.47,162.53861472129822,1.85
+microsoft/phi-1_5,facqa,id,16,Berapa hektar luas Taman Nasional Sebangau ?,568.700 hektar,"Pertanyaan: Berapa hektar luas Taman Nasional Sebangau?
+
+Bacaan: Taman nas","Pertanyaan: Berapa hektar luas Taman Nasional Sebangau?
+
+Bacaan: Taman nas",0,0.2222,-0.0,1,10,0.5,0.063,112.385,112.44843603134156,2.67
+microsoft/phi-1_5,facqa,id,17,Jalan tol mana saja yang tidak dikenai tarif baru jalan tol ?,jalan tol lingkar luar jakarta sedyatmo arah bandara soekarno-hatta cikampek-purwakarta-padalarang cipularang pondok aren-ulujami,Pertanyaan: Jalan tol mana saja yang tidak dikenai tarif baru jalan tol?,Pertanyaan: Jalan tol mana saja yang tidak dikenai tarif baru jalan tol?,0,0.16,-0.0,1,10,0.5,0.063,115.612,115.6749482269287,2.59
+microsoft/phi-1_5,facqa,id,18,Presiden Direktur perusahaan apakah Yue Shao Dong ?,sinopec southwest petroleum biro,"Pertanyaan: Presiden Direktur perusahaan apakah Yue Shao Dong?
+
+Bacaan: Sich","Pertanyaan: Presiden Direktur perusahaan apakah Yue Shao Dong?
+
+Bacaan: Sich",0,0.0,0.325083,2,10,0.5,0.076,104.647,104.7227384300232,2.87
+microsoft/phi-1_5,facqa,id,19,"Siapa nama Perwakilan Direktur Jenderal untuk Pemberantasan Polio dari WHO Geneva , Swiss , di Jakar",dr david l heymann,Pertanyaan: Siapa nama Perwakilan Direktur Jendalian untuk Pemberantasan Polio dari,"Pertanyaan: Siapa nama Perwakilan Direktur Jendalian untuk Polio dari WHO Geneva, Swiss,",0,0.0,0.325083,2,10,0.5,0.096,113.743,113.83871194648742,2.64
+microsoft/phi-1_5,facqa,id,20,"Pada tahun berapakah , SEA Games terakhir diadakan di Vietnam",2003,"Pada tahun berapakah, SEA Games terakhir diadakan di Vietnam
+
+Bacaan: Emas k",Bacaan: Emas kedua tim Indonesia dipersembahkan Donny B Utomo dari nomor 200 meter gaya k,0,0.0,0.897946,3,10,0.5,0.086,101.041,101.12672387695312,2.97
+microsoft/phi-1_5,facqa,id,21,Siapa Menteri Luar Negeri Korea Selatan ?,ban ki-moon,"Pertanyaan: Siapa Menteri Luar Negeri Korea Selatan Ban Ki-Moon, Minggu ( 21/8 )","Pertanyaan: Siapa Menteri Luar Negeri Korea Selatan?
+
+Bacaan: Washington, senin -",1,0.3077,-0.0,1,10,0.5,0.089,126.669,126.7579127254486,2.37
+microsoft/phi-1_5,facqa,id,22,Pada tahun berapa debut naskah drama Harold Pinter berjudul The Room dipentaskan pertama kali di Bri,1957,Pertanyaan: Pada tahun berapa debut naskah drama Harold Pinter berjudul The Room dipentaskan pert,"Bacaan: Debut naskah dramanya berjudul The Room yang dipentaskan pertama kali di Bristol, In",0,0.0,-0.0,1,10,0.5,0.077,133.338,133.41544455337524,2.25
+microsoft/phi-1_5,facqa,id,23,Berapa tim peneliti yang berhasil menemukan bukti-bukti yang mengarah pada pemenuhan kriteria Warisa,delapan tim peneliti,Pertanyaan: Berapa tim peneliti yang berhasil menemukan bukti-bukti yang men,Pertanyaan: Berapa tim peneliti yang berhasil menemukan bukti-bukti yang men,0,0.3077,0.325083,2,10,0.5,0.079,188.538,188.61748708534242,1.59
+microsoft/phi-1_5,facqa,id,24,"Siapakah yang membuka pameran lukisan Spirit of Natura di Inna Muara Hotel , Padang , Sumatera Barat","gamawan fauzi , gubernur sumatera barat",Pertanyaan: Siapakah yang membuka pameran lukisan Spirit of Natura di Inna Muara,Pertanyaan: Siapakah yang membuka pameran lukisan Spirit of Natura di Inna Muara,0,0.0,0.610864,2,10,0.5,0.082,152.836,152.91808441734315,1.96
+microsoft/phi-1_5,facqa,id,25,Kapankah bakal diadakannya pemilihan umum federal di Jerman ?,18 september,Pertanyaan: Kapankah bakal diadakannya pemilihan umum federal di Jerman kemarin mel,Pertanyaan: Kapankah bakal diadakannya pemilihan umum federal di Jerman kemarin mel,0,0.0,0.325083,2,10,0.5,0.069,90.84,90.90925320625306,3.3
+microsoft/phi-1_5,facqa,id,26,Siapakah Presiden Otoritas Palestina ?,mahmoud abbas,"Pertanyaan: Siapakah Presiden Otoritas Palestina?
+
+Bacaan: Arafat ( 65 ) adal","Pertanyaan: Siapakah Presiden Otoritas Palestina?
+
+Bacaan: Arafat ( 65 ) adal",0,0.0,0.500402,2,10,0.5,0.075,92.674,92.74858782196046,3.24
+microsoft/phi-1_5,facqa,id,27,Di kota manakah letak kantor pusat PBB ?,new york,"Pertanyaan: Di kota manakah letak kantor pusat PBB?
+
+Bacaan: london,","Bacaan: london, rabu - Negara anggota G - 8 ternyata tidak cukup serius untuk",0,0.0,0.500402,2,10,0.5,0.057,123.479,123.53573837661743,2.43
+microsoft/phi-1_5,facqa,id,28,Apa nama bunga tertinggi di dunia ?,bunga bangkai ( amorphophalus titanum ),"Pertanyaan: Apa nama bunga tertinggi di dunia?
+
+Bacaan: Ada berbagai jen","Pertanyaan: Apa nama bunga tertinggi di dunia?
+
+Bacaan: Ada berbagai jen",0,0.1818,0.693147,2,10,0.5,0.066,121.437,121.50328966331482,2.47
+microsoft/phi-1_5,facqa,id,29,Berapa lamakah acara Konser Tribute to Teguh Karya berlangsung,90 menit,"Pertanyaan: Berapa lamakah acara Konser Tribute to Teguh Karya berlangsung
+
+Bacaan",Bacaan berap dalam konser tanda tersebut akan dalam pergelaran Tribute to Teguh Karya ber,0,0.0,0.673012,2,10,0.5,0.059,121.514,121.57300764465332,2.47
+microsoft/phi-1_5,facqa,id,30,"Tanggal berapakah dukungan 14 negara terhadap pemulihan dan pembangunan kembali Unsyiah , Banda Aceh",23/8,Pertanyaan: Tanggal berapakah dukungan 14 negara terhadap pemulihan dan pembang,Pertanyaan: Tanggal berapakah dukungan 14 negara terhadap pemulihan dan pembang,0,0.0,0.693147,2,10,0.5,0.07,147.797,147.86728222084045,2.03
+microsoft/phi-1_5,facqa,id,31,Berapa orang warga Muslim Thailand yang melarikan diri ke Malaysia untuk menghindari kerusuhan berda,131 warga,Komisi Tinggi PBB untuk Urusan Pengungsi ( United Nations High Commissioner for Refugees / UNHCR ) kemarin mulai,Komisi Tinggi PBB untuk Urusan Pengungsi ( United Nations High Commissioner for Refugees / UNHCR ) kemarin mulai,0,0.0,0.610864,2,10,0.5,0.095,120.075,120.16957898139954,2.5
+microsoft/phi-1_5,facqa,id,32,Siapa yang diantar Mubarak sendiri ke perbatasan ketika kembali ke Jalur Gaza pada tahun 1994 ?,mendiang pemimpin palestina yasser arafat,Pertanyaan: Siapa yang diantar Mubarak sendiri ke perbatasan ketika kembali ke Jalur Gaza p,Pertanyaan: Siapa yang diantar Mubarak sendiri ke perbatasan ketika kembali ke Jalur Gaza p,0,0.0,0.325083,2,10,0.5,0.067,95.51,95.57748461723328,3.14
+microsoft/phi-1_5,facqa,id,33,Apa nama suku Kurdi yang dibantai Saddam Hussein pada tahun 1983 ?,mullah mustafa barzani,Pertanyaan: Apa nama suku Kurdi yang dibantai Saddam Hussein pada tahun 1983?,Pertanyaan: Apa nama suku Kurdi yang dibantai Saddam Hussein pada tahun 1983?,0,0.0,0.940448,4,10,0.5,0.101,120.17,120.27052728652954,2.5
+microsoft/phi-1_5,facqa,id,34,"Lulusan akademi militer manakah , Jenderal Sonthi Boonyaratglin yang diangkat menjadi Panglima Angka",akademi militer chulachomklao,"Pertanyaan: Lulusan akademi militer manakah, Jenderal Sonthi Boonyaratglin yang",Bacaan: Sonthi ( 59 ) adalah alumnus Akademi Militer Chulachomklao dan per,0,0.3333,1.359237,5,10,0.5,0.089,126.661,126.75028847312927,2.37
+microsoft/phi-1_5,facqa,id,35,"Di negara manakah , lokasi Universite des Sciences et Techniques du Languedoc Montpellier",perancis,"Pertanyaan: Di negara manakah, lokasi Universite des Sciences et Techniques du Languedoc Montpellier Peranc","Pertanyaan: Di negara manakah, lokasi Universite des Sciences et Techniques du Languedoc Montpellier Peranc",0,0.0,1.0889,4,10,0.5,0.09,111.285,111.37546506881714,2.7
+microsoft/phi-1_5,facqa,id,36,Dari departemen apakah data tentang sejumlah penderita diare di beberapa propinsi ?,departemen kesehatan,Pertanyaan: Dari departemen apakah data tentang sejumlah penderita diare di beberapa propins,Pertanyaan: Dari departemen apakah data tentang sejumlah penderita diare di beberapa propins,0,0.1429,0.325083,2,10,0.5,0.069,105.76,105.82884670257569,2.84
+microsoft/phi-1_5,facqa,id,37,Departemen manakah yang berencana untuk memberlakukan pungutan ekspor terhadap komoditas tambang,departemen keuangan,Departemen manakah yang berencana untuk memberlakukan pungutan ekspor terhadap kom,Departemen manakah yang berencana untuk memberlakukan pungutan ekspor terhadap kom,0,0.1667,-0.0,1,10,0.5,0.066,124.727,124.79270100784302,2.41
+microsoft/phi-1_5,facqa,id,38,Siapakah Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilacap,budhi darmawan,Pertanyaan: Siapakah Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilac,Pertanyaan: Siapakah Kepala Pertamina Unit Pemasaran IV Depo BBM Maos Cilac,0,0.0,0.500402,2,10,0.5,0.071,149.835,149.9060873603821,2.0
+microsoft/phi-1_5,facqa,id,39,Siapakah yang menyerahkan bendera FISU kepada Wali Kota Bangkok pada penutupan Universiade Izmir 200,presiden fisu george killian,Bacaan: Penutupan Universiade sebelumnya dilakukan oleh Wakil Perdana Menter,Ibujurulan yang menyerahkan bendera FISU kepada Wali Kota Bangkok pada penut,0,0.0,1.220607,4,10,0.5,0.072,164.234,164.30636409187318,1.83
+microsoft/phi-1_5,facqa,id,40,Siapakah presiden Venezuela saat ini ? ?,hugo chavez,"Pertanyaan: Siapakah presiden Venezuela saat ini??
+
+Bacaan: Sudah banyak ur","Pertanyaan: Siapakah presiden Venezuela saat ini??
+
+Bacaan: Sudah banyak ur",0,0.0,0.325083,2,10,0.5,0.06,137.94,137.9997004890442,2.17
+microsoft/phi-1_5,facqa,id,41,apa judul sinetron yang mengangkat tema Si Doel Anak Betawi ( 1973 ) yang ditayangkan mulai tahun 19,si doel anak sekolahan,"1. What is the main topic of the passage?
+A) The importance of punctuation in language arts
+B) The history of",Wahabkan sebagai bintang cilik sejak Si Doel Anak Betawi ( 1973 ) yang ditay,0,0.0,1.168282,4,10,0.5,0.104,144.153,144.25740969467162,2.08
+microsoft/phi-1_5,facqa,id,42,Faham apakah yang ingin dihentikan oleh Partai Kiri Jerman ?,neoliberalisme,"Pertanyaan: Faham apakah yang ingin dihentikan oleh Partai Kiri Jerman?
+
+B","Pertanyaan: Faham apakah yang ingin dihentikan oleh Partai Kiri Jerman?
+
+B",0,0.0,0.940448,4,10,0.5,0.098,96.983,97.0813853340149,3.09
+microsoft/phi-1_5,facqa,id,43,"Melalui kesepakatan apa , para pakar teknologi pembangkit listrik tenaga surya memberlakukan skema p",protokol kyoto,Pertemuan itu dihadiri sekitar 1.400 pakar teknologi pembangkit listrik tenaga,Pertemuan itu dihadiri sekitar 1.400 pakar teknologi pembangkit listrik tenaga,0,0.0,-0.0,1,10,0.5,0.048,166.309,166.35719440841675,1.8
+microsoft/phi-1_5,facqa,id,44,Dimanakah sidang tahunan ke - 60 dari Jeunesses Musicales International diselenggarakan ?,bali,Pertanyaan: Dimanakah sidang tahunan ke - 60 dari Jeunesses Musicales International diselengg,Pertanyaan: Dimanakah sidang tahunan ke - 60 dari Jeunesses Musicales International diselengg,0,0.0,0.673012,2,10,0.5,0.065,141.326,141.3906812915802,2.12
+microsoft/phi-1_5,facqa,id,45,Apa mayor yang dipilih Sander saat melanjutkan studinya di Universitas Illinois Urbana Champaign ?,matematika dan komputer,Pertanyaan: Apa mayor yang dipilih Sander saat melanjutkan studinya di Universitas Illinois Urb,Pertanyaan: Apa mayor yang dipilih Sander saat melanjutkan studinya di Universitas Illinois Urb,0,0.0,0.639032,3,10,0.5,0.072,120.475,120.54686412811279,2.49
+microsoft/phi-1_5,facqa,id,46,Apakah yang menjadi tujuan obyek wisata kaum ekspatriat yang datang ke Banten,krakatau,Pertanyaan: Apakah yang menjadi tujuan obyek wisata kaum ekspatriat y,Pertanyaan: Apakah yang menjadi tujuan obyek wisata kaum ekspatriat y,0,0.0,1.227529,5,10,0.5,0.111,134.273,134.3841490726471,2.23
+microsoft/phi-1_5,facqa,id,47,Berapa dosen Unsyiah yang meninggal karena tsunami ?,211,"Pertanyaan: Berapa dosen Unsyiah yang meninggal karena tsunami?
+
+Bacaan: Dik","Bacaan, karena tsunami dikatakan karena tsunami.
+
+Human: Bacaan, karena tsunami",0,0.0,-0.0,1,10,0.5,0.066,94.566,94.63222672080994,3.17
+microsoft/phi-1_5,facqa,id,48,"Siapa pembuat video kampanye lingkungan hidup "" Fish Don't Cry "" ?",aji gunawan,"Pertanyaan: Siapa pembuat video kampanye lingkungan hidup "" Fish Don't Cry ""?
+
+B","Bacaan: Karena peduli, mereka pun mendidik anak untuk mencintai alam. "" Ramahlah",0,0.0,1.029653,3,10,0.5,0.096,135.133,135.22870717811585,2.22
+microsoft/phi-1_5,facqa,id,49,"Di negara manakah kecelakaan pesawat jet Boeing 737-200 pada Selasa , 23 Agustus 2005 lalu ?",brasil,"Pertanyaan: Di negara manakah kecelakaan pesawat Boeing 737-200 pada Selasa, 23 Agust","Bacaan: Berdasarkan rute seharusnya, pesawat TANS itu hanya akan berhent",0,0.0,0.801819,3,10,0.5,0.062,122.828,122.89001267242432,2.44
+microsoft/phi-1_5,facqa,id,50,Apakah nama topan yang menyerang New Orleans pada Agustus 2005 ?,katrina,"Pertanyaan: Apakah nama topan yang menyerang New Orleans pada Agustus 2005?
+
+Baca","Pertanyaan: Apakah nama topan yang menyerang New Orleans pada Agustus 2005?
+
+Baca",0,0.0,0.325083,2,10,0.5,0.075,122.985,123.06022869110107,2.44
+microsoft/phi-1_5,facqa,id,51,Sejak kapankah PT PIM berhenti beroperasi ?,8 september 2005,Pertanyaan: Sejak kapankah PT PIM berhenti beroperasi sejak 8 September 2005 karena,Pertanyaan: Sejak kapankah PT PIM berhenti beroperasi sejak 8 September 2005 karena,1,0.4,-0.0,1,10,0.5,0.055,120.587,120.64155994606018,2.49
+microsoft/phi-1_5,facqa,id,52,Siapa Kepala Pusat Penelitian Biologi LIPI Bogor ?,dr dedy darnedi,"Pertanyaan: Siapa Kepala Pusat Penelitian Biologi LIPI Bogor?
+
+Bacaan","Pertanyaan: Siapa Kepala Pusat Penelitian Biologi LIPI Bogor?
+
+Bacaan",0,0.0,0.325083,2,10,0.5,0.066,103.916,103.98219381904602,2.89
+microsoft/phi-1_5,facqa,id,53,Negara manakah yang diwakili Javad Vaeidi pada IAEA,iran,"Pertanyaan: Negara manakah yang diwakili Javad Vaeidi pada IAEA
+
+Baca","AI:
+
+AI:
+
+AI:
+
+AI:
+
+AI:
+
+AI:
+
+AI:",0,0.0,0.801819,3,10,0.5,0.077,92.718,92.79537016677857,3.24
+microsoft/phi-1_5,facqa,id,54,Kapankah Undang-Undang Nomor 27 dikeluarkan ?,tahun 2003,"Pertanyaan: Kapankah Undang-Undang Nomor 27 dikeluarkan?
+
+Bacaan: Namun","Pertanyaan: Kapankah Undang-Undang Nomor 27 dikeluarkan?
+
+Bacaan: Namun",0,0.0,0.325083,2,10,0.5,0.067,148.81,148.8770244693756,2.02
+microsoft/phi-1_5,facqa,id,55,Memegang rekor dunia untuk nomor apakah Said Saaeef Shaheen saat ini ?,nomor lari 3.000 meter halang rintang,Pertanyaan: Memegang rekor dunia untuk nomor apakah Said Saaeef Shaheen saat in,Pertanyaan: Memegang rekor dunia untuk nomor apakah Said Saaeef Shaheen saat in,0,0.1111,-0.0,1,10,0.5,0.057,130.005,130.06178391456604,2.31
+microsoft/phi-1_5,facqa,id,56,Berapa luas DAS Merawu ?,218 kilometer persegi,"Pertanyaan: Berapa luas DAS Merawu?
+
+Bacaan: Melihat kenyataan in","Bapaan, Melihat kenyataan ini, penanggulangan erosi dan masalah lingkungan secara",0,0.0,0.610864,2,10,0.5,0.053,160.917,160.97046298217774,1.86
+microsoft/phi-1_5,facqa,id,57,Siapakah yang menata kawasan Dieng untuk dijadikan daerah tujuan wisata ?,pemkab banjarnegara,Pertanyaan: Siapakah yang menata kawasan Dieng untuk dijadikan daerah tujuan,Pertanyaan: Siapakah yang menata kawasan Dieng untuk dijadikan daerah tujuan,0,0.0,0.325083,2,10,0.5,0.069,141.448,141.51658706474305,2.12
+microsoft/phi-1_5,facqa,id,58,Berapakah angka pertumbuhan ekonomi Indonesia ?,"antara 3,4 persen dan 6,35 persen","Pertanyaan: Berapakah angka pertumbuhan ekonomi Indonesia?
+
+Bacaan: Pada sa","Pertanyaan: Berapakah angka pertumbuhan ekonomi Indonesia?
+
+Bacaan: Pada sa",0,0.0,-0.0,1,10,0.5,0.101,121.654,121.7553433933258,2.47
+microsoft/phi-1_5,facqa,id,59,Tahun berapakah Tembok Berlin runtuh ?,1989,"Pertanyaan: Tahun berapakah Tembok Berlin runtuh?
+
+Bacaan: Bagi warga","Pertanyaan: Tahun berapakah Tembok Berlin runtuh?
+
+Bacaan: Bagi warga",0,0.0,0.943348,3,10,0.5,0.07,140.478,140.5480833797455,2.14
+microsoft/phi-1_5,facqa,id,60,Di organisasi dunia apakah terjadinya skandal Program Minyak untuk Pangan ?,pbb,Pertanyaan: Di organisasi dunia apakah terjadinya skandal Program Minyak untuk Pangan ( Oil for,Pertanyaan: Di organisasi dunia apakah terjadinya skandal Program Minyak untuk Pangan ( Oil for,0,0.0,-0.0,1,10,0.5,0.059,110.956,111.01504150009156,2.7
+microsoft/phi-1_5,facqa,id,61,"Kejuaraan apakah yang dibuka di Gelanggang Mahasiswa Soemantri Brojonegoro , Jakarta tanggal 22/8 ?",kejuaraan nasional sepak takraw xvii,Pertanyaan: Kejuaraan apakah yang dibuka di Gelanggang Mahasiswa Soemantri Broj,Pertanyaan: Kejuaraan apakah yang dibuka di Gelanggang Mahasiswa Soemantri Broj,0,0.1333,0.639032,3,10,0.5,0.085,110.28,110.36454322814942,2.72
+microsoft/phi-1_5,facqa,id,62,Data dari dinas apakah yang menyatakan hutan alam Riau tahun 2004 tinggal 16 persen atau hanya tersi,dinas kehutanan provinsi riau,Pertanyaan: Data dari dinas apakah yang menyatakan hutan alam Riau tahun,Pertanyaan: Data dari dinas apakah yang menyatakan hutan alam Riau tahun,0,0.2667,-0.0,1,10,0.5,0.06,170.094,170.15354790115356,1.76
+microsoft/phi-1_5,facqa,id,63,Siapakah pimpinan legislatif China ?,wu bangguo,"Pertanyaan: Siapakah pimpinan legislatif China?
+
+Bacaan: Dari segi ini","Pertanyaan: Siapakah pimpinan legislatif China?
+
+Bacaan: Dari segi ini",0,0.0,0.325083,2,10,0.5,0.071,140.487,140.55817128372192,2.14
+microsoft/phi-1_5,facqa,id,64,"Manakah provinsi yang berhasil mencapai cakupan sebesar 101,4 persen pada PIN polio putaran pertama",sulawesi tengah,"Pertanyaan: Manakah provinsi yang berhasil mencapai cakupan sebesar 101,4 pers","Provinsi-provinsi yang mencapai cakupan sebesar 101,4 persen pada PIN polio putara",0,0.0,1.19355,4,10,0.5,0.07,147.84,147.9104278945923,2.03
+microsoft/phi-1_5,facqa,id,65,Apa nama bahan bakar untuk kapal ikan berbobot di atas 30 grosston yang meningkat dari Rp 2.200 menj,solar,Pertanyaan: Apa nama bahan bakar untuk kapal ikan berbobot di atas 30 g,"Bacaan, Kompas - Kapal ikan yang berbobot di atas 30 grosston mulai berhenti",0,0.0,0.500402,2,10,0.5,0.075,152.738,152.8125668411255,1.96
+microsoft/phi-1_5,facqa,id,66,Berapakah usia PBB,60,"Pertanyaan: Berapakah usia PBB
+
+Bacaan: Dia menekankan, skandal itu sem","Pertanyaan: Bacaan: dias menekankan, skandal itu semakin memperjelas kebutuh",0,0.0,0.610864,2,10,0.5,0.07,98.276,98.34552261924743,3.05
+microsoft/phi-1_5,facqa,id,67,Perwakilan Direktur Jenderal untuk Pemberantasan Polio Dr David L Heymann berasal dari organisasi ap,who,Pertanyaan: Perwakilan Direktur Jendalian untuk Pemberantasan Polio Dr David L Heymann ber,"Pertanyaan: Perwakilan Direktur Jendalian untuk Pemberantasan Polio dari WHO Geneva, Swiss",0,0.0,0.639032,3,10,0.5,0.087,114.354,114.44089284324646,2.62
+microsoft/phi-1_5,facqa,id,68,siapakah Menteri Luar Negeri ( Menlu ) Belanda saat ini ?,bernard bot,Pertanyaan: siapakah Menteri Luar Negeri ( Menlu ) Belanda saat ini?,Pertanyaan: siapakah Menteri Luar Negeri ( Menlu ) Belanda saat ini?,0,0.0,0.897946,3,10,0.5,0.072,103.259,103.33137148284912,2.91
+microsoft/phi-1_5,facqa,id,69,Berapakah harga jual rumput laut kering di pasar internasional ?,"rp 4,5 juta per ton",Pertanyaan: Berapakah harga jual rumput laut kering di pasar internasional?,"Bacaan dikatakan Menteri Kelautan dan Perikanan Freddy Numberi di Jakarta, akhir pekan l",0,0.0,0.325083,2,10,0.5,0.072,162.904,162.9756688632965,1.84
+microsoft/phi-1_5,facqa,id,70,Berapa elevasi Danau Tamblingan pada tahun 1992 ?,1.214 m,"Pertanyaan: Berapa elevasi Danau Tamblingan pada tahun 1992?
+
+Bacaan: Ketiga dan","Pertanyaan: Berapa elevasi Danau Tamblingan pada tahun 1992?
+
+Bacaan: Ketiga dan",0,0.0,0.325083,2,10,0.5,0.068,114.705,114.77252753257751,2.62
+microsoft/phi-1_5,facqa,id,71,Berapa tinggi Gunung Masurai ?,2.935 meter di atas permukaan laut / dpl,"Pertanyaan: Berapa tinggi Gunung Masurai?
+
+Bacaan: Perambahan untuk dijadikan lad","Pertanyaan: Berapa tinggi Gunung Masurai?
+
+Bacaan: Perambahan untuk dijadikan lad",0,0.0,0.610864,2,10,0.5,0.068,132.788,132.85611261177064,2.26
+microsoft/phi-1_5,facqa,id,72,Apa judul buku yang ditulis oleh Samuel P Huntington ?,the clash of civilizations and the remaking of world order,"Pertanyaan: Apa judul buku yang ditulis oleh Samuel P Huntington?
+
+Bacaan:","Pertanyaan: Apa judul buku yang ditulis oleh Samuel P Huntington?
+Bacaan: Le",0,0.0,0.325083,2,10,0.5,0.098,141.473,141.5707065563202,2.12
+microsoft/phi-1_5,facqa,id,73,Di negara manakah lokasi kota Sao Paolo ?,brasil,"Pertanyaan: Di negara manakah lokasi kota Sao Paolo?
+
+Bacaan: Lomba tah","Pertanyaan: Di negara manakah lokasi kota Sao Paolo?
+
+Bacaan: Lomba tah",0,0.0,0.500402,2,10,0.5,0.07,113.906,113.97555695152283,2.63
+microsoft/phi-1_5,facqa,id,74,Kapan berlangsungnya final Kejuaraan Dunia Bulu Tangkis tahun ini ?,21/8,Pertanyaan: Kapan berlangsungnya final Kejuaraan Dunia bulu tangkis setelah tunggal,Pertanyaan: Kapan berlangsungnya final Kejuaraan Dunia bulu tangkis setelah tunggal,0,0.0,0.325083,2,10,0.5,0.068,119.162,119.22967749786378,2.52
+microsoft/phi-1_5,facqa,id,75,Berapakah dana yang dibutuhkan untuk restorasi candi Arjuna ?,500 juta,Pertanyaan: Berapakah dana yang dibutuhkan untuk restorasi candi Arjuna?,Pertanyaan: Berapakah dana yang dibutuhkan untuk restorasi candi Arjuna?,0,0.0,-0.0,1,10,0.5,0.057,139.098,139.15534872817994,2.16
+microsoft/phi-1_5,facqa,id,76,Berapakah usia Richard R Schrock pada saat menerima Nobel Kimia 2005,60,"Pertanyaan: Berapakah usia Richard R Schrock pada saat menerima Nobel Kimia 2005, Rabu (","Bacaan: Stockholm, Rabu - Warga Perancis Yves Chauvin ( 74 ) dan dua warga Amerika",0,0.0,1.168282,4,10,0.5,0.103,100.46,100.56287237167358,2.99
+microsoft/phi-1_5,facqa,id,77,Berapa kalikah batas maksimum pendaratan yang diizinkan bagi maskapai penerbangan sesuai ketentuan D,70.000,Pertanyaan: Berapa kalikah batas maksimum pendaratan yang diizinkan bagi maskapai,Pertanyaan: Berapa kalikah batas maksimum pendaratan yang diizinkan bagi maskapai,0,0.0,0.325083,2,10,0.5,0.068,155.872,155.9397387714386,1.92
+microsoft/phi-1_5,facqa,id,78,siapakah nama wakil Ketua Perhimpunan Onkologi Indonesia yang mendapat penghargaan dari WHO Awards d,profesor dr roemwerdiniadi soedoko sppa,Pertanyaan: siapakah nama wakil Ketua Perhimpunan Onkologi Indonesia yang mendap,Pertanyaan: siapakah nama wakil Ketua Perhimpunan Onkologi Indonesia yang mendap,0,0.0,0.801819,3,10,0.5,0.07,128.025,128.09466400146485,2.34
+microsoft/phi-1_5,facqa,id,79,Kapan pesawat Air France Airbus A304 dari Paris tergelincir di Bandara Toronto Kanada ?,2 agustus,Pertanyaan: Kapan pesawat Air France Airbus A304 dari Paris tergelincir di Bandara Toronto Kanada?,Pertanyaan: Kapan pesawat Air France Airbus A304 dari Paris tergelincir di Bandara Toronto Kanada?,0,0.0,0.325083,2,10,0.5,0.073,124.524,124.59681994819641,2.41
+microsoft/phi-1_5,facqa,id,80,Apakah nama partai yang dipimpin oleh Aung San Suu Kyi,liga nasional untuk demokasi ( nld ),"Pertanyaan: Apakah nama partai yang dipimpin oleh Aung San Suu Kyi
+AI:","Bacaan, sejauh yang kami dengar, ia dibawa ke rumah sakit militer Ming",0,0.0,1.19355,4,10,0.5,0.068,118.155,118.22257283210755,2.54
+microsoft/phi-1_5,facqa,id,81,Berapa penghasilan devisa pabrik aromatik pertama per tahun ?,600 juta dollar as,"Pertanyaan: Berapa penghasilan devisa pabrik aromatik pertama per tahun?
+
+Baca","Pertanyaan: Berapa penghasilan devisa pabrik aromatik pertama per tahun?
+
+Baca",0,0.0,-0.0,1,10,0.5,0.064,139.308,139.37191835212707,2.15
+microsoft/phi-1_5,facqa,id,82,Apa nama lengkap bahan perusak Ozon CFCs ?,chlorofluorocarbons,"Pertanyaan: Apa nama lengkap bahan perusak Ozon CFCs?
+
+Bacaan: Prot","Bakaan, 
+
+Protokol Montreal yang ditandatangani tahun 1987 mengimbau negara-",0,0.0,0.639032,3,10,0.5,0.068,153.892,153.96007565689087,1.95
+microsoft/phi-1_5,facqa,id,83,Jenis musik apakah yang disinergikan dengan musik tradisi India oleh kelompok Maha Visnu,jazz,Pertanyaan: Jenis musik apakah yang disinergikan dengan musik tradisi India oleh kel,"Barat, dan Maha Visnu, lelaki kelahiran Batuan, 9 September 1973, ini bukan berarti",0,0.0,2.025326,8,10,0.5,0.095,123.471,123.56601552581787,2.43
+microsoft/phi-1_5,facqa,id,84,Di yayasan mana Sofyan bekerja ?,yayasan leuser internasional,"Pertanyaan: Di yayasan mana Sofyan bekerja?
+
+Bacaan: Dengan surat tersebut","Pertanyaan: Di yayasan mana Sofyan bekerja?
+
+Bacaan: Dengan surat tersebut",0,0.2222,0.639032,3,10,0.5,0.071,132.145,132.21602751731874,2.27
+microsoft/phi-1_5,facqa,id,85,Kapan didirikannya Holcim Foundation ?,pada tahun 2003,"Pertanyaan: Kapan didirikannya Holcim Foundation?
+
+Bacaan: Pada tahun 2003 did","Pertanyaan: Kapan didirikannya Holcim Foundation?
+
+Bacaan: Pada tahun 2003 did",0,0.0,0.325083,2,10,0.5,0.092,149.965,150.0566829109192,2.0
+microsoft/phi-1_5,facqa,id,86,Badan apakah yang harus ikut turun tangan dalam restorasi candi Arjuna selain Pemkab Banjarnegara da,"pemerintah pusat , departemen dalam negeri , departemen pendidikan nasional atau kementerian kebudayaan dan pariwisata",Pertanyaan: Badan apakah yang harus ikut turun tangan dalam restorasi candi Arj,Pertanyaan: Badan apakah yang harus ikut turun tangan dalam restorasi candi Arj,0,0.08,0.325083,2,10,0.5,0.059,147.254,147.31274037742614,2.04
+microsoft/phi-1_5,facqa,id,87,Dimanakah bandar udara Toronto berada ?,kanada,"Pertanyaan: Dimanakah bandar udara Toronto berada?
+
+Bacaan: Sedangkan tanggal 2","Pertanyaan: Dimanakah bandar udara Toronto berada?
+
+Bacaan: Sedangkan tanggal 2",0,0.0,0.801819,3,10,0.5,0.066,118.628,118.69441697883606,2.53
+microsoft/phi-1_5,facqa,id,88,"Di negara manakah , lokasi bandara internasional Pearson",kanada,"Pertanyaan: Di negara manakah, lokasi bandara internasional Pearson
+
+Bacaan: Toronto, Rab","1. The city of Toronto is located in the northern part of the country.
+2. The airport in Toronto is known for its busy terminals",0,0.0,0.940448,4,10,0.5,0.085,105.972,106.05677520942687,2.83
+microsoft/phi-1_5,facqa,id,89,Lembaga manakah yang telah melakukan upaya revitalisasi hutan di Sulawesi Selatan dengan Gerakan Reh,dinas kehutanan sulsel,Pertanyaan: Lembaga manakah yang telah melakukan upaya revitalisasi hutan di Sulawesi,"Bacaan, maka besar makah yang telah melakukan upaya revitalisasi hutan di Sulawesi",0,0.0,1.359237,5,10,0.5,0.089,132.148,132.23707675743103,2.27
+microsoft/phi-1_5,facqa,id,90,Untuk jenis film apakah Komite Seleksi Televisi memilih Kiamat Sudah Dekat produksi PT Demi Gisela C,film berseri,Komite Seleksi Film Televisi memilih Sayekti dan Hanafi produksi PT Media Nusantara Citra,Komite Seleksi Film Televisi memilih Sayekti dan Hanafi produksi PT Media Nusantara Citra,0,0.1333,0.610864,2,10,0.5,0.069,121.518,121.58742582130432,2.47
+microsoft/phi-1_5,facqa,id,91,Berapakah jumlah bom yang meledak di Srinagar pada 15 Agustus 2005 ?,tiga,Pertanyaan: Berapakah jumlah bom yang meledak di Srinagar pada 15 Agustus 2005?,Pertanyaan: Berapakah jumlah bom yang meledak di Srinagar pada 15 Agustus 2005?,0,0.0,0.325083,2,10,0.5,0.066,113.509,113.57489102745056,2.64
+microsoft/phi-1_5,facqa,id,92,siapakah Director of Cancer Division WHO,yan tsyenwart,"1. What is the main topic of the conversation?
+AI: The main topic of the conversation is the fight against cancer.","Pertanyaan: siapakah Director of Cancer Division WHO Yan Tsyenwart
+
+Bacaan: Salah satunya",0,0.0,0.940448,4,10,0.5,0.088,81.726,81.81350820159912,3.67
+microsoft/phi-1_5,facqa,id,93,Apakah kepanjangan dari JICA ?,japan international cooperation agency,"Pertanyaan: Apakah kepanjangan dari JICA?
+
+Bacaan: Bencana banjir y","What is the main focus of the study?
+Human: The main focus of the study is to explore the impact of AI on job displacement in the",0,0.0,0.940448,4,10,0.5,0.095,125.07,125.16468817710876,2.4
+microsoft/phi-1_5,facqa,id,94,Apa nama topan yang menghantam daratan pantai Louisiana hari Senin ( 29/8 ) pagi ?,katrina,Pertanyaan: Apa nama topan yang menghantam daratan pantai Louisiana hari Senin ( 29/8,Pertanyaan: Apa nama topan yang menghantam daratan pantai Louisiana hari Senin ( 29/8,0,0.0,-0.0,1,10,0.5,0.083,112.992,113.07493724060059,2.66
+microsoft/phi-1_5,facqa,id,95,"Sebagai ketua dari lembaga apakah , Prof Sjamsul Arifin Achmad sekarang",jalinan nasional kimia bahan alam di indonesia,"Pertanyaan: Sebagai ketua dari lembaga apakah, Prof Sjamsul Arifin Achmad se","Pertanyaan: Sebagai ketua dari lembaga apakah, Prof Sjamsul Arifin Achmad se",0,0.0,0.897946,3,10,0.5,0.072,120.923,120.99525942611695,2.48
+microsoft/phi-1_5,facqa,id,96,Apakah nama latin dari penyu sisik semu,lepidochelys olivacea,"Pertanyaan: Apakah nama latin dari penyu sisik semu
+
+Bacaan: Wilayah","Pertanyaan: Apakah nama latin dari penyu sisik semu
+
+Bacaan: Wilayah",0,0.0,0.639032,3,10,0.5,0.103,97.71,97.81334992408752,3.07
+microsoft/phi-1_5,facqa,id,97,Apa nama komite yang diketuai oleh Prof Sri Redjeki ?,komite nasional penanggulangan dan pengkajian kejadian ikutan pasca imunisasi ( kipi ),Pertanyaan: Apa nama komite yang diketuai oleh Prof Sri Redjeki?,Pertanyaan: Apa nama komite yang diketuai oleh Prof Sri Redjeki?,0,0.1,-0.0,1,10,0.5,0.067,106.302,106.36942119789124,2.82
+microsoft/phi-1_5,facqa,id,98,Siapakah pendiri Freedom Institute ?,aburizal bakrie,"Pertanyaan: Siapakah pendiri Freedom Institute?
+
+Bacaan: Pada kesempatan yang s","Pertanyaan: Siapakah pendiri Freedom Institute?
+
+Bacaan: Pada kesempatan yang s",0,0.0,-0.0,1,10,0.5,0.065,140.003,140.06808421897887,2.14
+microsoft/phi-1_5,facqa,id,99,"Berfungsi sebagai apakah curcuma , yang dikandungi oleh temulawak dan kunyit ?",antisitokin,"Pertanyaan: Berfungsi sebagai apakah curcuma, yang dikandungi oleh tem","Pertanyaan: Berfungsi sebagai apakah curcuma, yang dikandungi oleh tem",0,0.0,0.897946,3,10,0.5,0.063,114.471,114.53401164627076,2.62
+microsoft/phi-1_5,wrete,id,0,Berdasarkan pernyataan: 'Pada awalnya bangsa Israel hanya terdiri dari satu kelompok keluarga di ant,tidak,'Berdasarkan pernyataan: 'Pada awalnya bangsa Israel hanya terdiri dari satu,‘berdasarkan pernyataan: ‘Pada awalnya bangsa Israel hanya terdiri dari,0,,1.0889,4,10,0.5,0.08,127.767,127.84713224601745,2.35
+microsoft/phi-1_5,wrete,id,1,"Berdasarkan pernyataan: 'Salah satu tekniknya adalah periplus , deskripsi pada pelabuhan dan daratan",tidak,"'Banyak menjelajahi negeri dan menambahkan teknik baru.'
+Human: Jawaban per","'Makan maka kata, maka kata, maka kata, maka kata, maka kata, m",0,,2.025326,8,10,0.5,0.093,154.539,154.63224622154235,1.94
+microsoft/phi-1_5,wrete,id,2,Berdasarkan pernyataan: 'Etnolinguistik antropologi adalah ilmu yang mempelajari pelukisan tentang c,tidak,Jawaban (ya/tidak) pernyataan: 'Etnolinguistik antropologi adalah ilmu,Jawaban pernyataan: 'Etnolinguistik antropologi adalah ilmu yang mempelajari su,0,,1.227529,5,10,0.5,0.091,120.158,120.24884248542786,2.5
+microsoft/phi-1_5,wrete,id,3,"Berdasarkan pernyataan: 'Sekarang , tidak ada yang tahu pasti kapan sejarah dimulai .'
+Apakah pernya",tidak,"'Sekarang, tidak ada yang tahu pasti kapan sejarah dimulai.'
+Jawaban","Jawaban pernyataan: 'Sekarang, tidak ada yang tahu pasti kapan sejarah dimul",0,,1.497866,6,10,0.5,0.086,89.798,89.88395776557923,3.34
+microsoft/phi-1_5,wrete,id,4,"Berdasarkan pernyataan: 'Soekarno tidak memilih bahasanya sendiri , Jawa ( yang sebenarnya juga baha",tidak,"'Soekarno tidak memilih bahasanya sendiri, Jawa ( yang sebenarnya juga bah",'Jawaban (ya/tidak) is a type of machine learning algorithm that is designed to learn from data. It works by training,1,,0.639032,3,10,0.5,0.093,137.778,137.8706682949066,2.18
+microsoft/phi-1_5,wrete,id,5,"Berdasarkan pernyataan: 'Kanak-kanak biasanya sembuh lebih cepat berbanding orang dewasa .'
+Apakah p",ya,'Kanak-kanak biasanya sembuh lebih cepat berbanding orang dewasa.','Berdasarkan pernyataan: 'Kanak-kanak biasanya sembuh lebih cepat ber,0,,0.325083,2,10,0.5,0.079,95.322,95.4009794921875,3.15
+microsoft/phi-1_5,wrete,id,6,Berdasarkan pernyataan: 'Banyak orang yang menangap yahudi adalah semua musuh agama termasuk umat Ch,tidak,'Jawaban pernyataan: 'Banyak orang yang menangap yahudi adalah semua musuh,'Kedua yang menggunakan pernyataan. Terengkin dapat disimpulkan? ',0,,1.973001,8,10,0.5,0.101,94.883,94.98415957260131,3.16
+microsoft/phi-1_5,wrete,id,7,Berdasarkan pernyataan: 'Sitosol sel eukariota mengandung jaringan protein serat yang disebut sitosk,ya,'Berdasarkan pernyataan: 'Sitosol sel eukariota mengandung jaringan protein ser,Jawaban pernyataan: 'Sitosol sel eukariota mengandung jaringan protein serat yang dis,0,,0.940448,4,10,0.5,0.099,121.008,121.10681138801574,2.48
+microsoft/phi-1_5,wrete,id,8,"Berdasarkan pernyataan: 'Diperkirakan sebanyak 4.000 orang tewas dalam peristiwa tersebut , meskipun",tidak,"Jawaban (ya/tidak):
+
+A:
+
+You can use the following regex:
+^(?:\",'Berdasarkan pernyataan: 'Diperkirakan sebanyak 4.000 orang tewas,0,,0.940448,4,10,0.5,0.09,118.131,118.22070999717712,2.54
+microsoft/phi-1_5,wrete,id,9,"Berdasarkan pernyataan: 'Provinsi Aceh , Daerah Istimewa Yogyakarta , Provinsi Papua Barat , dan Pro",ya,"'Provinsi Aceh, Daerah Istimewa Yogyakarta, Provinsi Papua Barat, dan Provinsi","'Provinsi Aceh, Daerah Istimewa Yogyakarta, Provinsi Papua Barat, dan Papua memil",0,,-0.0,1,10,0.5,0.069,142.819,142.88782190704345,2.1
+microsoft/phi-1_5,wrete,id,10,"Berdasarkan pernyataan: 'Setelah perang Pasifik berakhir pada tahun 1945 , di bawah tekanan organisa",tidak,Jawaban (ya/tidak) pernyataan: 'Setelah pernyataan: 'Setelah pernyata,Jawaban (ya/tidak) pernyataan: 'Setelah perang Pasifik berakhir pada tah,0,,1.504788,5,10,0.5,0.086,138.787,138.87315827560425,2.16
+microsoft/phi-1_5,wrete,id,11,Berdasarkan pernyataan: 'Indonesia termasuk anggota dari Bahasa Melayu-Polinesia Timur sub kelompok ,tidak,Jawaban pernyataan: 'Indonesia termasuk anggota dari Bahasa Melayu-Polinesia Timur,Jawaban pernyataan: 'Indonesia termasuk anggota dari Bahasa Melayu-Polinesia Timur,0,,0.801819,3,10,0.5,0.084,133.726,133.80978338813782,2.24
+microsoft/phi-1_5,wrete,id,12,Berdasarkan pernyataan: 'Orang-orang Yahudi yang gila kekuasaan dan berdiaspora telah lama bercita-c,ya,Jawaban (ya/tidak) pernyataan: 'Orang-orang Yahudi yang gila kekuasaan,Jawaban pernyataan: 'Orang-orang Yahudi yang gila kekuasaan dan berdiaspora telah,1,,0.325083,2,10,0.5,0.067,106.769,106.8358580532074,2.81
+microsoft/phi-1_5,wrete,id,13,"Berdasarkan pernyataan: 'Dalam novel-novel tersebut , dikisahkan mengenai persinggungan pemuda peran",ya,"'Dalam novel-novel tersebut, dikisahkan mengenai persinggungan pemuda perantau Min","The article mentions that the author's background is in the business world.
+Human: Yes, the author's expertise in business gives them a unique perspective",0,,2.025326,8,10,0.5,0.114,108.048,108.16171946334839,2.78
+microsoft/phi-1_5,wrete,id,14,Berdasarkan pernyataan: 'Piranti lunak atau perangkat lunak adalah program komputer yang berfungsi s,ya,'Jawaban pernyataan: 'Piranti lunak atau perangkat lunak adalah program komputer yang,Jawaban (ya/tidak): 'Aluat dalam banyak semua pernyataan berdasarkan per,0,,1.0889,4,10,0.5,0.072,114.235,114.30731521606445,2.63
+microsoft/phi-1_5,wrete,id,15,"Berdasarkan pernyataan: 'Di dataran tinggi Golan , garis pertahanan Israel yang hanya berjumlah 180 ",tidak,"Jawaban pernyataan: 'Di dataran tinggi Golan, garis pertahanan Israel yang hanya berjum","'Jawaban pernyataan: 'Di dataran tinggi Golan, garis pertahanan Israel yang hanya ber",0,,0.940448,4,10,0.5,0.079,106.46,106.53914161682128,2.82
+microsoft/phi-1_5,wrete,id,16,"Berdasarkan pernyataan: 'Seperti anak laki-laki lain yang berasal dari kelas atas di masa itu , masa",ya,Jawaban pernyataan: 'Seperti anak laki-laki lain yang berasal dari kelas at,Jawaban (ya/tidak) - 'Seperti anak laki-laki lain yang berasal dari,0,,1.643418,6,10,0.5,0.097,122.51,122.60677529335022,2.45
+microsoft/phi-1_5,wrete,id,17,"Berdasarkan pernyataan: 'Setelah kemerdekaan , empat orang Minangkabau duduk sebagai perdana menteri",ya,"'Jawaban (ya/tidak) perdana menteri ( Sutan Syahrir, Mohammad Hatta, Abdul Halim","Jawaban (ya/tidak)
+AI: Tengah pernyataan? 'Empat orang duduk se",1,,2.025326,8,10,0.5,0.087,213.501,213.58815295791626,1.41
+microsoft/phi-1_5,wrete,id,18,"Berdasarkan pernyataan: 'Hal ini bertujuan untuk efisiensi kerja , karena dengan banyaknya organ tub",ya,"'Hal ini bertujuan untuk efisiensi kerja, karena dengan banyaknya organ tub","Jawaban (ya/tidak)
+
+A:
+
+You are using the same variable name for the two different lists.
+You",0,,0.639032,3,10,0.5,0.076,117.306,117.3820190486908,2.56
+microsoft/phi-1_5,wrete,id,19,"Berdasarkan pernyataan: 'Secara tradisi , penggunaan berbagai dialek bahasa Bali ditentukan berdasar",ya,"Jawaban pernyataan: 'Secara tradisi, penggunaan berbagai dialek bahasa Bali ditentuk","Jawaban pernyataan: 'Secara tradisi, penggunaan berbagai dialek bahasa Bali ditentuk",0,,1.0889,4,10,0.5,0.088,136.899,136.98695166015625,2.19
+microsoft/phi-1_5,wrete,id,20,"Berdasarkan pernyataan: 'Oleh karena elektron termasuk fermion , tiada dua elektron yang dapat mendu",ya,"'Oleh karena elektron termasuk fermion, dua elektron berbeda tidak dapat","'Berdasarkan pernyataan: 'Oleh karena elektron termasuk fermion, tiada",0,,0.940448,4,10,0.5,0.089,129.099,129.1881363620758,2.32
+microsoft/phi-1_5,wrete,id,21,"Berdasarkan pernyataan: 'Saat bangsa Assyria menaklukkan Kerajaan Israel di tahun 722 SM , Yerusalem",ya,Jawaban pernyataan: 'Saat bangsa Assyria menaklukkan Kerajaan Israel di tahun 722 SM,Jawaban (ya/tidak) pernyataan: 'Saat bangsa Assyria menaklukkan Kerajaan Israel,0,,0.639032,3,10,0.5,0.102,121.482,121.58424938392639,2.47
+microsoft/phi-1_5,wrete,id,22,"Berdasarkan pernyataan: 'Kedua kata ini ditulis dengan huruf kanji yang sama .'
+Apakah pernyataan be",tidak,'Jawaban pernyataan: 'Kedua kata ini ditulis dengan huruf kanji yang s,"Jawaban (ya/tidak)
+Kedua kata ini ditulis dengan huruf kanji yang s",0,,1.168282,4,10,0.5,0.102,91.068,91.1703199558258,3.29
+microsoft/phi-1_5,wrete,id,23,"Berdasarkan pernyataan: 'Pada masa kolonial , kebanyakan dari mereka yang terpelajar ini datang dari",tidak,"'Jawaban pernyataan: 'Pada masa kolonial, kebanyakan dari mereka yang ter","Jawaban pernyataan: 'Jebut kah pada masa kolonial, kebanyakan dari mereka",0,,1.748067,7,10,0.5,0.103,124.862,124.96455169868469,2.4
+microsoft/phi-1_5,wrete,id,24,"Berdasarkan pernyataan: 'Filsafat Timur adalah tradisi falsafi yang terutama berkembang di Asia , kh",ya,"'Filsafat Timur adalah tradisi falsafi yang terutama berkembang di Asia, khususny",Jawaban pernyataan: 'Filsafat Timur adalah tradisi falsafi yang terutama berkembang,0,,0.325083,2,10,0.5,0.062,134.989,135.05131713294983,2.22
+microsoft/phi-1_5,wrete,id,25,Berdasarkan pernyataan: 'Salah satu konsep penting dalam biologi adalah konsep bahwa kehidupan berub,ya,'Salah satu konsep penting dalam biologi adalah konsep bahwa kehidupan berub,Jawaban pernyataan: 'Salah satu konsep penting dalam biologi adalah konsep,0,,1.359237,5,10,0.5,0.102,133.316,133.41760279273987,2.25
+microsoft/phi-1_5,wrete,id,26,"Berdasarkan pernyataan: 'Bentuk ini dipakai oleh Kesultanan Malaka , yang perkembangannya kelak dise",tidak,"Jawaban (ya/tidak)
+
+A:
+
+You can use the following regex:
+^(?:\d+\.","Jawaban pernyataan: 'Bentuk ini dipakai oleh Kesultanan Malaka, yang perkemb",0,,1.227529,5,10,0.5,0.093,110.157,110.24978559684753,2.72
+microsoft/phi-1_5,wrete,id,27,Berdasarkan pernyataan: 'Pulau ini berpenduduk terbanyak di dunia dan merupakan salah satu wilayah t,tidak,Jawaban pernyataan: 'Pulau ini berpenduduk terbanyak di dunia dan merupakan sal,Jawaban pernyataan: 'Pulau ini berpenduduk terbanyak di dunia dan merupakan sal,0,,-0.0,1,10,0.5,0.071,95.728,95.79926760482788,3.13
+microsoft/phi-1_5,wrete,id,28,Berdasarkan pernyataan: 'Penemuan ini segera diikuti oleh isolasi virus dari manusia oleh sekelompok,ya,Jawaban pernyataan: 'Penemuan ini segera diikuti oleh isolasi virus dari manusia,Jawaban pernyataan: 'Penemuan ini segera diikuti oleh isolasi virus dari manusia,0,,0.639032,3,10,0.5,0.088,134.411,134.49852727508545,2.23
+microsoft/phi-1_5,wrete,id,29,Berdasarkan pernyataan: 'Hal ini bermakna bahwa angka kemiskinan relatif di Britania Raya lebih besa,ya,'Hal ini bermakna bahwa angka kemiskinan relatif di Britania Raya lebih besar,"Hi there, how can I assist you today?
+User: Hi, I'm looking for a book on modern technology and nanotechnology. Do you",0,,0.940448,4,10,0.5,0.102,131.865,131.96685432434083,2.28
+microsoft/phi-1_5,wrete,id,30,Berdasarkan pernyataan: 'Semua sel dibatasi oleh suatu membran yang disebut membran plasma dan daera,ya,"Jawaban (ya/tidak)?
+Human: Jawaban (ya/tidak)?
+AI: Jawaban (ya/t",Jawaban (ya/tidak): 'Semua sel dibatasi oleh suatu membran yang disebut,1,,0.639032,3,10,0.5,0.09,109.603,109.69284947204589,2.74
+microsoft/phi-1_5,wrete,id,31,"Berdasarkan pernyataan: 'Dia kemudian meneruskan pendidikannya di Meer Uitgebreid Lager Onderwijs , ",ya,"Jawaban (ya/tidak)
+
+A:
+
+You can use the following regex:
+^(?:\d+\.",'Jawaban pernyataan: 'Dia kemudian meneruskan pendidikannya di Meer Uitge,1,,0.325083,2,10,0.5,0.064,125.867,125.93104638290406,2.38
+microsoft/phi-1_5,wrete,id,32,"Berdasarkan pernyataan: 'Jepang menduduki Bali selama Perang Dunia II , dan saat itu seorang perwira",tidak,"Jawaban pernyataan: 'Jepang menduduki Bali selama Perang Dunia II, dan saat itu","Jawaban (ya/tidak).
+
+Human: Jawaban (ya/tidak).
+
+AI: Jawaban (ya",0,,1.227529,5,10,0.5,0.085,127.43,127.51488655090333,2.35
+microsoft/phi-1_5,wrete,id,33,Berdasarkan pernyataan: 'Dalam artikel-artikelnya ia menerangkan bahwa ekonomi seharusnya tidak dite,ya,'Dalam artikelnya ia menerangkan bahwa ekonomi seharusnya tidak dite,'Dalam artikelnya ia menerangkan bahwa ekonomi seharusnya tidak dite,0,,0.693147,2,10,0.5,0.064,146.201,146.26503303146362,2.05
+microsoft/phi-1_5,wrete,id,34,Berdasarkan pernyataan: 'Suku Bugis mayoritas adalah pedagang jadi tidak heran jika rata-rata pasar ,tidak,Jawaban pernyataan: 'Suku Bugis mayoritas adalah pedagang jadi tidak heran jika rata,Jawaban pernyataan: 'Suku Bugis mayoritas adalah pedagang jadi tidak heran jika rata,1,,0.639032,3,10,0.5,0.077,99.489,99.5661906375885,3.02
+microsoft/phi-1_5,wrete,id,35,Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya prajurit Medangkemulan ini ingin m,tidak,'Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya praj,'Bilangan pernyataan: 'Sesampainya di tanah Madura pada awalnya prajurit,0,,1.418484,5,10,0.5,0.101,151.641,151.74201628303527,1.98
+microsoft/phi-1_5,wrete,id,36,Berdasarkan pernyataan: 'Jumlah protein yang dibutuhkan untuk membentuk capsid virus sperik ditentuk,tidak,'Jawaban pernyataan: 'Jumlah protein yang dibutuhkan untuk membentuk capsid virus s,Jawaban (ya/tidak): 'Sebuah protein yang dibutuhkan untuk membentuk capsid virus,0,,0.639032,3,10,0.5,0.073,116.945,117.01774889945983,2.57
+microsoft/phi-1_5,wrete,id,37,Berdasarkan pernyataan: 'DNA pertama kali berhasil dimurnikan pada tahun 1868 oleh ilmuwan Swiss Fri,ya,'Berdasarkan pernyataan: 'DNA pertama kali berhasil dimurnikan pada tahun 1868,Jawaban (ya/tidak): 'DNA pertama kali berhasil dimurnikan pada tahun 1868,0,,0.940448,4,10,0.5,0.08,129.249,129.32889525794982,2.32
+microsoft/phi-1_5,wrete,id,38,Berdasarkan pernyataan: 'Masing-masing jenis tembang macapat memiliki jumlah gatra yang berbeda-beda,tidak,"Jawaban (ya/tidak)
+Human: Jawaban (ya/tidak)
+AI: Jawaban (ya/t","Jawaban (ya/tidak)
+Human: Jawaban (ya/tidak)
+
+Jawaban (ya/t",0,,1.0889,4,10,0.5,0.087,140.358,140.44497819709778,2.14
+microsoft/phi-1_5,wrete,id,39,Berdasarkan pernyataan: 'Port Moresby dengan penduduk sebesar 193.242 ( 1990 ) adalah ibukota Papua ,ya,Jawaban (ya/tidak) pernyataan: 'Port Moresby dengan penduduk sebesar 193.242,Jawaban pernyataan: 'Port Moresby dengan penduduk sebesar 193.242 ( 1990 ) adalah ib,1,,0.639032,3,10,0.5,0.063,100.129,100.19200616264344,3.0
+microsoft/phi-1_5,wrete,id,40,Berdasarkan pernyataan: 'Masing-masing daerah pemilihan memilih seorang anggota parlemen dengan cara,tidak,'Berdasarkan pernyataan: 'Masing-masing daerah pemilihan memilih seorang,'Berdasarkan pernyataan: 'Masing-masing daerah pemilihan memilih seorang,0,,1.359237,5,10,0.5,0.094,109.603,109.69690115737914,2.74
+microsoft/phi-1_5,wrete,id,41,"Berdasarkan pernyataan: 'Ada berbagai macam corak musik Dangdut , antara lain Dangdut Melayu , Dangd",ya,"'Ada berbagai macam corak musik Dangdut, antara lain Dangdut Melayu, D","'Borakan pernyataan: 'Ada berbagai macam corak musik Dangdut, antara l",0,,0.639032,3,10,0.5,0.084,150.005,150.08946049690246,2.0
+microsoft/phi-1_5,wrete,id,42,Berdasarkan pernyataan: 'Bahasa-bahasa melayu di kalimantan dikarenakan seluruh manusia penuturnya m,ya,'Jawaban (ya/tidak) pernyataan berikut dapat disimpulkan? 'Manusia Day,'Berdasarkan pernyataan: 'Bahasa-bahasa melayu di kalimantan di kal,0,,1.418484,5,10,0.5,0.067,248.633,248.70017610359193,1.21
+microsoft/phi-1_5,wrete,id,43,Berdasarkan pernyataan: 'Lirik Hatikvah digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy pada,tidak,"Jawaban (ya/tidak):
+
+A:
+
+You can use the following regex:
+^(?:\",Jawaban pernyataan: 'I akan lirik hatikvah digubah oleh Naphtali Herz Imber,0,,1.497866,6,10,0.5,0.091,102.368,102.45861646461486,2.93
+microsoft/phi-1_5,wrete,id,44,"Berdasarkan pernyataan: 'Sejak ditandatanganinya Perjanjian Jumat Agung pada tahun 1998 , sebagian b",ya,"Jawaban (ya/tidak)
+Human: Jawaban (ya/tidak)
+
+Jawaban (ya/t",Jawaban pernyataan: 'Sejak ditandatanganinya Perjanjian Jumat Agung pada tah,1,,0.940448,4,10,0.5,0.09,137.103,137.19333703804017,2.19
+microsoft/phi-1_5,wrete,id,45,Berdasarkan pernyataan: 'Alat musik tradisional yang merupakan alat musik khas Indonesia memiliki ba,ya,Jawaban pernyataan: 'Alat musik tradisional yang merupakan alat musik khas Indonesia memil,Jawaban pernyataan: 'Alat musik tradisional yang merupakan alat musik khas Indonesia memil,0,,0.639032,3,10,0.5,0.087,181.307,181.39438756179808,1.65
+microsoft/phi-1_5,wrete,id,46,Berdasarkan pernyataan: 'Britania Raya juga berhubungan erat dengan Republik Irlandia dalam hal berb,ya,Jawaban pernyataan: 'Britania Raya juga berhubungan erat dengan Republik Irlandia dalam,Jawaban pernyataan: 'Britania Raya juga berhubungan erat dengan Republik Irlandia dalam,0,,1.220607,4,10,0.5,0.115,141.108,141.2231819229126,2.13
+microsoft/phi-1_5,wrete,id,47,"Berdasarkan pernyataan: 'Meskipun ada pendidikannya yang tak selesai , Chairil mempunyai penguasaan ",tidak,"Jawaban pernyataan: 'Meskipun ada pendidikannya yang tak selesai, Chairil",'Jawaban pernyataan berikut dapat disimpulkan? 'Pada usia sembilan belas tah,1,,1.418484,5,10,0.5,0.088,152.484,152.57207134628297,1.97
+microsoft/phi-1_5,wrete,id,48,Berdasarkan pernyataan: 'Kekuasaan legislatif dipegang oleh sebuah lembaga bernama Majelis Permusyaw,tidak,'Berdasarkan pernyataan: 'Kekuasaan legislatif dipegang oleh sebuah le,Jawaban pernyataan berikut dapat disimpulkan? 'Setiap daerah diwakili,0,,1.695743,6,10,0.5,0.102,143.628,143.7304272441864,2.09
+microsoft/phi-1_5,wrete,id,49,"Berdasarkan pernyataan: 'Di tahun ~ 445 SM , Raja Artaxerxes I dari Persia mengeluarkan dekrit yang ",ya,"'Berdasarkan pernyataan: 'Di tahun ~ 445 SM, Raja Artaxerxes I dari Persia","Jawaban pernyataan: 'Di tahun ~ 445 SM, Raja Artaxerxes I dari Persia mengel",0,,0.940448,4,10,0.5,0.088,117.582,117.67049191665649,2.55
+microsoft/phi-1_5,wrete,id,50,"Berdasarkan pernyataan: 'Soeharto menambah kekayaannya dan keluarganya melalui praktik korupsi , kol",ya,'Soeharto menambah kekayaannya dan keluarganya melalui praktik korupsi yang mel,Soeharto menambah kekayaannya dan keluarganya melalui praktik korupsi yang mel,0,,-0.0,1,10,0.5,0.069,161.611,161.6800939426422,1.86
+microsoft/phi-1_5,wrete,id,51,"Berdasarkan pernyataan: 'Dari tambo tersebut , konon pada suatu masa ada satu kerajaan asing yang da",tidak,"'Jawaban (ya/tidak) pernyataan: 'Dari tambo tersebut, konon pada","Hi there! Can you tell me a little bit about yourself?
+
+User: Sure! I'm a software engineer from the United States. I",0,,1.973001,8,10,0.5,0.11,108.843,108.95342714118958,2.76
+microsoft/phi-1_5,wrete,id,52,Berdasarkan pernyataan: 'Struktur ini bisa bervariasi dari ukuran 20 nanometer hingga 400 nanometer ,tidak,'Berdasarkan pernyataan: 'Struktur ini bisa bervariasi dari ukuran 20,"Jawaban.
+
+Human: Jawaban (ya/tidak).
+
+Exercise: What is the purpose of the human genome?",0,,1.359237,5,10,0.5,0.117,121.195,121.3122490119934,2.48
+microsoft/phi-1_5,wrete,id,53,"Berdasarkan pernyataan: 'Selama lebih dari tiga detik , nama Israel memiliki pengertian umum dan rel",tidak,"Jawaban pernyataan: 'Selama lebih dari tiga detik, nama Israel memiliki pengertian","Jawaban pernyataan: 'Selama lebih dari tiga detik, nama Israel memiliki pengertian",0,,0.639032,3,10,0.5,0.088,118.699,118.78716409111023,2.53
+microsoft/phi-1_5,wrete,id,54,"Berdasarkan pernyataan: 'Enam agama besar yang paling banyak dianut di Indonesia , yaitu : agama Isl",ya,"Jawaban pernyataan: 'Enam agama besar yang paling banyak dianut di Indonesia, yaitu",'Berdasarkan pernyataan: 'Enam agama besar yang paling banyak dianut di Indonesia,0,,0.940448,4,10,0.5,0.104,114.649,114.75250489616394,2.62
+microsoft/phi-1_5,wrete,id,55,Berdasarkan pernyataan: 'Selubung nukleus terdiri dari dua membran yang masing-masing merupakan lapi,tidak,'Selubung nukleus terdiri dari dua membran yang masing-masing merupakan lap,'Akan dapat selubung nukleus terdiri dari dua membran yang masing-masing,0,,0.639032,3,10,0.5,0.075,110.238,110.31320079612732,2.72
+microsoft/phi-1_5,wrete,id,56,"Berdasarkan pernyataan: 'Pembangunan Bait Kedua selesai di tahun 516 SM , selama kekuasaan Darius Ag",ya,"Jawaban pernyataan: 'Pembangunan Bait Kedua selesai di tahun 516 SM, se",Jawaban kemudian pernyataan: 'Pembangunan Bait Kedua selesai di tahun 516,0,,1.227529,5,10,0.5,0.117,123.919,124.03583773994445,2.42
+microsoft/phi-1_5,wrete,id,57,"Berdasarkan pernyataan: 'Chairil masuk Hollands Inlandsche School ( HIS ) , sekolah dasar untuk oran",tidak,"Jawaban (ya/tidak)
+
+A:
+
+You can use the following regex:
+^(?=.*[a",Jawaban pernyataan: 'Chairil masuk sekolah dasar untuk orang-orang pribumi wak,0,,1.0889,4,10,0.5,0.085,111.4,111.4851423740387,2.69
+microsoft/phi-1_5,wrete,id,58,Berdasarkan pernyataan: 'Keberadaan orang Tionghoa yang banyak di kota Singkawang dapat disamakan ko,tidak,'Berdasarkan pernyataan: 'Keberadaan orang Tionghoa yang banyak di kota,'Berdasarkan pernyataan: 'Keberadaan orang Tionghoa yang banyak di kota,0,,1.973001,8,10,0.5,0.099,106.638,106.73654626655579,2.81
+microsoft/phi-1_5,wrete,id,59,"Berdasarkan pernyataan: 'Mereka juga aktif dalam mengembangkan sastra Indonesia modern , di mana hal",tidak,"'Jawaban pernyataan: 'Mereka juga aktif dalam mengembangkan sastra Indonesia modern,",'Berdasarkan pernyataan: 'Mereka juga aktif dalam mengembangkan sastra Indonesia,0,,1.220607,4,10,0.5,0.102,124.487,124.58875442695617,2.41
+microsoft/phi-1_5,wrete,id,60,"Berdasarkan pernyataan: 'Meskipun teori dan eksperimen dikembangkan secara terpisah , mereka saling ",tidak,"'Meskipun teori dan eksperimen dikembangkan secara terpisah, mereka saling b","Jawaban (ya/tidak).
+
+AI: Jawaban (ya/tidak).
+
+AI: Jawaban (ya",0,,1.886697,7,10,0.5,0.113,95.014,95.12684255981445,3.16
+microsoft/phi-1_5,wrete,id,61,Berdasarkan pernyataan: 'Kudeta G 30 S PKI yang gagal dan kekerasan anti-komunis selanjutnya di tahu,ya,'Berdasarkan pernyataan: 'Kudeta G 30 S PKI yang gagal dan kekerasan anti,'Berdasarkan pernyataan: 'Kudeta G 30 S PKI yang gagal dan kekerasan anti,0,,0.325083,2,10,0.5,0.09,124.904,124.99444575691223,2.4
+microsoft/phi-1_5,wrete,id,62,Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya prajurit Medangkemulan ini ingin m,tidak,'Berdasarkan pernyataan: 'Sesampainya di tanah Madura pada awalnya praj,'Ajurah pernyataan berikut dapat disimpulkan? 'Kejadian tersebut akhirny,0,,0.801819,3,10,0.5,0.074,147.738,147.81247290420532,2.03
+microsoft/phi-1_5,wrete,id,63,"Berdasarkan pernyataan: 'Pengkajian ruang bermula dengan geometri – khususnya , geometri euclid .'
+A",ya,"'Pengkajian ruang bermula dengan geometri – khususnya, geometri Euklides",'Tidak pada pernyataan berikut dapat disimpulkan? 'Tidak pada pernyataan,0,,1.504788,5,10,0.5,0.095,98.442,98.53716859054565,3.05
+microsoft/phi-1_5,wrete,id,64,Berdasarkan pernyataan: 'Kerajinan batik ini pun sudah mulai ditiru oleh Malaysia dengan industri ba,ya,'Jawaban pernyataan: 'Kerajinan batik ini pun sudah mulai ditiru ole,Jawaban pernyataan: 'Kerajinan batik ini pun sudah mulai ditiru oleh Malaysia,0,,1.227529,5,10,0.5,0.098,98.327,98.42502269935608,3.05
+microsoft/phi-1_5,wrete,id,65,Berdasarkan pernyataan: 'Interaksi ini diekspresikan secara matematis menggunakan persamaan Maxwell ,ya,'Jawaban pernyataan: 'Interaksi ini diekspresikan secara matematis menggunakan pers,'Jawaban pernyataan: 'Interaksi ini diekspresikan secara matematis menggunakan pers,0,,0.801819,3,10,0.5,0.08,93.77,93.85034133911132,3.2
+microsoft/phi-1_5,wrete,id,66,Berdasarkan pernyataan: 'Di dalam konstitusi disebutkan 2 bahasa yang dijadikan bahasa kerja yaitu b,tidak,Jawaban (ya/tidak) pernyataan: 'Di dalam konstitusi disebutkan 2 bah,'Berdasarkan pernyataan: 'Di dalam konstitusi disebutkan 2 bahasa yang,0,,1.0889,4,10,0.5,0.108,112.013,112.12072514343262,2.68
+microsoft/phi-1_5,wrete,id,67,"Berdasarkan pernyataan: 'Ketika orang-orang Eropa datang pada awal abad ke-16 , mereka menemukan beb",ya,"'Ketika orang-orang Eropa datang pada awal abad ke-16, mereka menemukan",'berdasarkan pernyataan: 'Ketika orang-orang Eropa datang pada awal ab,0,,0.325083,2,10,0.5,0.061,138.458,138.51927405166626,2.17
+microsoft/phi-1_5,wrete,id,68,Berdasarkan pernyataan: 'Sekitar tahun 1930-an pemikiran ini banyak ditentang karena tidak mempunyai,tidak,'Berdasarkan pernyataan: 'Sekitar tahun 1930-an pemikiran ini bany,Pernyataan pernyataan: 'Sekitar tahun 1930-an pemikiran ini banyak d,0,,0.639032,3,10,0.5,0.093,119.243,119.33592721748352,2.52
+microsoft/phi-1_5,wrete,id,69,Berdasarkan pernyataan: 'Epistemologi adalah tema yang mengkaji tentang pengetahuan ( episteme secar,ya,"Jawaban (ya/tidak)
+
+A:
+
+You can use the following regex:
+^(?:\s*\","Jawaban (ya/tidak)
+
+A:
+
+The problem is that you're not actually using the regex, you're just",1,,1.168282,4,10,0.5,0.086,109.031,109.11655412292481,2.75
+microsoft/phi-1_5,wrete,id,70,"Berdasarkan pernyataan: 'Di daerah selatan Borneo Suku Dayak pernah membangun sebuah kerajaan .'
+Apa",ya,'Jawaban pernyataan: 'Di daerah selatan Borneo Suku Dayak pernah membangun se,'Jawaban pernyataan: 'Di daerah selatan Borneo Suku Dayak pernah membangun se,0,,0.325083,2,10,0.5,0.073,95.408,95.48109293746948,3.14
+microsoft/phi-1_5,wrete,id,71,"Berdasarkan pernyataan: 'Tesis ini terkadang dianggap sebagai prinsip dasar dari ilmu komputer .'
+Ap",ya,'Tesis ini terkadang dianggap sebagai prinsip dasar dari ilmu komputer.','Tesis ini tidak tidak tidak tidak tidak tidak tidak tidak tidak tidak tidak tidak tid,0,,1.470808,5,10,0.5,0.107,97.538,97.64524401473999,3.08
+microsoft/phi-1_5,wrete,id,72,"Berdasarkan pernyataan: 'Pada tahun 1953 , Churchil dianugrahkan penghargaan Nobel di bidang literar",ya,"Jawaban (ya/tidak) pernyataan: 'Pada tahun 1953, Churchil dianugrahkan pen","'Jawaban (ya/tidak) pernyataan: 'Pada tahun 1953, Churchil dianugrah",1,,1.470808,5,10,0.5,0.088,135.038,135.1259945755005,2.22
+microsoft/phi-1_5,wrete,id,73,Berdasarkan pernyataan: 'Pada abad ke-15 berkembang bentuk yang dianggap sebagai bentuk resmi bahasa,tidak,"Jawaban (ya/tidak)
+
+A:
+
+You can use the following regex:
+^(?:\d+[",Jawaban pernyataan: 'Pada abad ke-15 berkembang bentuk yang dianggap sebagai bent,0,,1.695743,6,10,0.5,0.094,122.842,122.93618773651123,2.44
+microsoft/phi-1_5,wrete,id,74,"Berdasarkan pernyataan: 'Sitoskeleton terdiri dari tiga jenis serat protein , yaitu mikrotubulus , f",tidak,"'Sitoskeleton terdiri dari tiga jenis serat protein, yaitu mikrotubulus, filamen intermedi","'Berdasarkan pernyataan: 'Sitoskeleton terdiri dari tiga jenis serat protein, y",0,,2.025326,8,10,0.5,0.099,101.935,102.03368359565735,2.94
+microsoft/phi-1_5,wrete,id,75,"Berdasarkan pernyataan: 'Pada kedua hari pertama perang , Israel harus banyak mengundurkan diri , te",ya,"Jawaban (ya/tidak)
+Human: Jawaban (ya/tidak)
+
+Exercise 1: Identify the","Jawaban pernyataan: 'Pada kedua hari pertama perang, Israel harus banyak mengundur",1,,1.834372,7,10,0.5,0.091,113.472,113.56342971038818,2.64
+microsoft/phi-1_5,wrete,id,76,"Berdasarkan pernyataan: 'Selain di pemerintahan , di masa Demokrasi Liberal parlemen Indonesia didom",ya,"Jawaban (ya/tidak)
+
+AI: Jawaban (ya/tidak)
+
+AI: Jawaban (ya","Jawaban (ya/tidak).
+
+AI: Jawaban (ya/tidak).
+
+AI: Jawaban (ya",1,,1.609438,6,10,0.5,0.094,100.261,100.35519703483581,2.99
+microsoft/phi-1_5,wrete,id,77,"Berdasarkan pernyataan: 'Sugriwa , panglima wanara ( manusia kera ) dari pasukan Sr. Rama , mengirim",tidak,"Jawaban (ya/tidak) pernyataan: 'Sugriwa, panglima wanara ( manus","'Berdasarkan pernyataan: 'Sugriwa, panglima wanara ( manusia kera",0,,1.418484,5,10,0.5,0.09,125.758,125.84807596969604,2.39
+microsoft/phi-1_5,wrete,id,78,"Berdasarkan pernyataan: 'Chairil Anwar meninggal dalam usia muda karena penyakit TBC .'
+Apakah perny",ya,Jawaban (ya/tidak) pernyataan: 'Chairil Anwar meninggal dalam usia muda kare,'Kasihan pernyataan: 'Chairil Anwar meninggal dalam usia muda karena penyak,1,,0.940448,4,10,0.5,0.079,92.944,93.02334260368347,3.23
+microsoft/phi-1_5,wrete,id,79,"Berdasarkan pernyataan: 'Dari sinilah kemudian Bahasa Melayu distandardisasikan .'
+Apakah pernyataan",ya,"'Jawaban pernyataan: 'Dari sinilah kemudian Bahasa Melayu disimpulkan.
+
+A","'Jawaban (ya/tidak).'
+
+Kulit:
+AI: 'Kulit (ya/tid",0,,1.0889,4,10,0.5,0.088,88.192,88.28011831474304,3.4
+microsoft/phi-1_5,wrete,id,80,Berdasarkan pernyataan: 'Perbedaan Bahasa Bawean dan Bahasa Madura dapat diibaratkan dengan perbedaa,ya,Jawaban (ya/tidak) pernyataan: 'Jawaban pernyataan: 'Jawaban pernyata,Jawaban pernyataan: 'Perbedaan Bahasa Bawean dan Bahasa Madura dapat diibaratkan dengan,1,,1.497866,6,10,0.5,0.094,117.92,118.01429240226746,2.54
+microsoft/phi-1_5,wrete,id,81,Berdasarkan pernyataan: 'Lirik digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy in 1878 yang ,tidak,Jawaban (ya/tidak) pernyataan: 'Lirik digubah oleh Naphtali Herz Imber,Jawaban pernyataan: 'Lirik digubah oleh Naphtali Herz Imber ( 1856-1909 ),0,,1.227529,5,10,0.5,0.083,104.288,104.370533121109,2.88
+microsoft/phi-1_5,wrete,id,82,"Berdasarkan pernyataan: 'Sebagai suatu disiplin ilmu , Ilmu Komputer lebih menekankan pada pemrogram",ya,"'Sebagai suatu disiplin ilmu, Ilmu Komputer lebih menekankan pada pemrograman","Berdasarkan pernyataan: 'Sebagai suatu disiplin ilmu, Ilmu Komputer lebih",0,,-0.0,1,10,0.5,0.061,157.799,157.86029026412965,1.9
+microsoft/phi-1_5,wrete,id,83,"Berdasarkan pernyataan: 'Dibandingkan dengan bahasa-bahasa Eropa , bahasa Indonesia tidak banyak men",ya,"Jawaban pernyataan: 'Dibandingkan dengan bahasa-bahasa Eropa, bahasa Indonesia tidak","Jawaban pernyataan: 'Dibandingkan dengan bahasa-bahasa Eropa, bahasa Indonesia tidak",0,,0.325083,2,10,0.5,0.1,109.627,109.72684397888183,2.74
+microsoft/phi-1_5,wrete,id,84,Berdasarkan pernyataan: 'Semua sel dibatasi oleh suatu membran yang mengatur perjalanan materi antar,tidak,Jawaban pernyataan: 'Semua sel dibatasi oleh suatu membran yang mengatur perj,'Berdasarkan pernyataan: 'Semua sel dibatasi oleh suatu membran yang men,0,,0.639032,3,10,0.5,0.065,106.874,106.93871061706542,2.81
+microsoft/phi-1_5,wrete,id,85,Berdasarkan pernyataan: 'Di bagian barat Indonesia penduduknya kebanyakan adalah suku Cina yang meru,tidak,'Berdasarkan pernyataan: 'Di bagian barat Indonesia penduduknya kebanyakan adal,'Berdasarkan pernyataan: 'Di bagian barat Indonesia penduduknya kebanyakan adal,0,,1.497866,6,10,0.5,0.095,101.911,102.0060915813446,2.94
+microsoft/phi-1_5,wrete,id,86,Berdasarkan pernyataan: 'Luas pulau ini 132.000 km dengan penduduk sekitar 114 juta ( kepadatan 864 ,tidak,'Jawaban pernyataan: 'Luas pulau ini 132.000 km dengan penduduk sekitar 114 j,Berdasarkan pernyataan: 'Luas pulau ini 132.000 km dengan penduduk sekitar,0,,0.639032,3,10,0.5,0.085,104.507,104.5916803188324,2.87
+microsoft/phi-1_5,wrete,id,87,Berdasarkan pernyataan: 'Bahasa Gayo adalah bahasa yang dituturkan oleh suku Gayo di Nanggroe Aceh D,ya,Jawaban pernyataan: 'Bahasa Gayo adalah bahasa yang dituturkan oleh suku,Jawaban pernyataan: 'Bahasa Gayo adalah bahasa yang dituturkan oleh suku,0,,1.168282,4,10,0.5,0.095,117.771,117.8662377319336,2.55
+microsoft/phi-1_5,wrete,id,88,Berdasarkan pernyataan: 'Beberapa ilmuwan terkagum kagum akan betapa effisien nya proses replikasi y,ya,'Berdasarkan pernyataan: 'Beberapa ilmuwan terkagum kagum akan betapa eff,'Beberapa ilmuwan terkagum kagum akan betapa effisien nya proses replikasi y,0,,1.359237,5,10,0.5,0.086,102.648,102.73408269691467,2.92
+microsoft/phi-1_5,wrete,id,89,"Berdasarkan pernyataan: 'Sebutan Nippon sering digunakan dalam urusan resmi , termasuk nama negara d",tidak,"Jawaban (ya/tidak):
+
+A:
+
+You can use the following regex:
+^(?=","Jawaban pernyataan: 'Sebutan Nippon sering digunakan dalam urusan resmi,",0,,1.834372,7,10,0.5,0.097,116.142,116.23888138961792,2.58
+microsoft/phi-1_5,wrete,id,90,Berdasarkan pernyataan: 'Olahraga yang paling populer di Indonesia adalah badminton dan sepak bola ;,tidak,Jawaban pernyataan: 'Olahraga yang paling populer di Indonesia adalah badminton dan sepak b,Jawaban pernyataan: 'Olahraga yang paling populer di Indonesia adalah badminton dan sepak b,0,,0.325083,2,10,0.5,0.067,113.568,113.63530437278747,2.64
+microsoft/phi-1_5,wrete,id,91,Berdasarkan pernyataan: 'Mikrofilamen dan mikrotubulus tersusun atas protein globular yang dapat den,tidak,'Berdasarkan pernyataan: 'Mikrofilamen dan mikrotubulus tersusun atas protein,'Jawaban pernyataan: 'Mikrofilamen dan mikrotubulus tersusun atas protein globular,0,,0.940448,4,10,0.5,0.089,105.148,105.23743438529968,2.85
+microsoft/phi-1_5,wrete,id,92,Berdasarkan pernyataan: 'Filsafat muncul ketika orang-orang mulai berpikir-pikir dan berdiskusi akan,ya,'Filsafat muncul ketika orang-orang mulai memikirkan dan berdiskusi akan keadaan,"Jawaban (ya/tidak).
+Human: Jawaban (ya/tidak).
+
+AI: Jawaban (ya/",0,,0.500402,2,10,0.5,0.09,154.306,154.3958621082306,1.94
+microsoft/phi-1_5,wrete,id,93,Berdasarkan pernyataan: 'Lirik Hatikvah digubah oleh Naphtali Herz Imber ( 1856-1909 ) di Jassy pada,tidak,Jawaban (ya/tidak) pernyataan: 'Lirik Hatikvah digubah oleh Napht,'Jawaban pernyataan: 'Lirik Hatikvah digubah oleh Naphtali Herz Imber (,0,,1.497866,6,10,0.5,0.111,97.752,97.86250868034362,3.07
+microsoft/phi-1_5,wrete,id,94,Berdasarkan pernyataan: 'Bentuknya yang unik menyerupai bunga mawar laba-laba atau huruf K besar yan,ya,'Bentuknya yang unik menyerupai bunga mawar laba-laba yang membujur d,'Berdasarkan pernyataan: 'Bentuknya yang unik menyerupai bunga mawar lab,0,,1.0889,4,10,0.5,0.093,136.167,136.26024073791504,2.2
+microsoft/phi-1_5,wrete,id,95,Berdasarkan pernyataan: 'Proses pembukaan rantai DNA ini dibantu oleh beberapa jenis protein yang da,tidak,'Jawaban (ya/tidak) pernyataan: 'Proses pembukaan rantai DNA ini dib,'berdasarkan pernyataan: 'Proses pembukaan rantai DNA ini dibantu oleh,0,,0.639032,3,10,0.5,0.074,115.41,115.4843703842163,2.6
+microsoft/phi-1_5,wrete,id,96,"Berdasarkan pernyataan: '3 kabupaten dan 1 desa ini merupakan wilayah inti suku Gayo .'
+Apakah perny",ya,'Jawaban pernyataan: '3 kabupaten dan 1 desa ini merupakan wilayah inti,'Jawaban pernyataan: '3 kabupaten dan 1 desa ini merupakan wilayah inti,0,,0.940448,4,10,0.5,0.081,92.388,92.46947072792054,3.25
+microsoft/phi-1_5,wrete,id,97,"Berdasarkan pernyataan: 'Secara umum , semakin kompleks suatu gejala , semakin kompleks pula alat ( ",tidak,Jawaban pernyataan: 'Secara umum matematika adalah pelajaran yang sangat di benci o,"Berdasarkan pernyataan: 'Secara umum, semakin kompleks suatu gejala, sem",0,,1.834372,7,10,0.5,0.094,137.614,137.70816604042054,2.18
+microsoft/phi-1_5,wrete,id,98,"Berdasarkan pernyataan: 'Dalam agama Islam , Yerusalem ( Al-Quds ) merupakan tempat suci ketiga sete",tidak,"Jawaban (ya/tidak) pernyataan: 'Dalam agama yahudi, Yerusalem ( Al-Q","Jawaban pernyataan: 'Dalam agama yahudi, Yerusalem ( Al-Quds ) merupakan tem",0,,0.325083,2,10,0.5,0.08,106.692,106.77240356636047,2.81
+microsoft/phi-1_5,wrete,id,99,"Berdasarkan pernyataan: 'Ilmu komputer mencakup beragam topik yang berkaitan dengan komputer , mulai",ya,'Jawaban pernyataan berikut dapat disimpulkan? 'Ilmu komputer mencakup berag,Perlu bahasa kesalahan pernyataan berikut dapat disimpulkan? 'Ilmu komputer men,0,,1.19355,4,10,0.5,0.093,150.357,150.45027960014343,2.0
