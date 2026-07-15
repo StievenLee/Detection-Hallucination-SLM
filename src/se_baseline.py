@@ -37,19 +37,19 @@ from utils.semantic_entropy import SemanticEntropyCalculator
 # KONFIGURASI
 # ──────────────────────────────────────────────────
 MODELS = [
-    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    # "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
     "microsoft/phi-1_5",
-    "Qwen/Qwen1.5-1.8B-Chat",
+    # "Qwen/Qwen1.5-1.8B-Chat",
 ]
 
 # Dataset yang dijalankan — comment/uncomment sesuai kebutuhan 
 DATASETS = [
     {"name": "trivia_qa", "split": "validation", "n": 100, "csv_path": None},
     {"name": "bioasq",    "split": "factoid",    "n": 100, "csv_path": None},
-    {"name": "facqa",     "split": None,         "n": 100,
-     "csv_path": "data/raw/facqa/train_preprocess.csv"},
-    {"name": "wrete",     "split": None,         "n": 100,
-     "csv_path": "data/raw/wrete/train_preprocess.csv"},
+    # {"name": "facqa",     "split": None,         "n": 100,
+    #  "csv_path": "data/raw/facqa/train_preprocess.csv"},
+    # {"name": "wrete",     "split": None,         "n": 100,
+    #  "csv_path": "data/raw/wrete/train_preprocess.csv"},
 ]
 
 # ── PROMPT PER-DATASET ────────────────────────────────────────────────────
@@ -99,9 +99,9 @@ TOP_P         = 0.95
 DEVICE        = "cpu"
 # NLI_THRESHOLD = 0.5
 
-Path("results/metrics/qwen").mkdir(parents=True, exist_ok=True) 
-Path("results/outputs/qwen").mkdir(parents=True, exist_ok=True)
-Path("results/figures/qwen").mkdir(parents=True, exist_ok=True)
+Path("results/metrics/phi").mkdir(parents=True, exist_ok=True) 
+Path("results/outputs/phi").mkdir(parents=True, exist_ok=True)
+Path("results/figures/phi").mkdir(parents=True, exist_ok=True)
 # =============
 
 DEVICE        = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -109,7 +109,7 @@ F1_THRESHOLD  = 0.5
 SEED          = 42   # untuk reproducibility antar-run
 
 RESULTS_CSV = "results/metrics/phi/se_results.csv"
-AUROC_CSV   = "results/metrics/phi/se_auroc_summary(2).csv"
+AUROC_CSV   = "results/metrics/phi/se_auroc_summary.csv"
 
 
 # ──────────────────────────────────────────────────
